@@ -35,6 +35,21 @@ DCSync, Pass-the-Hash, and Kerberoasting — that those actions represent.
 **Value in one line:** it turns quiet Active Directory abuse into clear,
 correlated alerts before attackers reach domain dominance.
 
+## How it works
+
+A lightweight sensor installed on domain controllers, and on supported AD FS or
+AD CS servers, inspects authentication traffic, directory changes, and network
+activity locally, then sends only the security signals to the cloud. Defender for
+Identity baselines normal behavior for each user and device and detects the
+techniques used across the attack chain — reconnaissance, credential theft such as
+Pass-the-Hash and Kerberoasting, lateral movement, and domain-dominance actions
+such as DCSync.
+
+It also continuously scores identity posture, highlighting risky configurations and
+legacy protocols to remediate. Alerts correlate into Defender XDR alongside
+endpoint, email, and cloud-app evidence, and its on-premises focus complements
+Entra ID Protection's analysis of cloud sign-ins.
+
 ## Typical scope
 
 - Active Directory Domain Services domain controllers.

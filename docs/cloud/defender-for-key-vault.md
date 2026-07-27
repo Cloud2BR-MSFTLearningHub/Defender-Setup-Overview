@@ -38,6 +38,20 @@ suggests abuse.
 **Value in one line:** it turns the vault from a silent single point of failure
 into a monitored tripwire that warns you the moment secrets are targeted.
 
+## How it works
+
+Defender for Key Vault evaluates both control-plane operations, such as creating or
+modifying a vault, and data-plane operations, such as reading secrets, keys, and
+certificates, against Microsoft threat intelligence and a learned baseline of
+normal access. When an identity, location, or access volume falls outside that
+baseline — for example, an application principal suddenly enumerating every secret
+— it raises an alert with the caller, operation, and vault context.
+
+The analysis is passive: it reads the vault's own telemetry and never blocks
+legitimate access, so enabling it cannot break an application. Its value is early
+warning, which gives you time to rotate the affected secrets before an attacker
+can use them.
+
 ## Enable
 
 1. Inventory vaults, managed HSM resources, applications, identities, and owners.

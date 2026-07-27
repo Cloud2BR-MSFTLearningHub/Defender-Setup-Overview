@@ -37,6 +37,22 @@ known-vulnerable image or a suspicious in-cluster action is caught early.
 **Value in one line:** it secures the container supply chain and the running
 cluster together, instead of trusting that every image and workload is clean.
 
+## How it works
+
+Defender for Containers protects three stages of the container lifecycle. At build
+and registry time it scans images in supported registries for known
+vulnerabilities, so a risky image is flagged before it ever runs. At the cluster
+level, agentless discovery and Azure Policy assess Kubernetes configuration
+against hardening best practices. At runtime, a Defender sensor deployed to the
+nodes watches process, network, and Kubernetes audit activity for behavior that
+matches known attack techniques.
+
+Coverage follows where the cluster lives: AKS integrates natively, while Amazon
+EKS, Google GKE, and other conformant clusters connect through a cloud connector
+or Azure Arc. Because Defender detects and recommends rather than enforces,
+blocking a non-compliant deployment still requires an admission controller such as
+Azure Policy for Kubernetes or Gatekeeper.
+
 ## Where it applies
 
 | Environment | Connection model |

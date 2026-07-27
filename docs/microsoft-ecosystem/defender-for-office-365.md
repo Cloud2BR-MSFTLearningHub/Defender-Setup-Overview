@@ -37,6 +37,20 @@ filtering does not provide — plus tools to hunt and remediate what gets throug
 **Value in one line:** it defends the most-attacked surface — the inbox — with
 active detonation, click-time protection, and fast post-delivery remediation.
 
+## How it works
+
+Defender for Office 365 layers on top of Exchange Online Protection. Safe
+Attachments detonates inbound files in an isolated sandbox before delivery, and
+Safe Links rewrites URLs so they are re-checked at the moment a user clicks —
+catching links that were weaponized after the message arrived. Impersonation and
+spoof-intelligence models defend against business email compromise, and protection
+extends to links and files shared in Teams, SharePoint, and OneDrive.
+
+Plan 2 adds the hunting and response layer: Threat Explorer and campaign views show
+what got through, and automated investigation and response can remove malicious
+messages from mailboxes across the tenant. Signals feed Defender XDR, so an email
+threat is correlated with the endpoint and identity it touches.
+
 ## Protection ladder
 
 | Level | Main addition |

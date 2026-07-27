@@ -40,6 +40,23 @@ CSPM finds that risk before an attacker does and shows the shortest path to fix 
 **Value in one line:** CSPM converts thousands of raw findings into a ranked,
 measurable remediation plan that shrinks the attack surface before it is exploited.
 
+## How it works
+
+CSPM does not need agents to start. When you connect an Azure subscription, an AWS
+account, or a GCP project, Defender for Cloud reads the cloud provider's own APIs
+to build an inventory and continuously compares every resource against the
+Microsoft Cloud Security Benchmark and any regulatory standards you assign. Each
+gap becomes a recommendation, each recommendation affects the secure score, and
+the score gives you one percentage to track and report over time.
+
+Defender CSPM adds a graph on top of that inventory. Agentless scanning takes a
+point-in-time snapshot of disks, identities, and configurations without installing
+anything, and the cloud security graph links those facts together. Cloud Security
+Explorer lets you query the graph — for example, "internet-exposed VMs with a
+known vulnerability and a path to sensitive data" — and attack path analysis walks
+the graph automatically to show the chained steps an attacker could take from
+exposure to impact.
+
 ## Plans
 
 | Plan | Main capabilities |

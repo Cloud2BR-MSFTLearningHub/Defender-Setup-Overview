@@ -35,6 +35,19 @@ contained in minutes rather than hours.
 **Value in one line:** it upgrades endpoints from prevention-only antivirus to
 detection, investigation, and rapid containment that feeds the wider XDR picture.
 
+## How it works
+
+A single Defender for Endpoint sensor delivers layered protection on each device:
+next-generation antivirus blocks known malware, attack surface reduction rules
+close common exploitation techniques, and the behavioral EDR engine streams
+process, file, network, and registry events to the cloud, where machine learning
+flags suspicious sequences — including fileless and living-off-the-land attacks.
+
+When something is found, responders can isolate the device, run live-response
+commands, and collect forensic evidence from the Defender portal, while automated
+investigation remediates common threats on its own. All of this feeds Defender XDR,
+so an endpoint alert is correlated with the identity and email signals around it.
+
 ## Deployment paths
 
 | Device group | Common management path |

@@ -37,6 +37,22 @@ across every cloud and on-premises estate from a single plan.
 **Value in one line:** it extends enterprise endpoint detection, vulnerability
 management, and hardening to every server, not just the ones inside Azure.
 
+## How it works
+
+Defender for Servers combines two layers. The first is Microsoft Defender for
+Endpoint, whose sensor runs on the machine to provide next-generation antivirus,
+attack surface reduction, and behavioral endpoint detection and response. Its
+alerts and device data flow into both Defender for Cloud and the Microsoft
+Defender portal, so a server incident sits next to the endpoint and identity
+signals it relates to.
+
+The second layer is agentless. Defender for Cloud periodically snapshots the
+machine's disk to assess installed software, vulnerabilities, exposed secrets, and
+malware without depending on a running agent, while integrated vulnerability
+assessment keeps a live list of weaknesses. Non-Azure machines join through Azure
+Arc, which projects them into a subscription so the same plan, policies, and
+reporting apply whether the server runs in Azure, another cloud, or a datacenter.
+
 ## Plan choice
 
 | Plan | Use case |

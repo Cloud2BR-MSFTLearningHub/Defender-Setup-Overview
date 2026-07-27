@@ -36,6 +36,18 @@ and workload protection you use elsewhere, so multicloud does not mean multi-bli
 **Value in one line:** it folds Google Cloud into the same posture and threat
 model as Azure and AWS, so risk is compared on one scale.
 
+## How it works
+
+A GCP connector relies on workload identity federation and dedicated service
+accounts to grant Defender for Cloud read access without long-lived keys.
+Foundational CSPM then evaluates GCP resources against the multicloud benchmark,
+and workload plans extend Defender for Servers and Defender for Containers to
+eligible Compute Engine, GKE, and Artifact Registry resources.
+
+Discovered projects and resources join the unified inventory and secure score, so
+Google Cloud risk is compared directly with Azure and AWS and can appear in the
+same attack paths and Cloud Security Explorer queries.
+
 ## Typical coverage
 
 - Foundational CSPM and recommendations mapped to multicloud standards.

@@ -39,6 +39,21 @@ changing how applications read and write data.
 **Value in one line:** it stops storage from becoming a quiet path for malware
 delivery and data theft, while keeping normal application access unchanged.
 
+## How it works
+
+Defender for Storage analyzes the control-plane and data-plane telemetry that
+every storage account already emits, comparing it against Microsoft threat
+intelligence and behavioral models to spot anomalies such as access from a Tor
+exit node, unusual data extraction, or use of a leaked SAS token. This activity
+monitoring needs no agent and never sits in the data path, so it does not slow
+reads or writes.
+
+When you enable on-upload malware scanning, each uploaded blob is scanned by the
+Microsoft anti-malware engine and the result is surfaced as a blob index tag and
+an Event Grid event your application can act on. Sensitive-data threat detection
+adds weight to accounts that Microsoft Purview has flagged as holding sensitive
+information, so the highest-value data receives the closest attention.
+
 ## Protect
 
 - Blob Storage and Azure Data Lake Storage workloads supported by the plan.

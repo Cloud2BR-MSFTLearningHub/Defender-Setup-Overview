@@ -37,6 +37,19 @@ grants in real time.
 **Value in one line:** it turns invisible SaaS sprawl into a governed, monitored
 estate with real-time control over risky access and data movement.
 
+## How it works
+
+Defender for Cloud Apps operates as a cloud access security broker. Cloud Discovery
+analyzes traffic logs — often from Defender for Endpoint — to reveal which SaaS
+apps are in use and score each app's risk, exposing shadow IT. App connectors then
+use the APIs of sanctioned apps to pull activity logs, detect anomalies, and apply
+file and governance policies.
+
+For real-time control, Conditional Access App Control routes sessions through a
+reverse proxy so actions such as download or copy can be inspected and blocked as
+they happen, and App Governance monitors OAuth applications for risky permissions
+and behavior. Its signals also flow into Defender XDR.
+
 ## Capability map
 
 | Need | Capability |

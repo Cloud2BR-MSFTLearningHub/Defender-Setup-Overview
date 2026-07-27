@@ -37,6 +37,19 @@ prompting for MFA, forcing a password reset, or blocking access.
 **Value in one line:** it automatically challenges or blocks compromised sign-ins
 the moment risk appears, closing the most common path into the tenant.
 
+## How it works
+
+Entra ID Protection scores risk from Microsoft's view of trillions of
+authentications. Real-time and offline detections evaluate each sign-in and user
+for signals such as impossible travel, anonymized IP addresses, password spray, and
+leaked credentials, producing a sign-in risk level and a user risk level.
+
+Conditional Access consumes that risk to respond automatically: a risky sign-in can
+be challenged with multifactor authentication, a risky user can be forced to reset
+a password, and high risk can be blocked outright. The recommended pattern is to
+roll policies out in report-only mode first, exclude emergency-access accounts, and
+feed the risk events into Defender XDR or Sentinel for investigation.
+
 ## Configure
 
 1. Confirm Microsoft Entra licensing, roles, emergency accounts, and user scope.

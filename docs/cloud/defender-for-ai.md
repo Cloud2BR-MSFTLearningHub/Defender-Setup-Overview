@@ -35,6 +35,20 @@ watches supported workloads for active abuse.
 **Value in one line:** it brings fast-moving AI workloads under the same
 discovery, posture, and threat-detection discipline as the rest of the cloud.
 
+## How it works
+
+AI security posture management extends Defender CSPM. Using agentless discovery, it
+builds an AI bill of materials — models, endpoints, datastores, plugins, and the
+identities connected to them — and evaluates that graph for risky configurations
+and excessive access, surfacing the results as recommendations and attack paths
+alongside the rest of your cloud posture.
+
+AI threat protection adds runtime detection for supported generative-AI services.
+By integrating with the application and Azure AI content-safety signals, it can
+alert on prompt-injection attempts, credential theft, wallet abuse, and anomalous
+data access. Because service names and availability change quickly, the current
+support matrix is the authoritative source at deployment time.
+
 ## Capability map
 
 | Need | Capability |

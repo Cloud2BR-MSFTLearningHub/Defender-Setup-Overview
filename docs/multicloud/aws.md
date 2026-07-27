@@ -37,6 +37,19 @@ and attack-path view you already use for Azure.
 **Value in one line:** it removes the AWS blind spot, giving one prioritized view
 of risk across every cloud your organization runs.
 
+## How it works
+
+An AWS connector uses a CloudFormation stack — or a StackSet for an entire
+organization — to create least-privilege IAM roles that let Defender for Cloud read
+AWS configuration and, for selected plans, deploy the required components. From
+there, foundational CSPM assesses AWS resources against the multicloud benchmark,
+and workload plans such as Defender for Servers and Defender for Containers extend
+to eligible EC2, EKS, and ECR resources.
+
+Everything the connector discovers flows into the same inventory, secure score,
+and cloud security graph as your Azure resources, so AWS findings are ranked on
+one scale and attack paths that cross from Azure into AWS become visible.
+
 ## Typical coverage
 
 - Foundational CSPM and Microsoft Cloud Security Benchmark recommendations.

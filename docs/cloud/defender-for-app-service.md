@@ -36,6 +36,20 @@ signals to detect attacks that never appear in application logs alone.
 **Value in one line:** it gives hosted web apps host-aware threat detection that
 reaches attacks a perimeter firewall cannot see.
 
+## How it works
+
+Because App Service is a managed platform, Defender can see signals the application
+never logs — underlying host process behavior, sampled request telemetry, and
+platform events — and correlate them with known attack patterns. That combination
+surfaces reconnaissance, exploitation attempts, and post-compromise actions such
+as a suspicious process launched by the web worker.
+
+It also watches for issues specific to hosted apps, including dangling DNS entries
+that could allow subdomain takeover after a site is deprovisioned. Detections
+appear as Defender for Cloud alerts with investigation context, so responders can
+move from alert to the affected app, deployment slot, and recommended action
+quickly.
+
 ## Enable
 
 1. Inventory App Service apps, APIs, deployment slots, plans, and environments.

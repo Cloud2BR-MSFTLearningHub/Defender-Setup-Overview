@@ -37,6 +37,20 @@ and guided setup so protection does not require a specialist.
 **Value in one line:** it gives small teams enterprise-class endpoint detection
 and automated response without needing a dedicated security operations center.
 
+## How it works
+
+Defender for Business packages the Defender for Endpoint engine — next-generation
+antivirus, attack surface reduction, and behavioral EDR — into a streamlined
+experience with security-hardened defaults and a guided setup wizard, so protection
+is effective without deep configuration. Devices are onboarded through Microsoft
+Intune or a simple local script across Windows, macOS, iOS, and Android.
+
+Automated investigation and response handles common threats without analyst
+intervention, and threat and vulnerability management highlights the weaknesses
+that matter most. Servers can be added through a per-server add-on, and the same
+portal and incidents scale up if the organization later moves to enterprise
+Defender plans.
+
 ## Configure
 
 1. Confirm tenant eligibility, user and server limits, and included licenses.

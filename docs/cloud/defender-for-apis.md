@@ -37,6 +37,20 @@ the risky ones, and watches traffic for exploitation of the OWASP API risks.
 **Value in one line:** it makes your API estate visible and monitored, so the
 endpoints attackers probe are the endpoints you are already watching.
 
+## How it works
+
+Defender for APIs onboards eligible APIs from Azure API Management and then
+observes their live traffic. It builds an inventory enriched with usage,
+authentication, and exposure details, classifies which APIs handle sensitive data,
+and applies machine-learning detections tuned to the OWASP API security risks, so
+anomalies such as abnormal data exposure, suspicious enumeration, or abuse of a
+specific endpoint generate alerts.
+
+Onboarding is deliberate: enabling the subscription plan makes APIs eligible, and
+you then choose which APIs to actively monitor within plan capacity. That two-step
+model lets you focus protection on the sensitive, internet-facing production APIs
+that matter most.
+
 ## Enable
 
 1. Inventory API Management services, APIs, revisions, backends, and data owners.

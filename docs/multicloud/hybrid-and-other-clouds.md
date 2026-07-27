@@ -37,6 +37,19 @@ single Defender plan can protect them alongside cloud-native resources.
 **Value in one line:** it brings the hardest-to-reach servers and clusters under
 the same protection, inventory, and reporting as the rest of the cloud estate.
 
+## How it works
+
+Azure Arc installs a lightweight connected-machine agent, for servers, or an agent
+set, for Kubernetes, that registers the resource as an Arc-enabled object inside an
+Azure subscription. Once projected, the resource can receive the same Defender
+plan, Azure Policy, and extensions as a native Azure resource, and its telemetry
+appears in both Defender for Cloud and the Microsoft Defender portal.
+
+Arc handles projection, not eligibility. A machine becomes protected only when the
+relevant Defender plan is enabled in its subscription and the required components
+are healthy, and only the resource types listed in each product's support matrix
+are covered.
+
 ## What can connect
 
 | Asset | Onboarding path | Defender path |

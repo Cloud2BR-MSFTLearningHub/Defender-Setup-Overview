@@ -37,6 +37,20 @@ automation, so Defender incidents can be investigated alongside everything else.
 **Value in one line:** it extends Defender's strong detections with SIEM-scale
 correlation, retention, and automation across every security source you own.
 
+## How it works
+
+When you connect Microsoft Defender XDR to Sentinel, incidents and alerts
+synchronize between the two, so an incident can be worked in either portal without
+creating duplicates. Sentinel ingests that data alongside connectors for firewalls,
+networks, non-Microsoft clouds, and custom logs into a Log Analytics workspace,
+where analytics rules, workbooks, and hunting queries run across everything
+together.
+
+Its SOAR layer adds automation rules and Logic App playbooks that can enrich,
+assign, or remediate incidents across any connected system. Because ingestion and
+retention drive cost, the goal is to add only the data and rules that serve a
+defined use case rather than duplicating what Defender already detects natively.
+
 ## Decide the incident owner
 
 Choose whether Defender XDR or Sentinel is the primary incident queue. Avoid

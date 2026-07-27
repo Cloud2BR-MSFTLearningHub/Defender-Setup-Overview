@@ -38,6 +38,19 @@ becomes in the cloud, so teams fix the root cause instead of patching runtime.
 **Value in one line:** it shifts security left, catching exposed secrets and
 insecure infrastructure-as-code before they ever reach production.
 
+## How it works
+
+A DevOps connector authorizes Defender for Cloud to read metadata from your GitHub,
+Azure DevOps, or GitLab environment. Scanning surfaces exposed secrets, vulnerable
+dependencies, insecure infrastructure-as-code, and container image findings in the
+repositories and pipelines where they originate, and the results appear in
+Defender for Cloud with the rest of your posture.
+
+The differentiator is code-to-cloud mapping: when Defender CSPM is enabled, a
+finding in a template can be related to the live resource it deploys, so teams fix
+the root cause in source instead of repeatedly patching runtime. Findings route to
+the repository and pipeline owners who can actually resolve them.
+
 ## Enable
 
 1. Inventory organizations, projects, groups, repositories, pipelines, and owners.

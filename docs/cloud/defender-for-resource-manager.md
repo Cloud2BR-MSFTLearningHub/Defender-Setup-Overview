@@ -38,6 +38,20 @@ analytics to the management layer so those actions stand out.
 **Value in one line:** it watches the one layer every cloud change flows through,
 turning silent control-plane abuse into an actionable alert.
 
+## How it works
+
+Every deployment, role assignment, and configuration change in Azure passes through
+Azure Resource Manager, and each operation is recorded in the Activity Log.
+Defender for Resource Manager analyzes that stream with threat intelligence and
+behavioral models tuned to known cloud attack toolkits, so activity such as mass
+permission changes, suspicious use of exploitation frameworks, or bulk resource
+deletion stands out from routine administration.
+
+Detections arrive as Defender for Cloud alerts that name the principal, operation,
+and scope, which lets responders correlate them with Entra sign-ins and privileged
+role activity. Retaining Activity Log data supports the deeper investigation that a
+control-plane incident usually requires.
+
 ## Enable
 
 1. Identify subscriptions and management groups that form the security boundary.

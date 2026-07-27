@@ -37,6 +37,20 @@ build an OT asset inventory and detect threats without touching production traff
 **Value in one line:** it makes the operational network visible and monitored
 without risking the availability or safety of control systems.
 
+## How it works
+
+Defender for IoT monitors operational-technology networks passively. A network
+sensor receives a mirrored copy of traffic, typically through a SPAN port or
+network TAP, and uses protocol-aware analysis to identify devices, map
+communication, and detect anomalies — all without sending a single packet to the
+equipment, which protects the availability and safety of control systems.
+
+The sensor understands the industrial protocols that IT tools ignore, so it can
+baseline normal engineering activity and alert on deviations such as unauthorized
+programming changes or unexpected connections. Alerts can integrate with the SOC
+and Defender XDR, while enterprise IoT devices on managed networks can instead be
+covered through Defender for Endpoint.
+
 ## Configure OT monitoring
 
 1. Inventory plants, network segments, protocols, safety constraints, and owners.

@@ -35,6 +35,19 @@ respond automatically, cutting the time attackers have to act.
 **Value in one line:** it turns a flood of isolated alerts into a few
 prioritized incidents and automates the routine response work behind them.
 
+## How it works
+
+Defender XDR does not collect telemetry itself; it consumes the signals from each
+connected Defender product and Microsoft Sentinel. A correlation engine groups
+related alerts across email, identity, endpoint, cloud apps, and cloud workloads
+into a single incident with a shared timeline, affected assets, and evidence, so
+analysts investigate one story instead of many disconnected alerts.
+
+Automated investigation and response can then run playbooks that examine the
+incident, reach a verdict, and take approved remediation such as isolating a device
+or blocking a user. Advanced hunting exposes the underlying raw data through a
+query language, so teams can hunt proactively and build custom detections.
+
 ## Signal sources
 
 - Microsoft Defender for Endpoint and Defender Vulnerability Management.

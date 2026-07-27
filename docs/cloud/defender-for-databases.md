@@ -38,6 +38,21 @@ patterns against the exact engine you run.
 **Value in one line:** it catches credential-based and injection attacks on your
 data tier that infrastructure monitoring simply cannot see.
 
+## How it works
+
+Defender for Databases attaches to the database service rather than the host. For
+each supported engine it applies behavioral analytics and threat intelligence to
+query and login telemetry, learning what normal access looks like and alerting on
+deviations such as a brute-force login, a SQL injection pattern, or access from an
+unfamiliar principal or location. Where the engine supports it, vulnerability
+assessment also scans the database configuration and schema for weaknesses.
+
+Because it is a family of subplans, coverage is engine-specific: Azure SQL, SQL
+Server on machines, open-source relational databases, and Azure Cosmos DB each
+have their own subplan and meter. Alerts flow into Defender for Cloud and the
+Defender portal, so a database alert can be correlated with the identity and
+application evidence around it.
+
 ## Workload map
 
 | Workload | Protection family |
