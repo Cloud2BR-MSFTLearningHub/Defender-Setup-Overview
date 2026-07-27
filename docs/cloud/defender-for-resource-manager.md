@@ -1,5 +1,7 @@
 # Microsoft Defender for Resource Manager Overview
 
+Last updated: 2026-07-27
+
 <details markdown>
 <summary>References</summary>
 

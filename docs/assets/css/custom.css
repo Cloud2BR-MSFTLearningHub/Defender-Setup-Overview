@@ -14,6 +14,13 @@
   --md-accent-fg-color: var(--defender-blue);
 }
 
+/* Show the last-updated date as a small grey caption under each page title */
+.md-typeset h1 + p {
+  color: #6b7280;
+  font-size: 0.7rem;
+  margin: -0.2rem 0 0.9rem;
+}
+
 .md-header__button.md-logo img {
   border-radius: 50%;
   width: 2rem;

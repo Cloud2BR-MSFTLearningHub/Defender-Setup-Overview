@@ -1,5 +1,7 @@
 # DevOps Security in Microsoft Defender for Cloud
 
+Last updated: 2026-07-27
+
 <details markdown>
 <summary>References</summary>
 

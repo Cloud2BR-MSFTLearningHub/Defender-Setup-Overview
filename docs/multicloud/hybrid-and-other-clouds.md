@@ -1,5 +1,7 @@
 # Defender for Hybrid, On-Premises, and Other Clouds
 
+Last updated: 2026-07-27
+
 <details markdown>
 <summary>References</summary>
 

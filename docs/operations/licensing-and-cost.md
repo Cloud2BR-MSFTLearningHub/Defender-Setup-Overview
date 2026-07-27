@@ -1,5 +1,7 @@
 # Microsoft Defender Licensing and Cost Planning
 
+Last updated: 2026-07-27
+
 <details markdown>
 <summary>References</summary>
 

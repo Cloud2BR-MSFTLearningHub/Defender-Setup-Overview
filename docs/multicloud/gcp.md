@@ -1,5 +1,7 @@
 # Microsoft Defender for Cloud on Google Cloud
 
+Last updated: 2026-07-27
+
 <details markdown>
 <summary>References</summary>
 
