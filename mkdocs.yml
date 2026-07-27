@@ -34,6 +34,9 @@ markdown_extensions:
 extra_css:
   - assets/css/custom.css
 
+extra_javascript:
+  - assets/js/logo-link.js
+
 extra:
   generator: false
 
