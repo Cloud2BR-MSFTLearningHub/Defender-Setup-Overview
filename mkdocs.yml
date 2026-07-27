@@ -6,13 +6,36 @@ repo_name: Cloud2BR-MSFTLearningHub/Defender-Setup-Overview
 docs_dir: docs
 site_dir: site
 use_directory_urls: true
+copyright: Copyright &copy; 2026 <a href="https://github.com/Cloud2BR-MSFTLearningHub" target="_blank" rel="noopener">Cloud2BR OSS - Learning Hub</a>
 
 theme:
-  name: readthedocs
+  name: material
+  logo: https://avatars.githubusercontent.com/u/195347873?v=4
+  favicon: https://avatars.githubusercontent.com/u/195347873?v=4
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - tables
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/css/custom.css
+
+extra:
+  generator: false
 
 nav:
   - Home: index.md

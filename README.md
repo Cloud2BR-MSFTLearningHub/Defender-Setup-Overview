@@ -81,7 +81,6 @@ Estimate and govern spend with the [licensing and cost guide](docs/operations/li
 - [Microsoft Defender documentation](https://learn.microsoft.com/en-us/defender/)
 - [Defender for Cloud pricing](https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/)
 
-
 <!-- START BADGE -->
 <div align="center">
   <img src="https://img.shields.io/badge/Total%20views-40-limegreen" alt="Total views">

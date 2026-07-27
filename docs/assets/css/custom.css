@@ -1,0 +1,217 @@
+:root {
+  --defender-navy: #003366;
+  --defender-blue: #004a99;
+  --defender-blue-hover: #003874;
+  --defender-teal: #0e7490;
+  --defender-slate: #526173;
+  --defender-border: #dbe4ee;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--defender-navy);
+  --md-primary-fg-color--light: var(--defender-blue);
+  --md-primary-fg-color--dark: #00264d;
+  --md-accent-fg-color: var(--defender-blue);
+}
+
+.md-header__button.md-logo img {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.md-header__title .md-ellipsis {
+  font-size: 0.9em;
+}
+
+.md-tabs__link,
+.md-typeset a {
+  color: var(--defender-blue);
+}
+
+.md-tabs__link:hover,
+.md-typeset a:hover {
+  color: var(--defender-blue-hover);
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-grid {
+    max-width: 94%;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .md-grid {
+    max-width: 1700px;
+  }
+}
+
+.md-typeset {
+  font-size: 0.76rem;
+}
+
+.md-typeset p > img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 1rem auto 1.2rem;
+}
+
+.md-nav {
+  font-size: 0.62rem;
+}
+
+.md-nav__link {
+  border-radius: 6px;
+  color: #405064;
+  margin: 0.08rem 0.25rem 0.08rem 0;
+  padding: 0.34rem 0.55rem;
+}
+
+.md-nav__link:hover {
+  background-color: rgba(0, 74, 153, 0.07);
+  color: var(--defender-blue-hover);
+}
+
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  background-color: rgba(0, 74, 153, 0.1);
+  color: var(--defender-blue);
+  font-weight: 600;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__link {
+  color: #607084;
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.defender-hero {
+  border-bottom: 4px solid var(--defender-teal);
+  margin: 0.2rem 0 2rem;
+  padding: 1.75rem 0 1.6rem;
+}
+
+.defender-hero__eyebrow {
+  color: var(--defender-teal);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  margin: 0 0 0.45rem;
+  text-transform: uppercase;
+}
+
+.defender-hero h1 {
+  color: var(--defender-navy);
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.defender-hero p:last-child {
+  color: var(--defender-slate);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.75rem 0 0;
+  max-width: 54rem;
+}
+
+.guide-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1rem 0 2rem;
+}
+
+.guide-card,
+.guide-card:visited {
+  --card-accent: var(--defender-blue);
+  background: #fff;
+  border: 1px solid var(--defender-border);
+  border-top: 3px solid var(--card-accent);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  min-height: 10.5rem;
+  padding: 1rem 1.05rem;
+  text-decoration: none;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.guide-card:hover {
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.11);
+  color: inherit;
+  transform: translateY(-2px);
+}
+
+.guide-card:focus-visible {
+  outline: 2px solid var(--card-accent);
+  outline-offset: 2px;
+}
+
+.guide-card:nth-child(4n + 2) {
+  --card-accent: var(--defender-teal);
+}
+
+.guide-card:nth-child(4n + 3) {
+  --card-accent: #2563eb;
+}
+
+.guide-card:nth-child(4n) {
+  --card-accent: #0f766e;
+}
+
+.guide-card__label {
+  color: var(--card-accent);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.guide-card h2 {
+  color: #10253d;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  margin: 0 0 0.4rem;
+}
+
+.guide-card p {
+  color: var(--defender-slate);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.site-note {
+  color: var(--defender-slate);
+  font-size: 0.7rem;
+  margin-top: -0.65rem;
+}
+
+@media screen and (max-width: 76.25em) {
+  .guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 44rem) {
+  .defender-hero {
+    margin-bottom: 1.4rem;
+    padding: 1.25rem 0 1.1rem;
+  }
+
+  .defender-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+}
