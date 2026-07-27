@@ -1,0 +1,54 @@
+# Defender Automation and Remediation
+
+Costa Rica
+
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
+[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+
+Last updated: 2026-07-27
+
+----------
+
+[Back to the documentation hub](../index.md)
+
+Defender detects, recommends, investigates, and performs specific supported
+response actions. Policy and automation services provide broader enforcement and
+remediation. Match the tool to the decision being made.
+
+## Control map
+
+| Goal | Typical tool |
+| --- | --- |
+| Prevent an unsafe Azure configuration | Azure Policy deny or modify effect |
+| Enforce Kubernetes admission rules | Azure Policy for Kubernetes or Gatekeeper |
+| Repair deployed infrastructure | Infrastructure-as-code pull request and pipeline |
+| Respond to a Defender for Cloud alert | Workflow automation with Logic Apps |
+| Orchestrate a cross-product incident | Defender XDR automation or Sentinel playbook |
+| Manage endpoint settings | Intune security policy |
+| Restrict risky identity access | Conditional Access |
+
+## Safe automation pattern
+
+1. Normalize the alert, resource, identity, severity, and confidence.
+2. Enrich with ownership, criticality, exposure, maintenance, and threat context.
+3. Use idempotent actions and least-privilege managed identities.
+4. Start with notification or ticket creation.
+5. Add approval for disruptive actions such as isolation, deletion, or key rotation.
+6. Record every action and preserve evidence before remediation.
+7. Verify recovery, close the loop, and expire temporary exceptions.
+
+## Guardrails
+
+- Do not trust an alert title as the sole authorization for a destructive action.
+- Suppress duplicates without hiding recurring or escalating behavior.
+- Set concurrency, retry, timeout, and cost limits.
+- Protect automation credentials and restrict who can edit playbooks.
+- Maintain break-glass, rollback, and manual execution procedures.
+- Test with simulations and non-production resources.
+
+## References
+
+- [Defender for Cloud workflow automation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/workflow-automation)
+- [Azure Policy effects](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics)
+- [Sentinel automation](https://learn.microsoft.com/en-us/azure/sentinel/automation/automation)
+- [Defender XDR automated investigation](https://learn.microsoft.com/en-us/defender-xdr/m365d-autoir)

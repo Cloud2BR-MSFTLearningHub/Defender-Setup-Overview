@@ -1,0 +1,50 @@
+site_name: Microsoft Defender Setup and Overview Hub
+site_description: Deployment and operations guidance for Microsoft Defender products.
+site_url: https://cloud2br-msftlearninghub.github.io/defender-setup-overview/
+repo_url: https://github.com/Cloud2BR-MSFTLearningHub/Defender-Setup-Overview
+repo_name: Cloud2BR-MSFTLearningHub/Defender-Setup-Overview
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: readthedocs
+
+markdown_extensions:
+  - admonition
+  - tables
+
+nav:
+  - Home: index.md
+  - Overview: 00-overview.md
+  - Defender for Cloud:
+      - CSPM: cloud/defender-cspm.md
+      - Servers: cloud/defender-for-servers.md
+      - Containers: cloud/defender-for-containers.md
+      - Storage: cloud/defender-for-storage.md
+      - App Service: cloud/defender-for-app-service.md
+      - Databases: cloud/defender-for-databases.md
+      - Key Vault: cloud/defender-for-key-vault.md
+      - Resource Manager: cloud/defender-for-resource-manager.md
+      - APIs: cloud/defender-for-apis.md
+      - AI workloads: cloud/defender-for-ai.md
+      - DevOps security: cloud/devops-security.md
+  - Multicloud and Hybrid:
+      - AWS: multicloud/aws.md
+      - Google Cloud: multicloud/gcp.md
+      - Hybrid and other clouds: multicloud/hybrid-and-other-clouds.md
+  - Microsoft Ecosystem:
+      - Defender XDR: microsoft-ecosystem/defender-xdr.md
+      - Defender for Endpoint: microsoft-ecosystem/defender-for-endpoint.md
+      - Defender for Office 365: microsoft-ecosystem/defender-for-office-365.md
+      - Defender for Identity: microsoft-ecosystem/defender-for-identity.md
+      - Defender for Cloud Apps: microsoft-ecosystem/defender-for-cloud-apps.md
+      - Defender Vulnerability Management: microsoft-ecosystem/defender-vulnerability-management.md
+      - Defender for Business: microsoft-ecosystem/defender-for-business.md
+      - Defender for IoT: microsoft-ecosystem/defender-for-iot.md
+      - Entra ID Protection: microsoft-ecosystem/entra-id-protection.md
+  - Operations:
+      - Deployment checklist: operations/deployment-checklist.md
+      - Automation and remediation: operations/automation-and-remediation.md
+      - Sentinel integration: operations/sentinel-integration.md
+      - Licensing and cost: operations/licensing-and-cost.md
