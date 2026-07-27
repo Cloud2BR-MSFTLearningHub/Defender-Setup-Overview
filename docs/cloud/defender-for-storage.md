@@ -40,6 +40,6 @@ services and account types.
 - Monitor scan failures, throttling, transaction anomalies, and cost.
 - Do not expose test files or production data during validation.
 
-> [!IMPORTANT]
-> Malware scanning is not a substitute for access control, private networking,
-> soft delete, versioning, backups, or data-loss prevention.
+!!! warning "Important"
+   Malware scanning is not a substitute for access control, private networking,
+   soft delete, versioning, backups, or data-loss prevention.

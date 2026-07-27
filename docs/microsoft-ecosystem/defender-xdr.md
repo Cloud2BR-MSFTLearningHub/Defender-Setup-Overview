@@ -43,6 +43,6 @@ Only licensed, provisioned, and connected products contribute their full signals
 - Tune alert rules and exclusions with expiry, owner, and evidence.
 - Measure time to triage, contain, remediate, and close incidents.
 
-> [!NOTE]
-> Defender XDR is the correlation and response layer. It does not create missing
-> telemetry from a Defender product that has not been licensed or deployed.
+!!! note
+    Defender XDR is the correlation and response layer. It does not create missing
+    telemetry from a Defender product that has not been licensed or deployed.

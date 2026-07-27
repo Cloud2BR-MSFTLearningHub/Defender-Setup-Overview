@@ -32,6 +32,6 @@ data-plane activity with Microsoft threat intelligence.
 - Predefine secret or certificate rotation and application recovery procedures.
 - Monitor vaults outside the centrally managed subscription hierarchy.
 
-> [!IMPORTANT]
-> Defender detects suspicious access; it does not replace least privilege,
-> private endpoints, soft-delete and purge protection, or rotation processes.
+!!! warning "Important"
+    Defender detects suspicious access; it does not replace least privilege,
+    private endpoints, soft-delete and purge protection, or rotation processes.

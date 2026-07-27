@@ -49,7 +49,7 @@ supported machines or Kubernetes clusters in clouds other than AWS and GCP.
 - Include Arc, Azure Monitor, data-transfer, and Defender charges in cost estimates.
 - Define offboarding so retired assets do not remain billable or misleading.
 
-> [!IMPORTANT]
-> Azure Arc does not make every third-party PaaS service eligible for an Azure
-> Defender workload plan. It projects supported servers, Kubernetes, data, and
-> selected services according to each product's support matrix.
+!!! warning "Important"
+    Azure Arc does not make every third-party PaaS service eligible for an Azure
+    Defender workload plan. It projects supported servers, Kubernetes, data, and
+    selected services according to each product's support matrix.

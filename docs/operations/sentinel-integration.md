@@ -44,6 +44,6 @@ same incident in a loop.
 - Test playbook approval, failure handling, rollback, and audit records.
 - Document which portal analysts use for each response action.
 
-> [!IMPORTANT]
-> Sending duplicate raw telemetry and alerts can add cost without adding detection
-> value. Build integrations from explicit use cases and retention requirements.
+!!! warning "Important"
+    Sending duplicate raw telemetry and alerts can add cost without adding detection
+    value. Build integrations from explicit use cases and retention requirements.

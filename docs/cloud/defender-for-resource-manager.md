@@ -32,7 +32,7 @@ abuse, unusual administration, or destructive changes.
 - Pre-authorize containment actions for compromised automation identities.
 - Monitor newly created or moved subscriptions for configuration drift.
 
-> [!NOTE]
-> Resource Manager protection observes the Azure control plane. It does not
-> replace workload-specific plans, Entra ID Protection, or privileged identity
-> management.
+!!! note
+    Resource Manager protection observes the Azure control plane. It does not
+    replace workload-specific plans, Entra ID Protection, or privileged identity
+    management.

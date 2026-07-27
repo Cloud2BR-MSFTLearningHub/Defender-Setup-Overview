@@ -32,6 +32,6 @@ can also use Defender for Endpoint capabilities on supported networks and device
 - Monitor sensor packet visibility, health, time synchronization, and update status.
 - Exercise incident procedures in a lab or approved maintenance window.
 
-> [!CAUTION]
-> Do not run active scans, isolate devices, or change control-system traffic
-> without OT safety review. Availability and physical safety take priority.
+!!! danger "Caution"
+    Do not run active scans, isolate devices, or change control-system traffic
+    without OT safety review. Availability and physical safety take priority.

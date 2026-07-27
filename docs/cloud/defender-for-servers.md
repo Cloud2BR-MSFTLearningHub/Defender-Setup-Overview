@@ -46,7 +46,7 @@ pricing and regional-support checks.
 - Route alerts to the incident owner and test machine isolation procedures.
 - Track uncovered machines, stale agents, exclusions, and unsupported systems.
 
-> [!IMPORTANT]
-> Azure Arc enrollment and Defender for Servers licensing are separate concerns.
-> An Arc-connected server is not necessarily protected until its plan and
-> required components are healthy.
+!!! warning "Important"
+    Azure Arc enrollment and Defender for Servers licensing are separate concerns.
+    An Arc-connected server is not necessarily protected until its plan and
+    required components are healthy.

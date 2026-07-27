@@ -41,6 +41,6 @@ subplan that matches the database engine and hosting model.
 - Correlate database alerts with identity, application, and network evidence.
 - Track unprotected instances and stale vulnerability findings.
 
-> [!IMPORTANT]
-> A generic Databases toggle can expose separate subplans and charges. Review
-> the current plan configuration and pricing before broad enablement.
+!!! warning "Important"
+    A generic Databases toggle can expose separate subplans and charges. Review
+    the current plan configuration and pricing before broad enablement.

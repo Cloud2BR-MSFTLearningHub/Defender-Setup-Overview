@@ -32,7 +32,7 @@ authentication, password change, or access blocking.
 - Investigate risk with endpoint, email, identity, and cloud-app evidence.
 - Review exclusions and emergency account health on a fixed schedule.
 
-> [!IMPORTANT]
-> Entra ID Protection is related to the Microsoft security ecosystem but is not
-> a Defender for Cloud workload plan. Avoid locking out administrators by moving
-> directly from an untested policy to tenant-wide enforcement.
+!!! warning "Important"
+    Entra ID Protection is related to the Microsoft security ecosystem but is not
+    a Defender for Cloud workload plan. Avoid locking out administrators by moving
+    directly from an untested policy to tenant-wide enforcement.

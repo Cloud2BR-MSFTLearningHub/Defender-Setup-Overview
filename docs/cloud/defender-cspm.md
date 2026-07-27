@@ -40,6 +40,6 @@ configuration, and prioritizes security risk across Azure, AWS, and GCP.
 - Assign governance owners and remediation due dates.
 - Use Cloud Security Explorer and attack paths to investigate exposure chains.
 
-> [!NOTE]
-> CSPM identifies risk; workload plans add threat detection. Enabling Defender
-> CSPM does not automatically enable every Defender workload protection plan.
+!!! note
+    CSPM identifies risk; workload plans add threat detection. Enabling Defender
+    CSPM does not automatically enable every Defender workload protection plan.

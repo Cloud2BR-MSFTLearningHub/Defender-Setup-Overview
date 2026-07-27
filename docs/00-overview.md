@@ -76,7 +76,7 @@ response actions. They do not automatically rewrite every unsafe cloud resource.
 | Respond to an alert | Defender automation, Logic Apps, Sentinel playbooks, or API |
 | Repair infrastructure configuration | Infrastructure as code and deployment pipeline |
 
-> [!IMPORTANT]
-> Automated isolation, blocking, or deletion can interrupt production. Start
-> with audit and notification, define an owner and rollback path, and then move
-> well-tested controls to enforcement.
+!!! warning "Important"
+  Automated isolation, blocking, or deletion can interrupt production. Start
+  with audit and notification, define an owner and rollback path, and then move
+  well-tested controls to enforcement.

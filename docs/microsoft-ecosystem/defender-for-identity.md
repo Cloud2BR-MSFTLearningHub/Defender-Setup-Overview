@@ -40,7 +40,7 @@ identities, then correlates them in Defender XDR.
 - Correlate alerts with endpoint, cloud app, and Entra sign-in evidence.
 - Protect sensor credentials and establish domain-controller recovery procedures.
 
-> [!NOTE]
-> Defender for Identity complements Microsoft Entra ID Protection. The former
-> emphasizes hybrid and on-premises identity signals; the latter evaluates
-> Entra user and sign-in risk.
+!!! note
+  Defender for Identity complements Microsoft Entra ID Protection. The former
+  emphasizes hybrid and on-premises identity signals; the latter evaluates
+  Entra user and sign-in risk.

@@ -41,6 +41,6 @@ threat protection detects supported runtime threats.
 - Monitor prompt attacks, abusive use, credential theft, and data-access anomalies.
 - Recheck coverage whenever models, regions, or architectures change.
 
-> [!CAUTION]
-> AI plan names, eligible services, and availability are evolving quickly. Treat
-> the support matrix and pricing page as authoritative at deployment time.
+!!! danger "Caution"
+    AI plan names, eligible services, and availability are evolving quickly. Treat
+    the support matrix and pricing page as authoritative at deployment time.

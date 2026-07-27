@@ -41,6 +41,6 @@ resources.
 - Route findings to the correct project and workload owner.
 - Monitor newly created projects and organization-policy changes for drift.
 
-> [!NOTE]
-> Connecting an organization does not imply that every GCP service receives
-> runtime protection. CSPM breadth and workload-plan support are different.
+!!! note
+    Connecting an organization does not imply that every GCP service receives
+    runtime protection. CSPM breadth and workload-plan support are different.

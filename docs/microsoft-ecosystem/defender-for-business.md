@@ -33,7 +33,7 @@ eligible Microsoft 365 Business Premium subscriptions.
 - Maintain emergency contacts and an isolation recovery procedure.
 - Reassess licensing when organization size or security needs grow.
 
-> [!NOTE]
-> Defender for Business is not Defender for Cloud. Servers can be protected
-> through a Defender for Business server add-on or through Defender for Servers,
-> depending on architecture and licensing.
+!!! note
+   Defender for Business is not Defender for Cloud. Servers can be protected
+   through a Defender for Business server add-on or through Defender for Servers,
+   depending on architecture and licensing.

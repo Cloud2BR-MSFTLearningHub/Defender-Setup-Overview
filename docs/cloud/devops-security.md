@@ -34,6 +34,6 @@ DevOps, and GitLab, with capability differences documented by Microsoft.
 - Send remediation to the repository owner and fix source before redeployment.
 - Review connector permissions, inactive repositories, and coverage drift.
 
-> [!NOTE]
-> A DevOps connector does not protect a running workload by itself. Enable the
-> appropriate workload plan for runtime detection and response.
+!!! note
+  A DevOps connector does not protect a running workload by itself. Enable the
+  appropriate workload plan for runtime detection and response.

@@ -31,7 +31,7 @@ on Azure App Service by correlating platform and workload signals.
 - Keep deployment credentials out of source code and rotate exposed secrets.
 - Test application containment and slot rollback procedures.
 
-> [!NOTE]
-> App Service plan support is specific. Azure Functions and other serverless
-> hosting options can have different eligibility, telemetry, or protection.
-> Check the current support matrix rather than assuming all PaaS apps are covered.
+!!! note
+    App Service plan support is specific. Azure Functions and other serverless
+    hosting options can have different eligibility, telemetry, or protection.
+    Check the current support matrix rather than assuming all PaaS apps are covered.

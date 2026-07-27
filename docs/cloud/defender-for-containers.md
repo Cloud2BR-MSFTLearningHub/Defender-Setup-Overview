@@ -48,7 +48,7 @@ Kubernetes environments.
 - Track privileged workloads, exposed services, vulnerable images, and stale data.
 - Test response actions in a non-production namespace.
 
-> [!NOTE]
-> Defender recommends and detects; Azure Policy for Kubernetes, Gatekeeper, or
-> another admission controller performs preventive enforcement. ARO's managed
-> control plane also limits which components customers can directly manage.
+!!! note
+    Defender recommends and detects; Azure Policy for Kubernetes, Gatekeeper, or
+    another admission controller performs preventive enforcement. ARO's managed
+    control plane also limits which components customers can directly manage.

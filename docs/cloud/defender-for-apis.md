@@ -31,6 +31,6 @@ eligible APIs managed through supported Azure API Management tiers and regions.
 - Correlate API alerts with API Management, application, identity, and WAF logs.
 - Test key revocation, backend isolation, and safe API rollback.
 
-> [!IMPORTANT]
-> Enabling the subscription plan and onboarding individual APIs are distinct
-> steps. Unsupported or discovered APIs are not automatically protected.
+!!! warning "Important"
+    Enabling the subscription plan and onboarding individual APIs are distinct
+    steps. Unsupported or discovered APIs are not automatically protected.

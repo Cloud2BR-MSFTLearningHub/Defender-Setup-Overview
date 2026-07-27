@@ -41,6 +41,6 @@ an Azure subscription; protection remains resource- and plan-specific.
 - Route findings to the team that owns the AWS account and affected workload.
 - Remove stale accounts and update StackSets when connector requirements change.
 
-> [!IMPORTANT]
-> Do not grant connector permissions without cloud security and AWS platform
-> review. Organization-wide templates can affect every member account.
+!!! warning "Important"
+    Do not grant connector permissions without cloud security and AWS platform
+    review. Organization-wide templates can affect every member account.
