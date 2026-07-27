@@ -40,8 +40,8 @@ without risking the availability or safety of control systems.
 ## How it works
 
 Defender for IoT monitors operational-technology networks passively. A network
-sensor receives a mirrored copy of traffic, typically through a SPAN port or
-network TAP, and uses protocol-aware analysis to identify devices, map
+sensor receives a mirrored copy of traffic, typically through a switched port analyzer (SPAN) port or
+network test access point (TAP), and uses protocol-aware analysis to identify devices, map
 communication, and detect anomalies, all without sending a single packet to the
 equipment, which protects the availability and safety of control systems.
 
@@ -94,7 +94,7 @@ Detections include unauthorized device or programming changes, protocol anomalie
 
 ## Business example
 
-> An OT sensor sees an engineering workstation communicating with a PLC outside the
+> An operational technology (OT) sensor sees an engineering workstation communicating with a programmable logic controller (PLC) outside the
 > scheduled maintenance window. The SOC does not isolate the device; it contacts the
 > plant engineer, who confirms the activity is unauthorized. The plant follows its
 > approved incident procedure to remove the workstation from the control segment

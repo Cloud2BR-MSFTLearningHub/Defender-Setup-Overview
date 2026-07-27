@@ -39,10 +39,10 @@ of risk across every cloud your organization runs.
 
 ## How it works
 
-An AWS connector uses a CloudFormation stack, or a StackSet for an entire
-organization, to create least-privilege IAM roles that let Defender for Cloud read
+An Amazon Web Services (AWS) connector uses a CloudFormation stack, or a StackSet for an entire
+organization, to create least-privilege Identity and Access Management (IAM) roles that let Defender for Cloud read
 AWS configuration and, for selected plans, deploy the required components. From
-there, foundational CSPM assesses AWS resources against the multicloud benchmark,
+there, foundational cloud security posture management (CSPM) assesses AWS resources against the multicloud benchmark,
 and workload plans such as Defender for Servers and Defender for Containers extend
 to eligible EC2, EKS, and ECR resources.
 
@@ -83,13 +83,13 @@ one scale and attack paths that cross from Azure into AWS become visible.
 
 - **Connector model:** a single account uses a CloudFormation stack; an AWS Organization uses a StackSet so member accounts onboard automatically.
 - **Roles:** the templates create least-privilege IAM roles for CSPM reads and, per plan, for agentless scanning, Defender for Servers (via Arc and MDE), and Defender for Containers (EKS and ECR).
-- **Agentless scanning:** snapshots EBS volumes in the customer account and analyzes them in Microsoft's environment.
+- **Agentless scanning:** snapshots Amazon Elastic Block Store (EBS) volumes in the customer account and analyzes them in Microsoft's environment.
 - **CloudTrail:** required for control-plane detections; ensure a trail is enabled in scope.
 - **Permissions:** Security Admin / Owner in Azure plus AWS permissions to deploy the stack.
 
 ## Detections and operations
 
-CSPM maps AWS resources to the Microsoft Cloud Security Benchmark and standards such as CIS AWS and PCI DSS. Workload detections, such as EC2 through MDE and EKS through the sensor, map to MITRE ATT&CK just as they do in Azure. Monitor connector health, IAM role validity, region coverage, and scan freshness, and update StackSets when plan requirements change.
+CSPM maps AWS resources to the Microsoft Cloud Security Benchmark and standards such as Center for Internet Security (CIS) AWS and Payment Card Industry Data Security Standard (PCI DSS). Workload detections, such as Amazon Elastic Compute Cloud (EC2) through Microsoft Defender for Endpoint (MDE) and Amazon Elastic Kubernetes Service (EKS) through the sensor, map to MITRE ATT&CK just as they do in Azure. Monitor connector health, IAM role validity, region coverage, and scan freshness, and update StackSets when plan requirements change.
 
 !!! warning "Important"
     Do not grant connector permissions without cloud security and AWS platform

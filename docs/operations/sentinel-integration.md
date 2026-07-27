@@ -12,7 +12,7 @@
 
 [Back to the documentation hub](../index.md)
 
-Microsoft Sentinel is Microsoft's cloud-native SIEM and SOAR. Defender products
+Microsoft Sentinel is Microsoft's cloud-native security information and event management (SIEM) and security orchestration, automation, and response (SOAR). Defender products
 generate specialized detections and response context; Sentinel combines those
 signals with Microsoft and third-party data for broader analytics and automation.
 
@@ -39,7 +39,7 @@ correlation, retention, and automation across every security source you own.
 
 ## How it works
 
-When you connect Microsoft Defender XDR to Sentinel, incidents and alerts
+When you connect Microsoft Defender extended detection and response (XDR) to Sentinel, incidents and alerts
 synchronize between the two, so an incident can be worked in either portal without
 creating duplicates. Sentinel ingests that data alongside connectors for firewalls,
 networks, non-Microsoft clouds, and custom logs into a Log Analytics workspace,
@@ -79,7 +79,7 @@ same incident in a loop.
 
 - **Workspace:** Sentinel runs on a Log Analytics workspace; the Defender XDR connector synchronizes incidents and alerts between the two.
 - **Unified portal:** Sentinel is available inside the Microsoft Defender portal, giving one incident queue across Defender XDR and Sentinel.
-- **Connectors:** first-party connectors for Entra, Azure activity, and Microsoft 365, plus non-Microsoft sources such as CEF/Syslog, AWS, GCP, and custom logs.
+- **Connectors:** first-party connectors for Entra, Azure activity, and Microsoft 365, plus non-Microsoft sources such as Common Event Format (CEF)/Syslog, Amazon Web Services (AWS), Google Cloud Platform (GCP), and custom logs.
 - **Cost model:** billing is driven by ingested and retained data; use commitment tiers, basic and auxiliary logs, and archive tiers to manage cost.
 
 ## Analytics and automation

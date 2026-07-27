@@ -15,7 +15,7 @@
 Defender for Endpoint is Microsoft's enterprise endpoint security platform for
 prevention, endpoint detection and response, investigation, and remediation.
 It supports eligible Windows, macOS, Linux, Android, and iOS platforms, combining
-next-generation antivirus, attack surface reduction, and behavioral EDR in one
+next-generation antivirus, attack surface reduction, and behavioral endpoint detection and response (EDR) in one
 sensor.
 
 ## Why enable it

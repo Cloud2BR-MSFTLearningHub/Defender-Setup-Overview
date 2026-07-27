@@ -15,9 +15,9 @@
 
 Microsoft Defender is Microsoft's security product family. The correct product
 depends on whether the asset is a cloud resource, device, identity, mailbox,
-SaaS application, or security event.
+software as a service (SaaS) application, or security event.
 
-![Microsoft Defender for Cloud CNAPP capabilities across cloud environments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-cloud-introduction/defender-plans.png)
+![Microsoft Defender for Cloud cloud-native application protection platform (CNAPP) capabilities across cloud environments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-cloud-introduction/defender-plans.png)
 
 *Source: [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction).* 
 
@@ -26,29 +26,29 @@ SaaS application, or security event.
 Each Defender product exists because a different part of the environment is a
 distinct attack surface. Turning the right ones on replaces blind spots and
 disconnected point tools with layered, correlated protection: posture management
-prevents misconfigurations, workload plans detect runtime attacks, and Defender
-XDR ties the signals into incidents your team can actually act on. The pages in
+prevents misconfigurations, workload plans detect runtime attacks, and Microsoft
+Defender extended detection and response (XDR) ties the signals into incidents your team can actually act on. The pages in
 this hub each explain the specific value of enabling that protection.
 
 ## The four layers
 
 | Layer | Primary role | Examples |
 | --- | --- | --- |
-| Microsoft Defender for Cloud | CNAPP: posture, DevSecOps, and workload protection | Azure, AWS, GCP, Arc-enabled resources |
-| Microsoft Defender XDR | Unified detection and response | Endpoint, Identity, Office 365, Cloud Apps |
-| Microsoft Sentinel | Cloud-native SIEM and SOAR | Analytics, retention, hunting, playbooks, third-party data |
+| Microsoft Defender for Cloud | Cloud-native application protection platform (CNAPP): cloud security posture management (CSPM), development, security, and operations (DevSecOps), and cloud workload protection platform (CWPP) | Azure, AWS, GCP, Arc-enabled resources |
+| Microsoft Defender extended detection and response (XDR) | Unified detection and response | Endpoint, Identity, Office 365, Cloud Apps |
+| Microsoft Sentinel | Cloud-native security information and event management (SIEM) and security orchestration, automation, and response (SOAR) | Analytics, retention, hunting, playbooks, third-party data |
 | Policy and management | Prevention and remediation | Azure Policy, Intune, Conditional Access, Gatekeeper, Logic Apps |
 
 ## Defender for Cloud
 
 Defender for Cloud combines three cloud-security disciplines:
 
-- **CSPM** continuously evaluates configuration and exposure. Foundational CSPM
+- **Cloud security posture management (CSPM)** continuously evaluates configuration and exposure. Foundational CSPM
   is free; Defender CSPM adds capabilities such as attack paths, cloud security
   explorer, governance, and agentless scanning where supported.
-- **DevSecOps** connects GitHub, Azure DevOps, and GitLab so code, secret, and
+- **Development, security, and operations (DevSecOps)** connects GitHub, Azure DevOps, and GitLab so code, secret, and
   infrastructure-as-code findings can be related to deployed resources.
-- **CWPP** adds workload-specific threat protection through plans for servers,
+- **Cloud workload protection platform (CWPP)** adds workload-specific threat protection through plans for servers,
   containers, storage, databases, App Service, Key Vault, Resource Manager,
   APIs, and AI workloads.
 
@@ -90,7 +90,7 @@ response actions. They do not automatically rewrite every unsafe cloud resource.
 | Product family | Primary portal | Query and export |
 | --- | --- | --- |
 | Defender for Cloud plans | Microsoft Defender for Cloud in the Azure portal | Continuous export to Log Analytics (`SecurityAlert`) or Event Hubs |
-| Defender XDR products | Microsoft Defender portal | Advanced hunting (KQL) and the streaming API |
+| Defender XDR products | Microsoft Defender portal | Advanced hunting (Kusto Query Language (KQL)) and the streaming application programming interface (API) |
 | Microsoft Sentinel | Defender portal or Azure portal | Log Analytics workspace, analytics rules, and workbooks |
 | Entra ID Protection | Microsoft Entra admin center | Sentinel connector and Microsoft Graph |
 

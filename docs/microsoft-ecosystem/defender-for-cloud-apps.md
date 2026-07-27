@@ -22,9 +22,9 @@ session and access controls with Microsoft Entra Conditional Access.
 
 ## Why enable it
 
-Employees adopt SaaS apps faster than security can review them, and sensitive data
+Employees adopt software as a service (SaaS) apps faster than security can review them, and sensitive data
 quietly spreads across tools nobody sanctioned. Defender for Cloud Apps reveals
-that shadow IT, scores each app's risk, and can control risky sessions and OAuth
+that shadow IT, scores each app's risk, and can control risky sessions and Open Authorization (OAuth)
 grants in real time.
 
 | Without Defender for Cloud Apps | With it enabled |

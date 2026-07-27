@@ -25,7 +25,7 @@ signal from trillions of authentications to spot compromised identities in real 
 Stolen credentials are the most common way into a tenant, and static rules cannot
 tell a legitimate sign-in from an attacker using the right password. ID Protection
 scores risk continuously and lets Conditional Access respond automatically,
-prompting for MFA, forcing a password reset, or blocking access.
+prompting for multifactor authentication (MFA), forcing a password reset, or blocking access.
 
 | Without Entra ID Protection | With risk policies enabled |
 | --- | --- |

@@ -65,7 +65,7 @@ supported machines or Kubernetes clusters in clouds other than AWS and GCP.
 ## Connect
 
 1. Verify supported operating systems, Kubernetes distributions, regions, and egress.
-2. Design Azure tenant, subscription, resource group, region, tags, and RBAC placement.
+2. Design Azure tenant, subscription, resource group, region, tags, and role-based access control (RBAC) placement.
 3. Arc-enable a pilot server or cluster using the documented secure onboarding method.
 4. Enable the corresponding Defender plan in the Arc resource's subscription.
 5. Deploy required extensions and confirm their health.
@@ -73,7 +73,7 @@ supported machines or Kubernetes clusters in clouds other than AWS and GCP.
 
 ## Verify and operate
 
-- Reconcile Arc inventory with the source CMDB or cloud inventory.
+- Reconcile Arc inventory with the source configuration management database (CMDB) or cloud inventory.
 - Monitor disconnected agents, extension failures, certificates, and proxy changes.
 - Confirm Defender telemetry in both Defender for Cloud and the Defender portal.
 - Include Arc, Azure Monitor, data-transfer, and Defender charges in cost estimates.
@@ -111,7 +111,7 @@ extensions, and confirms that the asset is no longer receiving policies or
 incurring applicable service charges.
 
 !!! warning "Important"
-    Azure Arc does not make every third-party PaaS service eligible for an Azure
+    Azure Arc does not make every third-party platform as a service (PaaS) offering eligible for an Azure
     Defender workload plan. It projects supported servers, Kubernetes, data, and
     selected services according to each product's support matrix.
 

@@ -29,7 +29,7 @@ across every cloud and on-premises estate from a single plan.
 
 | Without Defender for Servers | With the plan enabled |
 | --- | --- |
-| VMs rely on inconsistent, per-team antivirus | Unified Defender for Endpoint EDR across Windows and Linux |
+| Virtual machines (VMs) rely on inconsistent, per-team antivirus | Unified Defender for Endpoint endpoint detection and response (EDR) across Windows and Linux |
 | Vulnerabilities are discovered on a periodic scan cycle | Integrated vulnerability assessment reports continuously |
 | Non-Azure servers sit outside central security | Arc-connected AWS, GCP, and on-premises servers are covered |
 | A disabled agent means a blind spot | Agentless disk scanning still evaluates the machine |
@@ -41,7 +41,7 @@ management, and hardening to every server, not just the ones inside Azure.
 
 Defender for Servers combines two layers. The first is Microsoft Defender for
 Endpoint, whose sensor runs on the machine to provide next-generation antivirus,
-attack surface reduction, and behavioral endpoint detection and response. Its
+attack surface reduction, and behavioral endpoint detection and response (EDR). Its
 alerts and device data flow into both Defender for Cloud and the Microsoft
 Defender portal, so a server incident sits next to the endpoint and identity
 signals it relates to.
@@ -84,7 +84,7 @@ pricing and regional-support checks.
 
 ## Architecture and prerequisites
 
-- **Endpoint sensor:** Plan 1 and Plan 2 provision Microsoft Defender for Endpoint through the unified MDE extension, with automatic onboarding for Azure and Arc machines.
+- **Endpoint sensor:** Plan 1 and Plan 2 provision Microsoft Defender for Endpoint through the unified Microsoft Defender for Endpoint (MDE) extension, with automatic onboarding for Azure and Arc machines.
 - **Agentless disk scanning:** snapshot-based assessment evaluates vulnerabilities, exposed secrets, and malware without an in-guest agent; it complements, not replaces, the MDE sensor.
 - **Data collection:** the Azure Monitor Agent (AMA) supports capabilities such as file integrity monitoring; the legacy Log Analytics agent (MMA) is retired, so new deployments should standardize on AMA or agentless.
 - **Connectivity:** machines need outbound access to Defender for Endpoint and Defender for Cloud service endpoints; closed networks require the documented proxy or private configuration.
@@ -97,7 +97,7 @@ Alerts map to MITRE ATT&CK so responders can reason in tactic terms:
 | Example detection | ATT&CK tactic |
 | --- | --- |
 | Suspicious PowerShell or shell command execution | Execution |
-| Credential-dumping behavior (for example LSASS access) | Credential Access |
+| Credential-dumping behavior (for example Local Security Authority Subsystem Service (LSASS) access) | Credential Access |
 | Reverse shell or anomalous outbound connection | Command and Control |
 | Web shell or scheduled-task persistence | Persistence |
 | Sign-in from a known-malicious IP | Initial Access |

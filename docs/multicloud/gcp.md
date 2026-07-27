@@ -38,9 +38,9 @@ model as Azure and AWS, so risk is compared on one scale.
 
 ## How it works
 
-A GCP connector relies on workload identity federation and dedicated service
+A Google Cloud Platform (GCP) connector relies on workload identity federation and dedicated service
 accounts to grant Defender for Cloud read access without long-lived keys.
-Foundational CSPM then evaluates GCP resources against the multicloud benchmark,
+Foundational cloud security posture management (CSPM) then evaluates GCP resources against the multicloud benchmark,
 and workload plans extend Defender for Servers and Defender for Containers to
 eligible Compute Engine, GKE, and Artifact Registry resources.
 
@@ -68,7 +68,7 @@ same attack paths and Cloud Security Explorer queries.
 ## Verify and operate
 
 - Confirm connector health, project coverage, regions, and scan freshness.
-- Verify service accounts, workload identity federation, and required APIs.
+- Verify service accounts, workload identity federation, and required application programming interfaces (APIs).
 - Review GCP API usage, data handling, and Defender plan charges.
 - Route findings to the correct project and workload owner.
 - Monitor newly created projects and organization-policy changes for drift.
@@ -77,7 +77,7 @@ same attack paths and Cloud Security Explorer queries.
 
 - **Connector model:** onboard a single project or an entire organization; the onboarding runs a Google Cloud deployment that provisions the required service accounts.
 - **Identity:** uses workload identity federation, so Defender for Cloud authenticates without long-lived service-account keys.
-- **Plans:** foundational CSPM plus Defender for Servers (Compute Engine via Arc and MDE) and Defender for Containers (GKE and Artifact Registry) where eligible.
+- **Plans:** foundational CSPM plus Defender for Servers (Compute Engine via Arc and Microsoft Defender for Endpoint (MDE)) and Defender for Containers (Google Kubernetes Engine (GKE) and Artifact Registry) where eligible.
 - **APIs and scanning:** onboarding enables the required Google Cloud APIs; agentless scanning snapshots persistent disks.
 - **Permissions:** Security Admin / Owner in Azure plus Google Cloud roles to run the deployment.
 
@@ -100,7 +100,7 @@ CSPM maps GCP resources to the Microsoft Cloud Security Benchmark and standards 
 
 ## Business example
 
-> A GCP organization connection discovers a Compute Engine VM with a public SSH
+> A GCP organization connection discovers a Compute Engine virtual machine (VM) with a public Secure Shell (SSH)
 > rule and an outdated operating system. The cloud team closes SSH to a controlled
 > administration path, Arc-enables the VM, and enables Defender for Servers for the
 > project. They confirm the resulting MDE device record and vulnerability finding

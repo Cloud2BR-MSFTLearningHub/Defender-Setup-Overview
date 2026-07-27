@@ -61,7 +61,7 @@ threat is correlated with the endpoint and identity it touches.
 
 ## Configure
 
-1. Confirm licenses and accepted domains; configure SPF, DKIM, and DMARC.
+1. Confirm licenses and accepted domains; configure Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC).
 2. Apply Standard or Strict preset security policies to a pilot group.
 3. Review anti-phishing, anti-malware, anti-spam, Safe Links, and Safe Attachments.
 4. Configure user reporting, submissions, quarantine, alerts, and notifications.
@@ -94,7 +94,7 @@ threat is correlated with the endpoint and identity it touches.
 
 ## Architecture and prerequisites
 
-- **Layering:** Defender for Office 365 builds on Exchange Online Protection; native deployment on Exchange Online needs no MX change.
+- **Layering:** Defender for Office 365 builds on Exchange Online Protection; native deployment on Exchange Online needs no Mail Exchange (MX) record change.
 - **Safe Attachments:** sandbox detonation before delivery, with dynamic delivery to reduce latency.
 - **Safe Links:** URL rewrite and time-of-click checking, including in Teams and Office apps.
 - **Policies:** Standard and Strict preset policies apply Microsoft-recommended settings; email authentication (SPF, DKIM, DMARC) underpins anti-spoofing.
