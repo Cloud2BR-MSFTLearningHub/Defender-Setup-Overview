@@ -19,8 +19,8 @@ remediation. Match the tool to the decision being made.
 ## Why it matters
 
 Detection without response just produces alerts faster than people can act on them.
-Automation closes that gap — handling repetitive triage, enrichment, and
-containment in seconds — while keeping humans in control of disruptive actions.
+Automation closes that gap by handling repetitive triage, enrichment, and
+containment in seconds while keeping humans in control of disruptive actions.
 The value comes from pairing the right enforcement tool with each decision.
 
 | Manual-only operations | With measured automation |
@@ -82,9 +82,9 @@ response while keeping human approval on the actions that can disrupt production
 
 ## Worked example
 
-A high-severity Key Vault alert triggers a Logic App. The playbook enriches the
-alert with the vault owner, resource tags, and recent sign-in context, then opens
-a ticket and sends the owner an approval request. On approval, it removes the
-suspect role assignment, records the action in the incident, and starts a secret
-rotation task; without approval, it preserves the evidence and escalates to the
-on-call analyst.
+> A high-severity Key Vault alert triggers a Logic App. The playbook enriches the
+> alert with the vault owner, resource tags, and recent sign-in context, then opens
+> a ticket and sends the owner an approval request. On approval, it removes the
+> suspect role assignment, records the action in the incident, and starts a secret
+> rotation task; without approval, it preserves the evidence and escalates to the
+> on-call analyst.

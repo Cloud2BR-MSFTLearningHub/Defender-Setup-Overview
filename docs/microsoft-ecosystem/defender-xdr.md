@@ -20,7 +20,7 @@ stitches the related evidence together automatically.
 
 ## Why enable it
 
-Modern attacks cross domains — a phishing email leads to a stolen identity, which
+Modern attacks cross domains: a phishing email leads to a stolen identity, which
 leads to an endpoint, which reaches the cloud. Reviewing each product separately
 hides that story. Defender XDR correlates the signals into one incident and can
 respond automatically, cutting the time attackers have to act.
@@ -96,6 +96,22 @@ DeviceProcessEvents
 
 Save high-value queries as custom detection rules so novel techniques become first-class alerts that feed the same incident correlation.
 
+Find high-severity alerts with account, mail, URL, or device evidence, then use
+the shared alert ID to pivot to the related incident:
+
+```kusto
+AlertInfo
+| where Timestamp > ago(24h)
+| where Severity in~ ("High", "Medium")
+| join kind=inner (
+    AlertEvidence
+    | where EntityType in~ ("Account", "Device", "MailMessage", "Url")
+    | project AlertId, EntityType, EntityValue
+) on AlertId
+| project Timestamp, AlertId, Title, Severity, ServiceSource, EntityType, EntityValue
+| order by Timestamp desc
+```
+
 !!! note
     Defender XDR is the correlation and response layer. It does not create missing
     telemetry from a Defender product that has not been licensed or deployed.
@@ -111,8 +127,8 @@ Save high-value queries as custom detection rules so novel techniques become fir
 
 ## Worked example
 
-A phishing email delivers a malicious link to a finance user. Defender for Office
-365 records the click, Defender for Endpoint detects the downloaded payload, and
-Entra records a risky sign-in. Defender XDR groups the three alerts into one
-incident; automated investigation isolates the device while the SOC resets the
-account and removes the message from other mailboxes.
+> A phishing email delivers a malicious link to a finance user. Defender for Office
+> 365 records the click, Defender for Endpoint detects the downloaded payload, and
+> Entra records a risky sign-in. Defender XDR groups the three alerts into one
+> incident; automated investigation isolates the device while the SOC resets the
+> account and removes the message from other mailboxes.

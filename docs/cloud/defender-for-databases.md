@@ -23,7 +23,7 @@ injection, brute force, privilege abuse, and exfiltration.
 
 ## Why enable it
 
-Attackers who reach a database rarely trigger platform alarms — they use valid
+Attackers who reach a database rarely trigger platform alarms; they use valid
 queries and stolen credentials. Defender for Databases applies behavioral
 analytics and threat intelligence to flag anomalous access and known attack
 patterns against the exact engine you run.
@@ -113,9 +113,9 @@ Detections are per-engine; validate only with an approved, non-production test. 
 
 ## Worked example
 
-A production Azure SQL Database raises an alert for repeated failed logins from a
-new internet address followed by a successful privileged login. The database
-owner compares the alert with SQL auditing and Entra sign-in evidence, rotates the
-application credential, and restricts the firewall to the approved private
-endpoint. The incident remains linked to the application and identity evidence in
-Defender XDR.
+> A production Azure SQL Database raises an alert for repeated failed logins from a
+> new internet address followed by a successful privileged login. The database
+> owner compares the alert with SQL auditing and Entra sign-in evidence, rotates the
+> application credential, and restricts the firewall to the approved private
+> endpoint. The incident remains linked to the application and identity evidence in
+> Defender XDR.

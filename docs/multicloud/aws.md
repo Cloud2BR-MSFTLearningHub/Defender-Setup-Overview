@@ -39,8 +39,8 @@ of risk across every cloud your organization runs.
 
 ## How it works
 
-An AWS connector uses a CloudFormation stack — or a StackSet for an entire
-organization — to create least-privilege IAM roles that let Defender for Cloud read
+An AWS connector uses a CloudFormation stack, or a StackSet for an entire
+organization, to create least-privilege IAM roles that let Defender for Cloud read
 AWS configuration and, for selected plans, deploy the required components. From
 there, foundational CSPM assesses AWS resources against the multicloud benchmark,
 and workload plans such as Defender for Servers and Defender for Containers extend
@@ -89,7 +89,7 @@ one scale and attack paths that cross from Azure into AWS become visible.
 
 ## Detections and operations
 
-CSPM maps AWS resources to the Microsoft Cloud Security Benchmark and standards such as CIS AWS and PCI DSS. Workload detections — EC2 through MDE, EKS through the sensor — map to MITRE ATT&CK just as they do in Azure. Monitor connector health, IAM role validity, region coverage, and scan freshness, and update StackSets when plan requirements change.
+CSPM maps AWS resources to the Microsoft Cloud Security Benchmark and standards such as CIS AWS and PCI DSS. Workload detections, such as EC2 through MDE and EKS through the sensor, map to MITRE ATT&CK just as they do in Azure. Monitor connector health, IAM role validity, region coverage, and scan freshness, and update StackSets when plan requirements change.
 
 !!! warning "Important"
     Do not grant connector permissions without cloud security and AWS platform
@@ -106,8 +106,8 @@ CSPM maps AWS resources to the Microsoft Cloud Security Benchmark and standards 
 
 ## Worked example
 
-An AWS Organization connects through a StackSet and Defender CSPM flags an S3
-bucket with public read access in a sandbox account. The account owner removes the
-public ACL, applies an Organizations service-control policy to prevent future
-public buckets, and uses the unified secure score to demonstrate the improvement
-alongside Azure remediation work.
+> An AWS Organization connects through a StackSet and Defender CSPM flags an S3
+> bucket with public read access in a sandbox account. The account owner removes the
+> public ACL, applies an Organizations service-control policy to prevent future
+> public buckets, and uses the unified secure score to demonstrate the improvement
+> alongside Azure remediation work.

@@ -39,8 +39,8 @@ and automated response without needing a dedicated security operations center.
 
 ## How it works
 
-Defender for Business packages the Defender for Endpoint engine — next-generation
-antivirus, attack surface reduction, and behavioral EDR — into a streamlined
+Defender for Business packages the Defender for Endpoint engine, including
+next-generation antivirus, attack surface reduction, and behavioral EDR, into a streamlined
 experience with security-hardened defaults and a guided setup wizard, so protection
 is effective without deep configuration. Devices are onboarded through Microsoft
 Intune or a simple local script across Windows, macOS, iOS, and Android.
@@ -96,8 +96,8 @@ Run the documented detection test on a pilot device, review incidents and vulner
 
 ## Worked example
 
-A 75-person company on Microsoft 365 Business Premium onboards a pilot group of
-ten Windows laptops through Intune. Defender for Business contains a simulated
-ransomware-like process automatically, the IT generalist verifies recovery, and
-the company uses the same policy assignment to onboard the remaining devices in
-waves rather than relying on each employee to install protection manually.
+> A 75-person company on Microsoft 365 Business Premium onboards a pilot group of
+> ten Windows laptops through Intune. Defender for Business contains a simulated
+> ransomware-like process automatically, the IT generalist verifies recovery, and
+> the company uses the same policy assignment to onboard the remaining devices in
+> waves rather than relying on each employee to install protection manually.

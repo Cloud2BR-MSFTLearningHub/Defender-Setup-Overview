@@ -69,9 +69,9 @@ actual charges, then establish budgets and anomaly alerts before broad rollout.
 
 ## Worked example
 
-A team needs runtime protection for 120 Azure and Arc-enabled production servers
-but only posture visibility for a separate development subscription. It enables
-the selected Defender for Servers tier on a 12-server pilot, confirms the
-extension and MDE device coverage, and compares the resulting bill with its
-estimate. It then applies the plan at the production management-group scope and
-sets a budget alert before expanding the Arc rollout.
+> A team needs runtime protection for 120 Azure and Arc-enabled production servers
+> but only posture visibility for a separate development subscription. It enables
+> the selected Defender for Servers tier on a 12-server pilot, confirms the
+> extension and MDE device coverage, and compares the resulting bill with its
+> estimate. It then applies the plan at the production management-group scope and
+> sets a budget alert before expanding the Arc rollout.

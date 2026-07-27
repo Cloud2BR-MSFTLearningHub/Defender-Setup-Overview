@@ -100,8 +100,8 @@ CSPM maps GCP resources to the Microsoft Cloud Security Benchmark and standards 
 
 ## Worked example
 
-A GCP organization connection discovers a Compute Engine VM with a public SSH
-rule and an outdated operating system. The cloud team closes SSH to a controlled
-administration path, Arc-enables the VM, and enables Defender for Servers for the
-project. They confirm the resulting MDE device record and vulnerability finding
-appear in the same portal as their Azure servers.
+> A GCP organization connection discovers a Compute Engine VM with a public SSH
+> rule and an outdated operating system. The cloud team closes SSH to a controlled
+> administration path, Arc-enables the VM, and enables Defender for Servers for the
+> project. They confirm the resulting MDE device record and vulnerability finding
+> appear in the same portal as their Azure servers.

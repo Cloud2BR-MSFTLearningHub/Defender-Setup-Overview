@@ -102,8 +102,8 @@ the repository and pipeline owners who can actually resolve them.
 
 ## Worked example
 
-A repository scan finds an Azure service-principal secret in an old infrastructure
-template. The team revokes the credential immediately, replaces it with workload
-identity federation, and makes secret scanning a required pull-request check. The
-code-to-cloud link identifies the deployed resource, allowing the team to verify
-that no remaining workload depends on the revoked secret.
+> A repository scan finds an Azure service-principal secret in an old infrastructure
+> template. The team revokes the credential immediately, replaces it with workload
+> identity federation, and makes secret scanning a required pull-request check. The
+> code-to-cloud link identifies the deployed resource, allowing the team to verify
+> that no remaining workload depends on the revoked secret.

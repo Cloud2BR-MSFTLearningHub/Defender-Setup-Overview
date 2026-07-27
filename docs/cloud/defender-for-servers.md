@@ -126,8 +126,8 @@ Alerts surface in Defender for Cloud and the Microsoft Defender portal and can b
 
 ## Worked example
 
-An Arc-enabled SQL Server in a datacenter appears in Azure inventory but has no
-Defender for Endpoint device record. The team enables Defender for Servers Plan 2
-on the Arc resource's subscription, verifies the MDE extension reports healthy,
-and uses the documented detection test on a maintenance-window clone. They then
-add a policy initiative so future Arc servers are onboarded automatically.
+> An Arc-enabled SQL Server in a datacenter appears in Azure inventory but has no
+> Defender for Endpoint device record. The team enables Defender for Servers Plan 2
+> on the Arc resource's subscription, verifies the MDE extension reports healthy,
+> and uses the documented detection test on a maintenance-window clone. They then
+> add a policy initiative so future Arc servers are onboarded automatically.

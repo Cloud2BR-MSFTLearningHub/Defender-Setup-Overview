@@ -75,13 +75,13 @@ that matter most.
 *Source: [Overview of Defender for APIs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-apis-introduction).*
 
 - **Platform prerequisite:** APIs must be published through supported Azure API Management tiers and regions; enabling the plan makes them eligible, and you then onboard specific APIs.
-- **Traffic analysis:** Defender samples API Management traffic to build the inventory and run ML detections — no gateway change or agent.
+- **Traffic analysis:** Defender samples API Management traffic to build the inventory and run ML detections. No gateway change or agent is required.
 - **Capacity model:** the plan covers a number of API requests; onboard the most sensitive, internet-facing APIs first.
 - **Permissions:** Security Admin / Owner to enable; API Management contributor to onboard APIs.
 
 ## Detections and OWASP API risks
 
-Detections align with the OWASP API Security Top 10 — for example abnormal data exposure (excessive response payloads), broken object-level authorization probing (enumeration), and suspicious spikes from a single client. Feed alerts to Sentinel and correlate with API Management `ApiManagementGatewayLogs` and any WAF logs for full request context, then respond by revoking keys, tightening product and rate-limit policies, or isolating the backend.
+Detections align with the OWASP API Security Top 10, including abnormal data exposure (excessive response payloads), broken object-level authorization probing (enumeration), and suspicious spikes from a single client. Feed alerts to Sentinel and correlate with API Management `ApiManagementGatewayLogs` and any WAF logs for full request context, then respond by revoking keys, tightening product and rate-limit policies, or isolating the backend.
 
 !!! warning "Important"
     Enabling the subscription plan and onboarding individual APIs are distinct
@@ -98,8 +98,8 @@ Detections align with the OWASP API Security Top 10 — for example abnormal dat
 
 ## Worked example
 
-An API Management service exposes both public catalog APIs and a payment API. The
-team onboards the payment API first, assigns it high criticality, and observes a
-spike of object-ID enumeration from one client. They revoke the compromised key,
-apply a stricter rate-limit policy, and create a backlog item to enforce
-object-level authorization in the backend.
+> An API Management service exposes both public catalog APIs and a payment API. The
+> team onboards the payment API first, assigns it high criticality, and observes a
+> spike of object-ID enumeration from one client. They revoke the compromised key,
+> apply a stricter rate-limit policy, and create a backlog item to enforce
+> object-level authorization in the backend.

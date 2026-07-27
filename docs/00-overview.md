@@ -112,9 +112,9 @@ Alerts from every layer can converge in Defender XDR and Microsoft Sentinel, whi
 
 ## Worked example
 
-An attacker compromises a developer identity and uses it to deploy a public
-container workload. Defender CSPM identifies the exposed configuration, Defender
-for Containers detects suspicious activity in the pod, and Defender XDR links the
-developer's risky sign-in to the workload incident. The response team revokes the
-identity session, contains the workload through the approved Kubernetes process,
-and adds an admission control to prevent the same public configuration.
+> An attacker compromises a developer identity and uses it to deploy a public
+> container workload. Defender CSPM identifies the exposed configuration, Defender
+> for Containers detects suspicious activity in the pod, and Defender XDR links the
+> developer's risky sign-in to the workload incident. The response team revokes the
+> identity session, contains the workload through the approved Kubernetes process,
+> and adds an admission control to prevent the same public configuration.

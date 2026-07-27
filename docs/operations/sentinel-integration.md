@@ -125,8 +125,8 @@ setting, table schema, or Defender integration changes.
 
 ## Worked example
 
-A SOC wants to detect a stolen cloud credential used from an unusual network.
-Sentinel correlates a Defender for Cloud Resource Manager alert, an Entra risky
-sign-in, and a firewall connection record that Defender XDR alone does not retain.
-An automation rule assigns the single incident to cloud operations and sends a
-playbook for approval before it disables the identity and blocks the source.
+> A SOC wants to detect a stolen cloud credential used from an unusual network.
+> Sentinel correlates a Defender for Cloud Resource Manager alert, an Entra risky
+> sign-in, and a firewall connection record that Defender XDR alone does not retain.
+> An automation rule assigns the single incident to cloud operations and sends a
+> playbook for approval before it disables the identity and blocks the source.

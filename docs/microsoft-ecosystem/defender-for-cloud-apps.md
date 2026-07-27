@@ -40,7 +40,7 @@ estate with real-time control over risky access and data movement.
 ## How it works
 
 Defender for Cloud Apps operates as a cloud access security broker. Cloud Discovery
-analyzes traffic logs — often from Defender for Endpoint — to reveal which SaaS
+analyzes traffic logs, often from Defender for Endpoint, to reveal which SaaS
 apps are in use and score each app's risk, exposing shadow IT. App connectors then
 use the APIs of sanctioned apps to pull activity logs, detect anomalies, and apply
 file and governance policies.
@@ -87,15 +87,15 @@ and behavior. Its signals also flow into Defender XDR.
 
 ## Worked example
 
-Cloud Discovery identifies an unsanctioned file-sharing service used by a product
-team. Security reviews its risk score and replaces it with an approved connector.
-For a sanctioned SaaS app, a Conditional Access App Control session policy blocks
-downloads to unmanaged devices while allowing browser-only access, reducing data
-exposure without stopping the team's workflow.
+> Cloud Discovery identifies an unsanctioned file-sharing service used by a product
+> team. Security reviews its risk score and replaces it with an approved connector.
+> For a sanctioned SaaS app, a Conditional Access App Control session policy blocks
+> downloads to unmanaged devices while allowing browser-only access, reducing data
+> exposure without stopping the team's workflow.
 
 ## Architecture and prerequisites
 
-- **Cloud Discovery:** analyzes traffic logs — native from Defender for Endpoint, or uploaded from proxies and firewalls — to reveal and risk-score SaaS apps.
+- **Cloud Discovery:** analyzes traffic logs from Defender for Endpoint or logs uploaded from proxies and firewalls to reveal and risk-score SaaS apps.
 - **App connectors:** API-based connectors to sanctioned apps pull activity, files, and configuration for anomaly detection and governance.
 - **Conditional Access App Control:** routes selected sessions through a reverse proxy, integrated with Entra Conditional Access, to enforce real-time session controls.
 - **App Governance:** monitors OAuth apps for risky permissions and behavior.
@@ -110,6 +110,17 @@ CloudAppEvents
 | where ActionType == "FileDownloaded"
 | summarize downloads = count() by AccountUpn, Application, bin(Timestamp, 1h)
 | where downloads > 100
+```
+
+Find activity from a specific source address across connected applications:
+
+```kusto
+CloudAppEvents
+| where Timestamp > ago(24h)
+| where IPAddress == "203.0.113.10"
+| summarize actions = count(), applications = make_set(Application, 20)
+  by AccountUpn, IPAddress, bin(Timestamp, 1h)
+| order by actions desc
 ```
 
 Pilot session policies in report-only mode with emergency-access accounts excluded, and reauthorize expiring connectors on a schedule.

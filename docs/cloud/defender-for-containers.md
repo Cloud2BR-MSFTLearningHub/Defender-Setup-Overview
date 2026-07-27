@@ -24,7 +24,7 @@ Kubernetes environments.
 
 Containers move fast, scale automatically, and are often built from third-party
 images, which makes vulnerable or misconfigured workloads easy to miss. Defender
-for Containers covers the full lifecycle — build, registry, and runtime — so a
+for Containers covers the full lifecycle: build, registry, and runtime. As a result, a
 known-vulnerable image or a suspicious in-cluster action is caught early.
 
 | Without Defender for Containers | With the plan enabled |
@@ -146,8 +146,8 @@ alert title.
 
 ## Worked example
 
-A registry scan identifies a critical vulnerability in an image used by an AKS
-production deployment. The security team opens a remediation task for the image
-owner, while the platform team adds an Azure Policy audit rule for that image tag.
-After the patched image is released, the policy is moved to deny mode so future
-deployments cannot use images with the same prohibited condition.
+> A registry scan identifies a critical vulnerability in an image used by an AKS
+> production deployment. The security team opens a remediation task for the image
+> owner, while the platform team adds an Azure Policy audit rule for that image tag.
+> After the patched image is released, the policy is moved to deny mode so future
+> deployments cannot use images with the same prohibited condition.

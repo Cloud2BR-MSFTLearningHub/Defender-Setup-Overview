@@ -25,7 +25,7 @@ Exchange Online, Teams, SharePoint, and OneDrive capabilities.
 Email and collaboration are the number-one entry point for attacks, and business
 email compromise is among the costliest. Defender for Office 365 adds time-of-click
 link protection, attachment detonation, and impersonation defense that basic spam
-filtering does not provide — plus tools to hunt and remediate what gets through.
+filtering does not provide, plus tools to hunt and remediate what gets through.
 
 | Without Defender for Office 365 | With Plan 1 or Plan 2 enabled |
 | --- | --- |
@@ -34,14 +34,14 @@ filtering does not provide — plus tools to hunt and remediate what gets throug
 | Impersonation and BEC are hard to catch | Impersonation and spoof intelligence flag them |
 | Post-delivery cleanup is manual | Explorer and automated response hunt and remove threats |
 
-**Value in one line:** it defends the most-attacked surface — the inbox — with
+**Value in one line:** it defends the most-attacked surface, the inbox, with
 active detonation, click-time protection, and fast post-delivery remediation.
 
 ## How it works
 
 Defender for Office 365 layers on top of Exchange Online Protection. Safe
 Attachments detonates inbound files in an isolated sandbox before delivery, and
-Safe Links rewrites URLs so they are re-checked at the moment a user clicks —
+Safe Links rewrites URLs so they are re-checked at the moment a user clicks,
 catching links that were weaponized after the message arrived. Impersonation and
 spoof-intelligence models defend against business email compromise, and protection
 extends to links and files shared in Teams, SharePoint, and OneDrive.
@@ -86,11 +86,11 @@ threat is correlated with the endpoint and identity it touches.
 
 ## Worked example
 
-Safe Links allows a URL at delivery, but the destination is weaponized later.
-When a user clicks it, Defender blocks the connection and the SOC uses Threat
-Explorer to find identical messages. Automated investigation removes the emails
-from remaining mailboxes, while the team adds the sender pattern to its phishing
-awareness review.
+> Safe Links allows a URL at delivery, but the destination is weaponized later.
+> When a user clicks it, Defender blocks the connection and the SOC uses Threat
+> Explorer to find identical messages. Automated investigation removes the emails
+> from remaining mailboxes, while the team adds the sender pattern to its phishing
+> awareness review.
 
 ## Architecture and prerequisites
 
@@ -109,6 +109,18 @@ UrlClickEvents
 | where Timestamp > ago(7d)
 | where ActionType == "ClickAllowed"
 | project Timestamp, Url, AccountUpn, NetworkMessageId
+```
+
+Find phishing messages that were delivered and retain the message identifier for
+Threat Explorer or remediation review:
+
+```kusto
+EmailEvents
+| where Timestamp > ago(7d)
+| where ThreatTypes has "Phish"
+| project Timestamp, NetworkMessageId, SenderFromAddress, RecipientEmailAddress,
+  Subject, DeliveryAction, DeliveryLocation, ThreatTypes
+| order by Timestamp desc
 ```
 
 Use Threat Explorer and automated investigation to remove malicious messages tenant-wide, and feed signals into Defender XDR for cross-domain correlation.

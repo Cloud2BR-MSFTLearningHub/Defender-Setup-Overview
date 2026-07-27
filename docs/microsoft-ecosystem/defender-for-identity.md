@@ -22,8 +22,8 @@ obvious on their own.
 
 Once attackers have a foothold, they abuse Active Directory to move laterally and
 escalate privilege using legitimate-looking actions. Defender for Identity
-baselines normal identity behavior and detects the techniques — such as
-DCSync, Pass-the-Hash, and Kerberoasting — that those actions represent.
+baselines normal identity behavior and detects the techniques, such as DCSync,
+Pass-the-Hash, and Kerberoasting, that those actions represent.
 
 | Without Defender for Identity | With sensors deployed |
 | --- | --- |
@@ -41,7 +41,7 @@ A lightweight sensor installed on domain controllers, and on supported AD FS or
 AD CS servers, inspects authentication traffic, directory changes, and network
 activity locally, then sends only the security signals to the cloud. Defender for
 Identity baselines normal behavior for each user and device and detects the
-techniques used across the attack chain — reconnaissance, credential theft such as
+techniques used across the attack chain, including reconnaissance and credential theft such as
 Pass-the-Hash and Kerberoasting, lateral movement, and domain-dominance actions
 such as DCSync.
 
@@ -119,6 +119,19 @@ IdentityLogonEvents
 | where failures > 25
 ```
 
+Find directory queries that enumerate service principal names, then pivot to the
+originating account and device before taking credential-response actions:
+
+```kusto
+IdentityQueryEvents
+| where Timestamp > ago(24h)
+| where QueryType has "SPN"
+| summarize queries = count(), targets = make_set(QueryTarget, 20)
+  by AccountUpn, DeviceName, bin(Timestamp, 1h)
+| where queries > 20
+| order by queries desc
+```
+
 !!! note
     Defender for Identity complements Microsoft Entra ID Protection. The former
     emphasizes hybrid and on-premises identity signals; the latter evaluates
@@ -135,8 +148,8 @@ IdentityLogonEvents
 
 ## Worked example
 
-Defender for Identity detects Kerberoasting behavior from a workstation that has
-never administered Active Directory. Analysts use the lateral-movement path to
-identify the impacted service account, reset its password, rotate the service
-credential, and remove the unnecessary service principal name that made the
-account a target.
+> Defender for Identity detects Kerberoasting behavior from a workstation that has
+> never administered Active Directory. Analysts use the lateral-movement path to
+> identify the impacted service account, reset its password, rotate the service
+> credential, and remove the unnecessary service principal name that made the
+> account a target.

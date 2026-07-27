@@ -23,7 +23,7 @@ without a native Defender for Cloud connector.
 ## Why enable it
 
 On-premises datacenters, private clouds, and providers without a native connector
-are often the least monitored part of an estate — yet they run legacy systems
+are often the least monitored part of an estate, yet they run legacy systems
 attackers love. Azure Arc projects those machines and clusters into Azure so a
 single Defender plan can protect them alongside cloud-native resources.
 
@@ -126,8 +126,8 @@ incurring applicable service charges.
 
 ## Worked example
 
-A manufacturing site has 40 VMware-hosted Linux servers with inconsistent
-antivirus coverage. The platform team Arc-enables five non-production servers
-through its outbound proxy, enables Defender for Servers on the target
-subscription, and validates extension health and alert routing. After the pilot,
-the same configuration-management package rolls out to the remaining servers.
+> A manufacturing site has 40 VMware-hosted Linux servers with inconsistent
+> antivirus coverage. The platform team Arc-enables five non-production servers
+> through its outbound proxy, enables Defender for Servers on the target
+> subscription, and validates extension health and alert routing. After the pilot,
+> the same configuration-management package rolls out to the remaining servers.

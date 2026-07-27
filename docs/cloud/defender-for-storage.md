@@ -133,8 +133,8 @@ procedure before relying on automatic downstream processing.
 
 ## Worked example
 
-An application accepts customer file uploads into a Blob container. The team
-enables on-upload malware scanning with an Event Grid subscription to a Logic App.
-When a blob is tagged as malicious, the workflow moves it to a quarantine
-container, opens a ticket, and prevents downstream processing; clean uploads
-continue through the existing application path without change.
+> An application accepts customer file uploads into a Blob container. The team
+> enables on-upload malware scanning with an Event Grid subscription to a Logic App.
+> When a blob is tagged as malicious, the workflow moves it to a quarantine
+> container, opens a ticket, and prevents downstream processing; clean uploads
+> continue through the existing application path without change.

@@ -62,9 +62,9 @@ owner, date, and scope instead of marking an item complete without validation.
 
 ## Worked example
 
-For an AKS pilot, the platform owner supplies two non-production clusters, the
-SOC owns alert triage, and finance reviews the expected plan charges. Success
-means every node and registry is visible, a benign test finding reaches the chosen
-incident queue, and the cluster team can remediate it within the agreed window.
-Only after those checks and a tested rollback does the organization apply the
-configuration through policy to production subscriptions.
+> For an AKS pilot, the platform owner supplies two non-production clusters, the
+> SOC owns alert triage, and finance reviews the expected plan charges. Success
+> means every node and registry is visible, a benign test finding reaches the chosen
+> incident queue, and the cluster team can remediate it within the agreed window.
+> Only after those checks and a tested rollback does the organization apply the
+> configuration through policy to production subscriptions.

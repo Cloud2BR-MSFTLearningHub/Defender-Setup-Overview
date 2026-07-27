@@ -24,7 +24,7 @@ signal from trillions of authentications to spot compromised identities in real 
 
 Stolen credentials are the most common way into a tenant, and static rules cannot
 tell a legitimate sign-in from an attacker using the right password. ID Protection
-scores risk continuously and lets Conditional Access respond automatically —
+scores risk continuously and lets Conditional Access respond automatically,
 prompting for MFA, forcing a password reset, or blocking access.
 
 | Without Entra ID Protection | With risk policies enabled |
@@ -74,7 +74,7 @@ feed the risk events into Defender XDR or Sentinel for investigation.
 - **Enforcement:** Conditional Access user-risk and sign-in-risk policies decide the response, and self-service password reset enables auto-remediation of risky users.
 - **Break-glass:** always exclude emergency-access accounts from risk policies.
 
-## Detections and hunting
+## Detections and Sentinel hunting example
 
 Risk detections include anonymous IP address, atypical or impossible travel, malware-linked IP, password spray, and leaked credentials. Feed events to Microsoft Sentinel through the Entra connector and hunt in `SigninLogs`:
 
@@ -86,6 +86,18 @@ SigninLogs
 ```
 
 Roll policies out in report-only mode, review impact with the What If tool, then stage enforcement.
+
+Group risky sign-ins by account and source address to identify repeated access
+attempts that may need a Conditional Access or identity-response investigation:
+
+```kusto
+SigninLogs
+| where TimeGenerated > ago(7d)
+| where RiskLevelDuringSignIn in ("high", "medium")
+| summarize riskySignIns = count(), locations = make_set(Location, 10)
+    by UserPrincipalName, IPAddress
+| order by riskySignIns desc
+```
 
 !!! warning "Important"
     Entra ID Protection is related to the Microsoft security ecosystem but is not
@@ -103,8 +115,8 @@ Roll policies out in report-only mode, review impact with the What If tool, then
 
 ## Worked example
 
-Entra ID Protection flags a user sign-in as high risk because the password appears
-in a leaked-credential set. A report-only Conditional Access policy confirms it
-would require MFA without affecting emergency accounts. The team then enables the
-policy for a pilot group, forces a password reset for high user risk, and expands
-enforcement after reviewing sign-in logs and support impact.
+> Entra ID Protection flags a user sign-in as high risk because the password appears
+> in a leaked-credential set. A report-only Conditional Access policy confirms it
+> would require MFA without affecting emergency accounts. The team then enables the
+> policy for a pilot group, forces a password reset for high user risk, and expands
+> enforcement after reviewing sign-in logs and support impact.

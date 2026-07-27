@@ -41,7 +41,7 @@ A single Defender for Endpoint sensor delivers layered protection on each device
 next-generation antivirus blocks known malware, attack surface reduction rules
 close common exploitation techniques, and the behavioral EDR engine streams
 process, file, network, and registry events to the cloud, where machine learning
-flags suspicious sequences — including fileless and living-off-the-land attacks.
+flags suspicious sequences, including fileless and living-off-the-land attacks.
 
 When something is found, responders can isolate the device, run live-response
 commands, and collect forensic evidence from the Defender portal, while automated
@@ -84,11 +84,11 @@ so an endpoint alert is correlated with the identity and email signals around it
 
 ## Worked example
 
-An employee opens a malicious attachment and Defender for Endpoint detects a
-suspicious child process from Office. The analyst isolates the device from the
-portal, uses live response to collect the command history, confirms no lateral
-movement in advanced hunting, and releases the device only after automated
-remediation and a clean rescan complete.
+> An employee opens a malicious attachment and Defender for Endpoint detects a
+> suspicious child process from Office. The analyst isolates the device from the
+> portal, uses live response to collect the command history, confirms no lateral
+> movement in advanced hunting, and releases the device only after automated
+> remediation and a clean rescan complete.
 
 ## Architecture and prerequisites
 
@@ -100,7 +100,7 @@ remediation and a clean rescan complete.
 
 ## Detections and MITRE ATT&CK
 
-Behavioral EDR maps alerts to ATT&CK tactics — Initial Access, Execution, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Lateral Movement, Command and Control, and Impact — and chains them into a device timeline.
+Behavioral EDR maps alerts to ATT&CK tactics, including Initial Access, Execution, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Lateral Movement, Command and Control, and Impact, then chains them into a device timeline.
 
 ## Advanced hunting example
 
@@ -115,6 +115,19 @@ DeviceProcessEvents
 ```
 
 Convert high-value queries into custom detection rules so they generate alerts automatically.
+
+Find Office applications that launch a command shell or PowerShell, a common
+starting point for malicious attachments:
+
+```kusto
+DeviceProcessEvents
+| where Timestamp > ago(24h)
+| where InitiatingProcessFileName in~ ("winword.exe", "excel.exe", "powerpnt.exe")
+| where FileName in~ ("cmd.exe", "powershell.exe", "pwsh.exe")
+| project Timestamp, DeviceName, AccountUpn, InitiatingProcessFileName,
+  FileName, ProcessCommandLine
+| order by Timestamp desc
+```
 
 ## Hunting data lifecycle
 

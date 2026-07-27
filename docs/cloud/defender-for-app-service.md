@@ -39,8 +39,8 @@ reaches attacks a perimeter firewall cannot see.
 ## How it works
 
 Because App Service is a managed platform, Defender can see signals the application
-never logs — underlying host process behavior, sampled request telemetry, and
-platform events — and correlate them with known attack patterns. That combination
+never logs, including underlying host process behavior, sampled request telemetry,
+and platform events, then correlates them with known attack patterns. That combination
 surfaces reconnaissance, exploitation attempts, and post-compromise actions such
 as a suspicious process launched by the web worker.
 
@@ -69,9 +69,9 @@ quickly.
 
 ## Architecture and prerequisites
 
-- **Signal sources:** correlates App Service platform logs, sampled request telemetry, and host process behavior — no application code change or agent required.
+- **Signal sources:** correlates App Service platform logs, sampled request telemetry, and host process behavior. No application code change or agent is required.
 - **Scope:** enabled per subscription under Defender plans; billed per App Service instance.
-- **Coverage nuance:** Windows and Linux App Service is supported; Azure Functions and other serverless hosting can differ — confirm against the support matrix.
+- **Coverage nuance:** Windows and Linux App Service is supported; Azure Functions and other serverless hosting can differ. Confirm support in the current matrix.
 - **Permissions:** Security Admin / Owner on the subscription.
 
 ## Detections and MITRE ATT&CK
@@ -101,7 +101,7 @@ Stream App Service diagnostic settings to Log Analytics so investigations have r
 
 ## Worked example
 
-After retiring a marketing app, a team leaves its custom DNS CNAME in place. A
-Defender for App Service dangling-DNS alert identifies the subdomain-takeover
-risk. The application owner removes the orphaned record, reviews the remaining
-custom domains, and adds DNS cleanup to the decommissioning runbook.
+> After retiring a marketing app, a team leaves its custom DNS CNAME in place. A
+> Defender for App Service dangling-DNS alert identifies the subdomain-takeover
+> risk. The application owner removes the orphaned record, reviews the remaining
+> custom domains, and adds DNS cleanup to the decommissioning runbook.

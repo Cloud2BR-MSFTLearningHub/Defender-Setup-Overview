@@ -52,8 +52,8 @@ the score gives you one percentage to track and report over time.
 Defender CSPM adds a graph on top of that inventory. Agentless scanning takes a
 point-in-time snapshot of disks, identities, and configurations without installing
 anything, and the cloud security graph links those facts together. Cloud Security
-Explorer lets you query the graph — for example, "internet-exposed VMs with a
-known vulnerability and a path to sensitive data" — and attack path analysis walks
+Explorer lets you query the graph, for example, "internet-exposed VMs with a
+known vulnerability and a path to sensitive data," and attack path analysis walks
 the graph automatically to show the chained steps an attacker could take from
 exposure to impact.
 
@@ -88,7 +88,7 @@ exposure to impact.
 ## Architecture and prerequisites
 
 - **Onboarding model:** foundational CSPM activates automatically for connected Azure subscriptions; Defender CSPM is a paid plan enabled per subscription, AWS account, or GCP project in Environment settings.
-- **Agentless scanning:** creates a temporary snapshot of managed disks using a Microsoft-managed identity, analyzes it in an isolated Microsoft environment, and deletes it — no in-guest agent and no runtime performance impact.
+- **Agentless scanning:** creates a temporary snapshot of managed disks using a Microsoft-managed identity, analyzes it in an isolated Microsoft environment, and deletes it. This requires no in-guest agent and has no runtime performance impact.
 - **Permissions:** onboarding needs Security Admin or Owner at the target scope, plus reader-level access to the cloud provider for multicloud connectors.
 - **Standards engine:** assessments run as Azure Policy definitions against the Microsoft Cloud Security Benchmark and any assigned regulatory initiatives (for example ISO 27001, PCI DSS, NIST SP 800-53).
 - **Export:** secure score and recommendations can stream to Log Analytics or Event Hubs through continuous export for Microsoft Sentinel or a data lake.
@@ -125,9 +125,9 @@ Attack path analysis pre-computes these chains and scores each path by exploitab
 
 ## Worked example
 
-A platform team connects its Azure subscriptions and discovers a public virtual
-machine with an exposed management port. Attack path analysis also shows that the
-VM's managed identity can read a storage account tagged `data-classification: pii`.
-Instead of remediating dozens of unrelated recommendations, the team closes the
-internet exposure, removes the excessive storage role, and records the secure-score
-improvement as evidence that it broke the highest-risk path.
+> A platform team connects its Azure subscriptions and discovers a public virtual
+> machine with an exposed management port. Attack path analysis also shows that the
+> VM's managed identity can read a storage account tagged `data-classification: pii`.
+> Instead of remediating dozens of unrelated recommendations, the team closes the
+> internet exposure, removes the excessive storage role, and records the secure-score
+> improvement as evidence that it broke the highest-risk path.

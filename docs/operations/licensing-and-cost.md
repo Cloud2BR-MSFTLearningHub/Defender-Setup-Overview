@@ -58,8 +58,8 @@ checks, and live price tools, see [configuration, plans, and pricing](configurat
 
 ## Worked example
 
-Before enabling Defender for Servers across 800 virtual machines, a team exports
-the inventory and finds that 150 are short-lived development nodes. It pilots the
-plan on 50 representative servers, tags the charges by environment, and compares
-daily cost with the estimate. The review leads to a production-first rollout and
-a monthly check that retired dev nodes no longer remain billable.
+> Before enabling Defender for Servers across 800 virtual machines, a team exports
+> the inventory and finds that 150 are short-lived development nodes. It pilots the
+> plan on 50 representative servers, tags the charges by environment, and compares
+> daily cost with the estimate. The review leads to a production-first rollout and
+> a monthly check that retired dev nodes no longer remain billable.

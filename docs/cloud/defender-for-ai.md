@@ -15,8 +15,8 @@
 Defender for Cloud addresses generative AI risk through two related capabilities:
 AI security posture management discovers and evaluates AI workloads, while AI
 threat protection detects supported runtime threats. As organizations ship AI
-features quickly, new risks appear — exposed model endpoints, excessive data
-access, and prompt-injection attacks — that traditional controls do not cover.
+features quickly, new risks appear: exposed model endpoints, excessive data
+access, and prompt-injection attacks that traditional controls do not cover.
 
 ## Why enable it
 
@@ -38,8 +38,8 @@ discovery, posture, and threat-detection discipline as the rest of the cloud.
 ## How it works
 
 AI security posture management extends Defender CSPM. Using agentless discovery, it
-builds an AI bill of materials — models, endpoints, datastores, plugins, and the
-identities connected to them — and evaluates that graph for risky configurations
+builds an AI bill of materials, including models, endpoints, datastores, plugins,
+and connected identities, then evaluates that graph for risky configurations
 and excessive access, surfacing the results as recommendations and attack paths
 alongside the rest of your cloud posture.
 
@@ -100,8 +100,8 @@ Representative alerts include detected prompt-injection or jailbreak attempts, a
 
 ## Worked example
 
-An internal chat application connects an Azure OpenAI endpoint to a document
-store. AI posture management identifies that the endpoint is public and the
-application identity has broad read access to the store. The team moves the
-endpoint behind private networking, scopes the identity to the approved index, and
-uses prompt-shield detections to monitor for attempted instruction override.
+> An internal chat application connects an Azure OpenAI endpoint to a document
+> store. AI posture management identifies that the endpoint is public and the
+> application identity has broad read access to the store. The team moves the
+> endpoint behind private networking, scopes the identity to the approved index, and
+> uses prompt-shield detections to monitor for attempted instruction override.

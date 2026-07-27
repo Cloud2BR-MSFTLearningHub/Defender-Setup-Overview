@@ -23,8 +23,8 @@ through, so it is where an attacker with stolen credentials operates.
 
 ## Why enable it
 
-Control-plane attacks — mass role assignments, toolkit-driven enumeration, or
-bulk resource deletion — look like ordinary administration until you correlate
+Control-plane attacks, such as mass role assignments, toolkit-driven enumeration,
+or bulk resource deletion, look like ordinary administration until you correlate
 them. Defender for Resource Manager applies threat intelligence and behavioral
 analytics to the management layer so those actions stand out.
 
@@ -71,7 +71,7 @@ control-plane incident usually requires.
 
 ## Architecture and prerequisites
 
-- **Data source:** analyzes Azure Resource Manager operations recorded in the Activity Log — no agent.
+- **Data source:** analyzes Azure Resource Manager operations recorded in the Activity Log. No agent is required.
 - **Scope:** a per-subscription plan; enable it across every subscription in the security boundary, including new and moved subscriptions.
 - **Retention:** export the Activity Log to a Log Analytics workspace (the `AzureActivity` table) for investigation beyond the default retention window.
 - **Permissions:** Security Admin / Owner to enable.
@@ -103,8 +103,8 @@ Correlate these alerts with Entra `SigninLogs`, `AuditLogs`, and Privileged Iden
 
 ## Worked example
 
-Defender raises an alert after an automation identity assigns itself Owner on a
-subscription outside its normal deployment window. Responders correlate the
-operation with `AzureActivity`, Entra sign-ins, and PIM records, revoke the
-credential, remove the unexpected role assignment, and move the automation to a
-least-privilege custom role.
+> Defender raises an alert after an automation identity assigns itself Owner on a
+> subscription outside its normal deployment window. Responders correlate the
+> operation with `AzureActivity`, Entra sign-ins, and PIM records, revoke the
+> credential, remove the unexpected role assignment, and move the automation to a
+> least-privilege custom role.

@@ -44,8 +44,8 @@ Defender for Key Vault evaluates both control-plane operations, such as creating
 modifying a vault, and data-plane operations, such as reading secrets, keys, and
 certificates, against Microsoft threat intelligence and a learned baseline of
 normal access. When an identity, location, or access volume falls outside that
-baseline — for example, an application principal suddenly enumerating every secret
-— it raises an alert with the caller, operation, and vault context.
+baseline. For example, if an application principal suddenly enumerates every
+secret, it raises an alert with the caller, operation, and vault context.
 
 The analysis is passive: it reads the vault's own telemetry and never blocks
 legitimate access, so enabling it cannot break an application. Its value is early
@@ -95,8 +95,8 @@ Representative alerts include access from a suspicious IP or unusual location, a
 
 ## Worked example
 
-An application service principal normally reads two secrets per deployment, but
-Defender alerts when it enumerates every secret in the vault from a new IP range.
-The on-call workflow disables the principal's role assignment, rotates the secrets
-it accessed, and asks the application team to restore access using a managed
-identity and private endpoint.
+> An application service principal normally reads two secrets per deployment, but
+> Defender alerts when it enumerates every secret in the vault from a new IP range.
+> The on-call workflow disables the principal's role assignment, rotates the secrets
+> it accessed, and asks the application team to restore access using a managed
+> identity and private endpoint.
