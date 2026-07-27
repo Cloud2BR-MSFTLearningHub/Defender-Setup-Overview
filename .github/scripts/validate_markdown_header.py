@@ -2,16 +2,12 @@
 
 from __future__ import annotations
 
+import re
 import subprocess
 import sys
 from pathlib import Path
 
-from markdown_header import (
-    EXPECTED_BADGE_LINE,
-    EXPECTED_PROFILE_LINE,
-    EXPECTED_SEPARATOR_LINE,
-    validate_standard_header,
-)
+MAIN_TITLE_PATTERN = re.compile(r"^\s{0,3}#\s+\S")
 
 
 def list_markdown_files(repo_root: Path) -> list[Path]:
@@ -30,7 +26,10 @@ def list_markdown_files(repo_root: Path) -> list[Path]:
     return sorted(repo_root / Path(line) for line in result.stdout.splitlines() if line)
 def validate_markdown_file(file_path: Path) -> list[str]:
     lines = file_path.read_text(encoding="utf-8-sig").splitlines()
-    return validate_standard_header(lines)
+    if any(MAIN_TITLE_PATTERN.match(line) for line in lines):
+        return []
+
+    return ["missing a main title that starts with '# '."]
 
 
 def main() -> int:
@@ -49,7 +48,7 @@ def main() -> int:
             failures[file_path.relative_to(repo_root)] = errors
 
     if not failures:
-        print(f"Validated the standard header block in {len(markdown_files)} Markdown files.")
+        print(f"Validated a main title in {len(markdown_files)} Markdown files.")
         return 0
 
     print("Markdown header validation failed.\n")
@@ -59,14 +58,7 @@ def main() -> int:
         for error in errors:
             print(f"  * {error}")
 
-    print(
-        "\nExpected block immediately below the main '# Title' line:\n\n"
-        "City, Country\n\n"
-        f"{EXPECTED_BADGE_LINE}\n"
-        f"{EXPECTED_PROFILE_LINE}\n\n"
-        "Last updated: YYYY-MM-DD\n\n"
-        f"{EXPECTED_SEPARATOR_LINE}"
-    )
+    print("\nEach Markdown file must contain a main title that starts with '# '." )
     return 1
 
 

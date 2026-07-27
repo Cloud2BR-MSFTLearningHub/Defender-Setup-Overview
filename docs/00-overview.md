@@ -1,13 +1,15 @@
 # What Is Microsoft Defender?
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Defender XDR overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)
+- [Microsoft Sentinel overview](https://learn.microsoft.com/en-us/azure/sentinel/overview)
+- [Azure Arc overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
+- [Configuration, plans, and pricing](operations/configuration-plans-and-pricing.md)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](index.md)
 
@@ -78,11 +80,3 @@ response actions. They do not automatically rewrite every unsafe cloud resource.
 > Automated isolation, blocking, or deletion can interrupt production. Start
 > with audit and notification, define an owner and rollback path, and then move
 > well-tested controls to enforcement.
-
-## References
-
-- [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender XDR overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)
-- [Microsoft Sentinel overview](https://learn.microsoft.com/en-us/azure/sentinel/overview)
-- [Azure Arc overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
-- [Configuration, plans, and pricing](operations/configuration-plans-and-pricing.md)

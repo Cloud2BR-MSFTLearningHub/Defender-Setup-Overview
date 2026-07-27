@@ -1,13 +1,14 @@
 # Microsoft Defender for Cloud on Google Cloud
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Connect GCP projects](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-gcp)
+- [GCP security features](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-gcp)
+- [Multicloud planning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-multicloud-security-get-started)
+- [Defender for Containers on GCP](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-container-gcp)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -43,10 +44,3 @@ resources.
 > [!NOTE]
 > Connecting an organization does not imply that every GCP service receives
 > runtime protection. CSPM breadth and workload-plan support are different.
-
-## References
-
-- [Connect GCP projects](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-gcp)
-- [GCP security features](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-gcp)
-- [Multicloud planning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-multicloud-security-get-started)
-- [Defender for Containers on GCP](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-container-gcp)

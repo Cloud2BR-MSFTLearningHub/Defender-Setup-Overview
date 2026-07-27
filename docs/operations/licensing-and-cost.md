@@ -1,13 +1,15 @@
 # Microsoft Defender Licensing and Cost Planning
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Cloud pricing](https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/)
+- [Defender for Cloud cost calculator](https://learn.microsoft.com/en-us/azure/defender-for-cloud/cost-calculator)
+- [Microsoft 365 licensing guidance](https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-service-descriptions)
+- [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview)
+- [Configuration, plans, and pricing](configuration-plans-and-pricing.md)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -44,11 +46,3 @@ checks, and live price tools, see [configuration, plans, and pricing](configurat
 - Are preview capabilities billed and supported for production?
 - What telemetry creates separate Log Analytics or Sentinel ingestion charges?
 - How quickly does billing stop after offboarding?
-
-## References
-
-- [Defender for Cloud pricing](https://azure.microsoft.com/en-us/pricing/details/defender-for-cloud/)
-- [Defender for Cloud cost calculator](https://learn.microsoft.com/en-us/azure/defender-for-cloud/cost-calculator)
-- [Microsoft 365 licensing guidance](https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-service-descriptions)
-- [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview)
-- [Configuration, plans, and pricing](configuration-plans-and-pricing.md)

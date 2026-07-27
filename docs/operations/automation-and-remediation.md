@@ -1,13 +1,14 @@
 # Defender Automation and Remediation
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Cloud workflow automation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/workflow-automation)
+- [Azure Policy effects](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics)
+- [Sentinel automation](https://learn.microsoft.com/en-us/azure/sentinel/automation/automation)
+- [Defender XDR automated investigation](https://learn.microsoft.com/en-us/defender-xdr/m365d-autoir)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -45,10 +46,3 @@ remediation. Match the tool to the decision being made.
 - Protect automation credentials and restrict who can edit playbooks.
 - Maintain break-glass, rollback, and manual execution procedures.
 - Test with simulations and non-production resources.
-
-## References
-
-- [Defender for Cloud workflow automation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/workflow-automation)
-- [Azure Policy effects](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-basics)
-- [Sentinel automation](https://learn.microsoft.com/en-us/azure/sentinel/automation/automation)
-- [Defender XDR automated investigation](https://learn.microsoft.com/en-us/defender-xdr/m365d-autoir)

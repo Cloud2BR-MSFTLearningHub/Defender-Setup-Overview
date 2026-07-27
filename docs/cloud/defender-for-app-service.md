@@ -1,13 +1,13 @@
 # Microsoft Defender for App Service Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for App Service overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-app-service-introduction)
+- [Enable Defender for App Service](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-app-service-plan)
+- [App Service security recommendations](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference-app-services)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -35,9 +35,3 @@ on Azure App Service by correlating platform and workload signals.
 > App Service plan support is specific. Azure Functions and other serverless
 > hosting options can have different eligibility, telemetry, or protection.
 > Check the current support matrix rather than assuming all PaaS apps are covered.
-
-## References
-
-- [Defender for App Service overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-app-service-introduction)
-- [Enable Defender for App Service](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-app-service-plan)
-- [App Service security recommendations](https://learn.microsoft.com/en-us/azure/defender-for-cloud/recommendations-reference-app-services)

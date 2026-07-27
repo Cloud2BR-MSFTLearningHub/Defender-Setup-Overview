@@ -1,13 +1,14 @@
 # Microsoft Defender for Identity Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Identity overview](https://learn.microsoft.com/en-us/defender-for-identity/what-is)
+- [Deployment overview](https://learn.microsoft.com/en-us/defender-for-identity/deploy-defender-identity)
+- [Prerequisites](https://learn.microsoft.com/en-us/defender-for-identity/prerequisites)
+- [Security assessments](https://learn.microsoft.com/en-us/defender-for-identity/security-assessment)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -43,10 +44,3 @@ identities, then correlates them in Defender XDR.
 > Defender for Identity complements Microsoft Entra ID Protection. The former
 > emphasizes hybrid and on-premises identity signals; the latter evaluates
 > Entra user and sign-in risk.
-
-## References
-
-- [Defender for Identity overview](https://learn.microsoft.com/en-us/defender-for-identity/what-is)
-- [Deployment overview](https://learn.microsoft.com/en-us/defender-for-identity/deploy-defender-identity)
-- [Prerequisites](https://learn.microsoft.com/en-us/defender-for-identity/prerequisites)
-- [Security assessments](https://learn.microsoft.com/en-us/defender-for-identity/security-assessment)

@@ -1,13 +1,14 @@
 # Configure Microsoft Defender Plans, Tiers, and Pricing
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Licensing and cost planning](licensing-and-cost.md)
+- [Deployment checklist](deployment-checklist.md)
+- [Defender for Servers](../cloud/defender-for-servers.md)
+- [Defender CSPM](../cloud/defender-cspm.md)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -56,10 +57,3 @@ Use live pricing and actual resource counts rather than documentation examples:
 Capture the selected plan, scope, billing meter, region, resource count, and
 assumptions in the deployment record. Review the estimate after the pilot using
 actual charges, then establish budgets and anomaly alerts before broad rollout.
-
-## Related guidance
-
-- [Licensing and cost planning](licensing-and-cost.md)
-- [Deployment checklist](deployment-checklist.md)
-- [Defender for Servers](../cloud/defender-for-servers.md)
-- [Defender CSPM](../cloud/defender-cspm.md)

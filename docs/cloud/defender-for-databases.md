@@ -1,13 +1,14 @@
 # Microsoft Defender for Databases Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Protect databases with Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-databases-plan)
+- [Defender for Azure SQL](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-introduction)
+- [Defender for open-source databases](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-databases-introduction)
+- [Defender for Cosmos DB](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-defender-for-cosmos)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -43,10 +44,3 @@ subplan that matches the database engine and hosting model.
 > [!IMPORTANT]
 > A generic Databases toggle can expose separate subplans and charges. Review
 > the current plan configuration and pricing before broad enablement.
-
-## References
-
-- [Protect databases with Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-databases-plan)
-- [Defender for Azure SQL](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-introduction)
-- [Defender for open-source databases](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-databases-introduction)
-- [Defender for Cosmos DB](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-defender-for-cosmos)

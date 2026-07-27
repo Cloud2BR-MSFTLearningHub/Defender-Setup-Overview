@@ -1,13 +1,14 @@
 # Microsoft Defender for AI Workloads Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [AI security in Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-security)
+- [AI security posture management](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-security-posture)
+- [AI threat protection](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-threat-protection)
+- [Enable AI threat protection](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-onboarding)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -43,10 +44,3 @@ threat protection detects supported runtime threats.
 > [!CAUTION]
 > AI plan names, eligible services, and availability are evolving quickly. Treat
 > the support matrix and pricing page as authoritative at deployment time.
-
-## References
-
-- [AI security in Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-security)
-- [AI security posture management](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-security-posture)
-- [AI threat protection](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-threat-protection)
-- [Enable AI threat protection](https://learn.microsoft.com/en-us/azure/defender-for-cloud/ai-onboarding)

@@ -35,8 +35,8 @@ jobs:
       - name: Lint and Fix Markdown files
         run: markdownlint "**/*.md" --fix --config .github/.markdownlint.json --ignore GPT-RAG_SolutionAccelerator/
 
-      - name: Validate standard Markdown header
-        id: validate-header
+      - name: Validate Markdown document titles
+        id: validate-titles
         continue-on-error: true
         run: python .github/scripts/validate_markdown_header.py
 
@@ -54,8 +54,8 @@ jobs:
           git pull --rebase origin "$PR_BRANCH" || echo "No rebase needed"
           git push origin HEAD:"$PR_BRANCH"
 
-      - name: Fail if standard Markdown header validation failed
-        if: steps.validate-header.outcome == 'failure'
+      - name: Fail if Markdown document title validation failed
+        if: steps.validate-titles.outcome == 'failure'
         run: |
-          echo "Standard Markdown header validation failed. See the validation log above."
+          echo "Markdown document title validation failed. See the validation log above."
           exit 1

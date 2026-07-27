@@ -1,13 +1,13 @@
 # Microsoft Defender for Resource Manager Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Resource Manager overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-resource-manager-introduction)
+- [Enable Defender for Resource Manager](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-resource-manager-plan)
+- [Azure Activity Log](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -36,9 +36,3 @@ abuse, unusual administration, or destructive changes.
 > Resource Manager protection observes the Azure control plane. It does not
 > replace workload-specific plans, Entra ID Protection, or privileged identity
 > management.
-
-## References
-
-- [Defender for Resource Manager overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-resource-manager-introduction)
-- [Enable Defender for Resource Manager](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-resource-manager-plan)
-- [Azure Activity Log](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log)

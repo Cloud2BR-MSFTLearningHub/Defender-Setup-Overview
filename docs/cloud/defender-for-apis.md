@@ -1,13 +1,13 @@
 # Microsoft Defender for APIs Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for APIs overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-apis-introduction)
+- [Enable Defender for APIs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-apis-deploy)
+- [Defender for APIs support matrix](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-apis)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -34,9 +34,3 @@ eligible APIs managed through supported Azure API Management tiers and regions.
 > [!IMPORTANT]
 > Enabling the subscription plan and onboarding individual APIs are distinct
 > steps. Unsupported or discovered APIs are not automatically protected.
-
-## References
-
-- [Defender for APIs overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-apis-introduction)
-- [Enable Defender for APIs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-apis-deploy)
-- [Defender for APIs support matrix](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-apis)

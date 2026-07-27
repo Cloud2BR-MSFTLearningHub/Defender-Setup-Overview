@@ -1,13 +1,13 @@
 # Microsoft Defender for IoT Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for IoT overview](https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/overview)
+- [Plan OT monitoring](https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/plan-network-monitoring)
+- [Enterprise IoT security](https://learn.microsoft.com/en-us/defender-for-iot/device-builder/overview)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -35,9 +35,3 @@ can also use Defender for Endpoint capabilities on supported networks and device
 > [!CAUTION]
 > Do not run active scans, isolate devices, or change control-system traffic
 > without OT safety review. Availability and physical safety take priority.
-
-## References
-
-- [Defender for IoT overview](https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/overview)
-- [Plan OT monitoring](https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/plan-network-monitoring)
-- [Enterprise IoT security](https://learn.microsoft.com/en-us/defender-for-iot/device-builder/overview)

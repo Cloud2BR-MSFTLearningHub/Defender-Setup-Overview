@@ -1,13 +1,14 @@
 # Microsoft Defender for Cloud on AWS
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Connect AWS accounts](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-aws)
+- [AWS security features](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-aws)
+- [Multicloud planning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-multicloud-security-get-started)
+- [Defender for Containers on AWS](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-container-aws)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -43,10 +44,3 @@ an Azure subscription; protection remains resource- and plan-specific.
 > [!IMPORTANT]
 > Do not grant connector permissions without cloud security and AWS platform
 > review. Organization-wide templates can affect every member account.
-
-## References
-
-- [Connect AWS accounts](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-aws)
-- [AWS security features](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-aws)
-- [Multicloud planning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-multicloud-security-get-started)
-- [Defender for Containers on AWS](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-container-aws)

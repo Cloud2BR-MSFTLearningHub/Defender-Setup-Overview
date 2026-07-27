@@ -1,13 +1,14 @@
 # Microsoft Sentinel and Defender Integration
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Microsoft Sentinel overview](https://learn.microsoft.com/en-us/azure/sentinel/overview)
+- [Connect Microsoft Defender XDR](https://learn.microsoft.com/en-us/azure/sentinel/connect-microsoft-365-defender)
+- [Sentinel in the Defender portal](https://learn.microsoft.com/en-us/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Sentinel cost planning](https://learn.microsoft.com/en-us/azure/sentinel/billing-reduce-costs)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -46,10 +47,3 @@ same incident in a loop.
 > [!IMPORTANT]
 > Sending duplicate raw telemetry and alerts can add cost without adding detection
 > value. Build integrations from explicit use cases and retention requirements.
-
-## References
-
-- [Microsoft Sentinel overview](https://learn.microsoft.com/en-us/azure/sentinel/overview)
-- [Connect Microsoft Defender XDR](https://learn.microsoft.com/en-us/azure/sentinel/connect-microsoft-365-defender)
-- [Sentinel in the Defender portal](https://learn.microsoft.com/en-us/azure/sentinel/microsoft-sentinel-defender-portal)
-- [Sentinel cost planning](https://learn.microsoft.com/en-us/azure/sentinel/billing-reduce-costs)

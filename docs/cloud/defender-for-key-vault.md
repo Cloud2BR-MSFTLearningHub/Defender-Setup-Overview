@@ -1,13 +1,13 @@
 # Microsoft Defender for Key Vault Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Key Vault overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-key-vault-introduction)
+- [Enable Defender for Key Vault](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-key-vault-plan)
+- [Azure Key Vault security](https://learn.microsoft.com/en-us/azure/key-vault/general/security-features)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -35,9 +35,3 @@ data-plane activity with Microsoft threat intelligence.
 > [!IMPORTANT]
 > Defender detects suspicious access; it does not replace least privilege,
 > private endpoints, soft-delete and purge protection, or rotation processes.
-
-## References
-
-- [Defender for Key Vault overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-key-vault-introduction)
-- [Enable Defender for Key Vault](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-key-vault-plan)
-- [Azure Key Vault security](https://learn.microsoft.com/en-us/azure/key-vault/general/security-features)

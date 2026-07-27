@@ -1,13 +1,14 @@
 # Microsoft Defender Deployment Checklist
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Cloud planning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-cloud)
+- [Defender for Cloud support matrix](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud)
+- [Defender XDR prerequisites](https://learn.microsoft.com/en-us/defender-xdr/prerequisites)
+- [Configuration, plans, and pricing](configuration-plans-and-pricing.md)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -49,10 +50,3 @@ owner, date, and scope instead of marking an item complete without validation.
 - [ ] Remove retired assets, stale connectors, permissions, and billable plans.
 - [ ] Exercise response playbooks and audit privileged actions.
 - [ ] Measure risk reduction and response outcomes, not only alert count.
-
-## References
-
-- [Defender for Cloud planning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-cloud)
-- [Defender for Cloud support matrix](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud)
-- [Defender XDR prerequisites](https://learn.microsoft.com/en-us/defender-xdr/prerequisites)
-- [Configuration, plans, and pricing](configuration-plans-and-pricing.md)

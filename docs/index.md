@@ -1,13 +1,13 @@
 # Microsoft Defender Setup and Overview Hub
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Microsoft Defender documentation](https://learn.microsoft.com/en-us/defender/)
+- [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Defender XDR overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 <div class="defender-hero" markdown>
 
@@ -71,9 +71,3 @@ and security operations.
 Before a pilot, use the [configuration, plans, and pricing reference](operations/configuration-plans-and-pricing.md) to configure Defender settings, compare tiers, verify regional eligibility, and open current pricing and cost-calculation tools.
 
 <p class="site-note">Layout and palette follow the Cloud2BR TEC academy pattern. The header icon and favicon use the public Cloud2BR OSS - Learning Hub organization avatar.</p>
-
-## References
-
-- [Microsoft Defender documentation](https://learn.microsoft.com/en-us/defender/)
-- [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender XDR overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)

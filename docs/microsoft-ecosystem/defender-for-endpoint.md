@@ -1,13 +1,14 @@
 # Microsoft Defender for Endpoint Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Endpoint overview](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint)
+- [Plan deployment](https://learn.microsoft.com/en-us/defender-endpoint/mde-planning-guide)
+- [Minimum requirements](https://learn.microsoft.com/en-us/defender-endpoint/minimum-requirements)
+- [Pilot and deploy](https://learn.microsoft.com/en-us/defender-xdr/pilot-deploy-defender-endpoint)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -39,10 +40,3 @@ It supports eligible Windows, macOS, Linux, Android, and iOS platforms.
 - Run Microsoft's documented detection test on an approved test device.
 - Validate isolation, live response, evidence collection, and rollback authority.
 - Track unmanaged devices, exposure score, vulnerabilities, and stale sensors.
-
-## References
-
-- [Defender for Endpoint overview](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint)
-- [Plan deployment](https://learn.microsoft.com/en-us/defender-endpoint/mde-planning-guide)
-- [Minimum requirements](https://learn.microsoft.com/en-us/defender-endpoint/minimum-requirements)
-- [Pilot and deploy](https://learn.microsoft.com/en-us/defender-xdr/pilot-deploy-defender-endpoint)

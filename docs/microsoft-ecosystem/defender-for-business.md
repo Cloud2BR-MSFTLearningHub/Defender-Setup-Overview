@@ -1,13 +1,13 @@
 # Microsoft Defender for Business Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Business overview](https://learn.microsoft.com/en-us/defender-business/mdb-overview)
+- [Set up Defender for Business](https://learn.microsoft.com/en-us/defender-business/mdb-setup-configuration)
+- [Device onboarding](https://learn.microsoft.com/en-us/defender-business/mdb-onboard-devices)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -37,9 +37,3 @@ eligible Microsoft 365 Business Premium subscriptions.
 > Defender for Business is not Defender for Cloud. Servers can be protected
 > through a Defender for Business server add-on or through Defender for Servers,
 > depending on architecture and licensing.
-
-## References
-
-- [Defender for Business overview](https://learn.microsoft.com/en-us/defender-business/mdb-overview)
-- [Set up Defender for Business](https://learn.microsoft.com/en-us/defender-business/mdb-setup-configuration)
-- [Device onboarding](https://learn.microsoft.com/en-us/defender-business/mdb-onboard-devices)

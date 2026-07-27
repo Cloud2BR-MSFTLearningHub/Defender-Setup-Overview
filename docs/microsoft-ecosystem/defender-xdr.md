@@ -1,13 +1,14 @@
 # Microsoft Defender XDR Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Microsoft Defender XDR overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)
+- [Turn on Defender XDR](https://learn.microsoft.com/en-us/defender-xdr/m365d-enable)
+- [Microsoft Defender portal](https://security.microsoft.com/)
+- [Advanced hunting overview](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-overview)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -45,10 +46,3 @@ Only licensed, provisioned, and connected products contribute their full signals
 > [!NOTE]
 > Defender XDR is the correlation and response layer. It does not create missing
 > telemetry from a Defender product that has not been licensed or deployed.
-
-## References
-
-- [Microsoft Defender XDR overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)
-- [Turn on Defender XDR](https://learn.microsoft.com/en-us/defender-xdr/m365d-enable)
-- [Microsoft Defender portal](https://security.microsoft.com/)
-- [Advanced hunting overview](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-overview)

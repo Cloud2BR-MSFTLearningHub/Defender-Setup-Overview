@@ -1,13 +1,14 @@
 # Defender for Hybrid, On-Premises, and Other Clouds
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Azure Arc overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
+- [Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview)
+- [Azure Arc-enabled Kubernetes](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/overview)
+- [Connect non-Azure machines to Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-machines)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -52,10 +53,3 @@ supported machines or Kubernetes clusters in clouds other than AWS and GCP.
 > Azure Arc does not make every third-party PaaS service eligible for an Azure
 > Defender workload plan. It projects supported servers, Kubernetes, data, and
 > selected services according to each product's support matrix.
-
-## References
-
-- [Azure Arc overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
-- [Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview)
-- [Azure Arc-enabled Kubernetes](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/overview)
-- [Connect non-Azure machines to Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-machines)

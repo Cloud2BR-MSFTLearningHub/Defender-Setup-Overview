@@ -1,13 +1,14 @@
 # Microsoft Defender for Cloud Apps Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Cloud Apps overview](https://learn.microsoft.com/en-us/defender-cloud-apps/what-is-defender-for-cloud-apps)
+- [Deployment guide](https://learn.microsoft.com/en-us/defender-cloud-apps/general-setup)
+- [Connect apps](https://learn.microsoft.com/en-us/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps)
+- [Conditional Access App Control](https://learn.microsoft.com/en-us/defender-cloud-apps/proxy-intro-aad)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -44,10 +45,3 @@ session and access controls with Microsoft Entra Conditional Access.
 - Review false positives before enabling automated governance actions.
 - Test session controls with emergency access accounts excluded appropriately.
 - Reauthorize expiring connectors and remove abandoned integrations.
-
-## References
-
-- [Defender for Cloud Apps overview](https://learn.microsoft.com/en-us/defender-cloud-apps/what-is-defender-for-cloud-apps)
-- [Deployment guide](https://learn.microsoft.com/en-us/defender-cloud-apps/general-setup)
-- [Connect apps](https://learn.microsoft.com/en-us/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps)
-- [Conditional Access App Control](https://learn.microsoft.com/en-us/defender-cloud-apps/proxy-intro-aad)

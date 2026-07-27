@@ -1,13 +1,14 @@
 # Microsoft Defender for Office 365 Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Office 365 overview](https://learn.microsoft.com/en-us/defender-office-365/mdo-about)
+- [Deployment guide](https://learn.microsoft.com/en-us/defender-office-365/mdo-deployment-guide)
+- [Preset security policies](https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies)
+- [Email authentication](https://learn.microsoft.com/en-us/defender-office-365/email-authentication-about)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -42,10 +43,3 @@ Exchange Online, Teams, SharePoint, and OneDrive capabilities.
 - Confirm message traces, submissions, Explorer or detections, and incidents.
 - Monitor policy exceptions, forwarding, spoofing, and high-risk users.
 - Test mailbox remediation, malicious-message removal, and communications.
-
-## References
-
-- [Defender for Office 365 overview](https://learn.microsoft.com/en-us/defender-office-365/mdo-about)
-- [Deployment guide](https://learn.microsoft.com/en-us/defender-office-365/mdo-deployment-guide)
-- [Preset security policies](https://learn.microsoft.com/en-us/defender-office-365/preset-security-policies)
-- [Email authentication](https://learn.microsoft.com/en-us/defender-office-365/email-authentication-about)

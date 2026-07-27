@@ -1,13 +1,15 @@
 # Microsoft Defender for Servers Overview
 
-Costa Rica
+<details markdown>
+<summary>References</summary>
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+- [Defender for Servers overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-servers-introduction)
+- [Plan a deployment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers)
+- [Deploy Defender for Servers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-servers-plan)
+- [Defender for Endpoint detection test](https://learn.microsoft.com/en-us/defender-endpoint/run-detection-test)
+- [Configuration, plans, and pricing](../operations/configuration-plans-and-pricing.md)
 
-Last updated: 2026-07-27
-
-----------
+</details>
 
 [Back to the documentation hub](../index.md)
 
@@ -48,11 +50,3 @@ pricing and regional-support checks.
 > Azure Arc enrollment and Defender for Servers licensing are separate concerns.
 > An Arc-connected server is not necessarily protected until its plan and
 > required components are healthy.
-
-## References
-
-- [Defender for Servers overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-servers-introduction)
-- [Plan a deployment](https://learn.microsoft.com/en-us/azure/defender-for-cloud/plan-defender-for-servers)
-- [Deploy Defender for Servers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-servers-plan)
-- [Defender for Endpoint detection test](https://learn.microsoft.com/en-us/defender-endpoint/run-detection-test)
-- [Configuration, plans, and pricing](../operations/configuration-plans-and-pricing.md)
