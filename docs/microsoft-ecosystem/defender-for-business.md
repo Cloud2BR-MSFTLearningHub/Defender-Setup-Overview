@@ -69,6 +69,17 @@ Defender plans.
 - Maintain emergency contacts and an isolation recovery procedure.
 - Reassess licensing when organization size or security needs grow.
 
+## Architecture and prerequisites
+
+- **Engine:** the Defender for Endpoint stack with SMB-tuned defaults and a guided wizard; onboarding via Intune or a local script across Windows, macOS, iOS, and Android.
+- **Limits:** designed for up to 300 users; servers require the Defender for Business servers add-on.
+- **Automation:** Automated Investigation and Response is on by default to remediate common threats without an analyst.
+- **Portal:** the same Microsoft Defender portal and incident model used by enterprise plans, so growth is a license change, not a migration.
+
+## Operate
+
+Run the documented detection test on a pilot device, review incidents and vulnerability findings weekly, and keep an isolation and recovery runbook. Reassess licensing when the organization approaches the user or server limits, or needs enterprise features such as advanced hunting.
+
 !!! note
     Defender for Business is not Defender for Cloud. Servers can be protected
     through a Defender for Business server add-on or through Defender for Servers,

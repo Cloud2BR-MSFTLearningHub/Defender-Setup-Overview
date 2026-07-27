@@ -79,6 +79,25 @@ application evidence around it.
 - Correlate database alerts with identity, application, and network evidence.
 - Track unprotected instances and stale vulnerability findings.
 
+## Architecture and prerequisites
+
+- **Azure SQL / Managed Instance:** protection is built into the service with no agent; pair with SQL vulnerability assessment and auditing to Log Analytics.
+- **SQL Server on machines:** requires the SQL IaaS or Arc extension and the Azure Monitor Agent to relay events.
+- **Open-source relational (PostgreSQL, MySQL, MariaDB):** agentless where supported by the plan and region.
+- **Azure Cosmos DB:** agentless control-plane and data-plane analysis.
+- **Permissions:** Security Admin / Owner to enable subplans; database-level access is not required for detection.
+
+## Detections and MITRE ATT&CK
+
+| Example detection | ATT&CK tactic |
+| --- | --- |
+| SQL injection payload pattern | Initial Access / Execution |
+| Brute-force or spray of database logins | Credential Access |
+| Access from an unfamiliar principal or geography | Defense Evasion |
+| Anomalous data-extraction volume | Exfiltration |
+
+Detections are per-engine; validate only with an approved, non-production test. Export alerts to Sentinel (`SecurityAlert`) and correlate with `AzureDiagnostics` audit records for full query context.
+
 !!! warning "Important"
     A generic Databases toggle can expose separate subplans and charges. Review
     the current plan configuration and pricing before broad enablement.

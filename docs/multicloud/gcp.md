@@ -73,6 +73,18 @@ same attack paths and Cloud Security Explorer queries.
 - Route findings to the correct project and workload owner.
 - Monitor newly created projects and organization-policy changes for drift.
 
+## Architecture and prerequisites
+
+- **Connector model:** onboard a single project or an entire organization; the onboarding runs a Google Cloud deployment that provisions the required service accounts.
+- **Identity:** uses workload identity federation, so Defender for Cloud authenticates without long-lived service-account keys.
+- **Plans:** foundational CSPM plus Defender for Servers (Compute Engine via Arc and MDE) and Defender for Containers (GKE and Artifact Registry) where eligible.
+- **APIs and scanning:** onboarding enables the required Google Cloud APIs; agentless scanning snapshots persistent disks.
+- **Permissions:** Security Admin / Owner in Azure plus Google Cloud roles to run the deployment.
+
+## Detections and operations
+
+CSPM maps GCP resources to the Microsoft Cloud Security Benchmark and standards such as CIS GCP. Confirm service accounts, workload identity federation, and enabled APIs after onboarding, and monitor new projects and organization-policy changes for drift.
+
 !!! note
     Connecting an organization does not imply that every GCP service receives
     runtime protection. CSPM breadth and workload-plan support are different.

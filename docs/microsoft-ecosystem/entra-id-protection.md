@@ -67,6 +67,26 @@ feed the risk events into Defender XDR or Sentinel for investigation.
 - Investigate risk with endpoint, email, identity, and cloud-app evidence.
 - Review exclusions and emergency account health on a fixed schedule.
 
+## Architecture and prerequisites
+
+- **Detections:** real-time (at sign-in) and offline (post-processing) detections feed a sign-in risk level and a user risk level; leaked-credential matching uses Microsoft threat intelligence.
+- **Licensing:** full risk detail and risk-based Conditional Access require Microsoft Entra ID P2; P1 and free surface reduced signal.
+- **Enforcement:** Conditional Access user-risk and sign-in-risk policies decide the response, and self-service password reset enables auto-remediation of risky users.
+- **Break-glass:** always exclude emergency-access accounts from risk policies.
+
+## Detections and hunting
+
+Risk detections include anonymous IP address, atypical or impossible travel, malware-linked IP, password spray, and leaked credentials. Feed events to Microsoft Sentinel through the Entra connector and hunt in `SigninLogs`:
+
+```kusto
+SigninLogs
+| where TimeGenerated > ago(7d)
+| where RiskLevelDuringSignIn in ("high", "medium")
+| project TimeGenerated, UserPrincipalName, IPAddress, Location, RiskEventTypes
+```
+
+Roll policies out in report-only mode, review impact with the What If tool, then stage enforcement.
+
 !!! warning "Important"
     Entra ID Protection is related to the Microsoft security ecosystem but is not
     a Defender for Cloud workload plan. Avoid locking out administrators by moving

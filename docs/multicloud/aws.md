@@ -75,6 +75,22 @@ one scale and attack paths that cross from Azure into AWS become visible.
 - Route findings to the team that owns the AWS account and affected workload.
 - Remove stale accounts and update StackSets when connector requirements change.
 
+## Architecture and prerequisites
+
+![AWS accounts represented in the Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/quickstart-onboard-aws/aws-account-in-overview.png)
+
+*Source: [Connect your AWS accounts](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-aws).*
+
+- **Connector model:** a single account uses a CloudFormation stack; an AWS Organization uses a StackSet so member accounts onboard automatically.
+- **Roles:** the templates create least-privilege IAM roles for CSPM reads and, per plan, for agentless scanning, Defender for Servers (via Arc and MDE), and Defender for Containers (EKS and ECR).
+- **Agentless scanning:** snapshots EBS volumes in the customer account and analyzes them in Microsoft's environment.
+- **CloudTrail:** required for control-plane detections; ensure a trail is enabled in scope.
+- **Permissions:** Security Admin / Owner in Azure plus AWS permissions to deploy the stack.
+
+## Detections and operations
+
+CSPM maps AWS resources to the Microsoft Cloud Security Benchmark and standards such as CIS AWS and PCI DSS. Workload detections — EC2 through MDE, EKS through the sensor — map to MITRE ATT&CK just as they do in Azure. Monitor connector health, IAM role validity, region coverage, and scan freshness, and update StackSets when plan requirements change.
+
 !!! warning "Important"
     Do not grant connector permissions without cloud security and AWS platform
     review. Organization-wide templates can affect every member account.

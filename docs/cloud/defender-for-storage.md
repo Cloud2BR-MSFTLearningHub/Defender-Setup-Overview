@@ -78,6 +78,22 @@ information, so the highest-value data receives the closest attention.
 - Monitor scan failures, throttling, transaction anomalies, and cost.
 - Do not expose test files or production data during validation.
 
+## Architecture and prerequisites
+
+![How Defender for Storage activity monitoring identifies threats to data](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-storage-introduction/activity-monitoring.png)
+
+*Source: [Overview of Defender for Storage](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-introduction).*
+
+- **Activity monitoring:** analyzes the storage account's control-plane and data-plane operations from the Azure resource-logs pipeline; it is agentless and adds no data-path latency.
+- **On-upload malware scanning:** an in-account engine inspects each new blob, writes the result as a blob index tag, and emits an Event Grid event; a per-account monthly cap protects cost.
+- **Sensitive-data threat detection:** uses Defender CSPM sensitive-data context (Microsoft Purview) to weight alerts on accounts holding regulated data.
+- **Scope model:** enable at subscription level for inheritance or override per storage account; malware scanning and sensitive-data detection are independent toggles.
+- **Permissions:** Security Admin / Owner to enable; scanning components use a system-assigned managed identity granted data access to the protected accounts.
+
+## Detections and response
+
+Representative alerts include access from a Tor exit node or suspicious IP, an unusual volume of data extraction, upload of a known-malicious blob, and anomalous SAS-token usage. Wire malware-scan Event Grid events to a Logic App or Function to quarantine or delete flagged blobs automatically, and export alerts to Sentinel through the `SecurityAlert` table for correlation.
+
 !!! warning "Important"
     Malware scanning is not a substitute for access control, private networking,
     soft delete, versioning, backups, or data-loss prevention.

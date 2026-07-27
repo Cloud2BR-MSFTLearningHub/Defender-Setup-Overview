@@ -82,6 +82,34 @@ pricing and regional-support checks.
 - Route alerts to the incident owner and test machine isolation procedures.
 - Track uncovered machines, stale agents, exclusions, and unsupported systems.
 
+## Architecture and prerequisites
+
+- **Endpoint sensor:** Plan 1 and Plan 2 provision Microsoft Defender for Endpoint through the unified MDE extension, with automatic onboarding for Azure and Arc machines.
+- **Agentless disk scanning:** snapshot-based assessment evaluates vulnerabilities, exposed secrets, and malware without an in-guest agent; it complements, not replaces, the MDE sensor.
+- **Data collection:** the Azure Monitor Agent (AMA) supports capabilities such as file integrity monitoring; the legacy Log Analytics agent (MMA) is retired, so new deployments should standardize on AMA or agentless.
+- **Connectivity:** machines need outbound access to Defender for Endpoint and Defender for Cloud service endpoints; closed networks require the documented proxy or private configuration.
+- **Permissions:** enabling the plan requires Security Admin or Owner on the subscription; Arc onboarding requires the Azure Connected Machine Onboarding role.
+
+## Detections and MITRE ATT&CK
+
+Alerts map to MITRE ATT&CK so responders can reason in tactic terms:
+
+| Example detection | ATT&CK tactic |
+| --- | --- |
+| Suspicious PowerShell or shell command execution | Execution |
+| Credential-dumping behavior (for example LSASS access) | Credential Access |
+| Reverse shell or anomalous outbound connection | Command and Control |
+| Web shell or scheduled-task persistence | Persistence |
+| Sign-in from a known-malicious IP | Initial Access |
+
+Alerts surface in Defender for Cloud and the Microsoft Defender portal and can be exported to the `SecurityAlert` table in Log Analytics or Microsoft Sentinel.
+
+## Scale the deployment
+
+- Enable the plan at management-group scope and use the Defender for Endpoint integration setting so new machines onboard automatically.
+- For Arc, deploy the Connected Machine agent at scale with a service principal, a configuration-management package, or the install script.
+- Govern configuration with Azure Policy (for example, "Defender for Servers should be enabled") and remediate non-compliant subscriptions with DeployIfNotExists.
+
 !!! warning "Important"
     Azure Arc enrollment and Defender for Servers licensing are separate concerns.
     An Arc-connected server is not necessarily protected until its plan and

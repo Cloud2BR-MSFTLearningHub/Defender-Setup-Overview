@@ -69,6 +69,17 @@ can use them.
 - Predefine secret or certificate rotation and application recovery procedures.
 - Monitor vaults outside the centrally managed subscription hierarchy.
 
+## Architecture and prerequisites
+
+- **Telemetry:** analyzes Key Vault control-plane and data-plane operations; enable diagnostic logging to Log Analytics for investigation depth.
+- **Scope:** a per-subscription plan covering vaults in scope, with new vaults inheriting protection.
+- **No data-path impact:** analysis is asynchronous on the vault's logs and never blocks access.
+- **Permissions:** Security Admin / Owner to enable.
+
+## Detections and response
+
+Representative alerts include access from a suspicious IP or unusual location, a spike in secret or key enumeration, access by an application identity that has never touched the vault, and denied-then-succeeded patterns. Because the value is early warning, pre-build automated response: on a high-confidence alert, trigger a Logic App to rotate the affected secrets and keys and notify the vault owner. Use RBAC (not legacy access policies), private endpoints, purge protection, and short secret lifetimes as the preventive layer beneath detection.
+
 !!! warning "Important"
     Defender detects suspicious access; it does not replace least privilege,
     private endpoints, soft-delete and purge protection, or rotation processes.

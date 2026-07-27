@@ -85,6 +85,17 @@ response actions. They do not automatically rewrite every unsafe cloud resource.
 | Respond to an alert | Defender automation, Logic Apps, Sentinel playbooks, or API |
 | Repair infrastructure configuration | Infrastructure as code and deployment pipeline |
 
+## Where signals surface
+
+| Product family | Primary portal | Query and export |
+| --- | --- | --- |
+| Defender for Cloud plans | Microsoft Defender for Cloud in the Azure portal | Continuous export to Log Analytics (`SecurityAlert`) or Event Hubs |
+| Defender XDR products | Microsoft Defender portal | Advanced hunting (KQL) and the streaming API |
+| Microsoft Sentinel | Defender portal or Azure portal | Log Analytics workspace, analytics rules, and workbooks |
+| Entra ID Protection | Microsoft Entra admin center | Sentinel connector and Microsoft Graph |
+
+Alerts from every layer can converge in Defender XDR and Microsoft Sentinel, which is what makes cross-domain correlation possible. Decide the primary incident queue (Defender XDR or Sentinel) before enabling connectors so ownership and automation stay unambiguous.
+
 !!! warning "Important"
     Automated isolation, blocking, or deletion can interrupt production. Start
     with audit and notification, define an owner and rollback path, and then move

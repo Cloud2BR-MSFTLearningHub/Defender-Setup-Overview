@@ -85,6 +85,31 @@ exposure to impact.
 
 *Source: [Attack path analysis](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-attack-path).*
 
+## Architecture and prerequisites
+
+- **Onboarding model:** foundational CSPM activates automatically for connected Azure subscriptions; Defender CSPM is a paid plan enabled per subscription, AWS account, or GCP project in Environment settings.
+- **Agentless scanning:** creates a temporary snapshot of managed disks using a Microsoft-managed identity, analyzes it in an isolated Microsoft environment, and deletes it — no in-guest agent and no runtime performance impact.
+- **Permissions:** onboarding needs Security Admin or Owner at the target scope, plus reader-level access to the cloud provider for multicloud connectors.
+- **Standards engine:** assessments run as Azure Policy definitions against the Microsoft Cloud Security Benchmark and any assigned regulatory initiatives (for example ISO 27001, PCI DSS, NIST SP 800-53).
+- **Export:** secure score and recommendations can stream to Log Analytics or Event Hubs through continuous export for Microsoft Sentinel or a data lake.
+
+## Query the cloud security graph
+
+Cloud Security Explorer runs graph queries over discovered assets, network exposure, identities, and data. High-signal examples include:
+
+- Internet-exposed virtual machines that contain a high-severity vulnerability.
+- Managed identities whose permissions create a path to a storage account holding sensitive data.
+- Publicly reachable databases accessible from a workload with a known CVE.
+
+Attack path analysis pre-computes these chains and scores each path by exploitability and blast radius, so remediation can target the single choke point that breaks the most paths.
+
+## Scale with governance
+
+- Enable Defender CSPM at the management-group scope so new subscriptions inherit it.
+- Use governance rules to auto-assign an owner and remediation due date to recommendations by tag or scope.
+- Drive remediation through Azure Policy DeployIfNotExists and infrastructure-as-code rather than manual portal fixes.
+- Track secure score over time as a program KPI and alert on regressions through continuous export.
+
 !!! note
     CSPM identifies risk; workload plans add threat detection. Enabling Defender
     CSPM does not automatically enable every Defender workload protection plan.

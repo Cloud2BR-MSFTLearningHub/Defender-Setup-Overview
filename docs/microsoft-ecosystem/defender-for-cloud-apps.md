@@ -75,3 +75,24 @@ and behavior. Its signals also flow into Defender XDR.
 - Review false positives before enabling automated governance actions.
 - Test session controls with emergency access accounts excluded appropriately.
 - Reauthorize expiring connectors and remove abandoned integrations.
+
+## Architecture and prerequisites
+
+- **Cloud Discovery:** analyzes traffic logs — native from Defender for Endpoint, or uploaded from proxies and firewalls — to reveal and risk-score SaaS apps.
+- **App connectors:** API-based connectors to sanctioned apps pull activity, files, and configuration for anomaly detection and governance.
+- **Conditional Access App Control:** routes selected sessions through a reverse proxy, integrated with Entra Conditional Access, to enforce real-time session controls.
+- **App Governance:** monitors OAuth apps for risky permissions and behavior.
+
+## Advanced hunting example
+
+Investigate high-volume SaaS downloads in the unified schema:
+
+```kusto
+CloudAppEvents
+| where Timestamp > ago(24h)
+| where ActionType == "FileDownloaded"
+| summarize downloads = count() by AccountUpn, Application, bin(Timestamp, 1h)
+| where downloads > 100
+```
+
+Pilot session policies in report-only mode with emergency-access accounts excluded, and reauthorize expiring connectors on a schedule.

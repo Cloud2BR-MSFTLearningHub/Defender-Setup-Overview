@@ -74,6 +74,34 @@ Entra ID Protection's analysis of cloud sign-ins.
 - Correlate alerts with endpoint, cloud app, and Entra sign-in evidence.
 - Protect sensor credentials and establish domain-controller recovery procedures.
 
+## Architecture and prerequisites
+
+- **Sensor placement:** install the sensor directly on every domain controller, and on AD FS or AD CS servers where those signals are needed.
+- **Directory Service Account:** configure a group managed service account (gMSA) so the sensor can query the directory securely.
+- **Sizing and connectivity:** validate CPU and memory against domain-controller load, and allow outbound HTTPS to the Defender for Identity service.
+- **Surface:** signals appear in the Defender portal identity experience and feed Defender XDR.
+
+## Detections across the attack chain
+
+| Phase | Example detection |
+| --- | --- |
+| Reconnaissance | Account and SPN enumeration, AS-REP roasting |
+| Credential access | Kerberoasting, brute force, Pass-the-Hash |
+| Lateral movement | Overpass-the-Hash, remote code execution |
+| Domain dominance | DCSync, DCShadow, Golden Ticket use |
+
+## Advanced hunting example
+
+Surface accounts with a burst of failed logons:
+
+```kusto
+IdentityLogonEvents
+| where Timestamp > ago(24h)
+| where ActionType == "LogonFailed"
+| summarize failures = count() by AccountUpn, DeviceName, bin(Timestamp, 1h)
+| where failures > 25
+```
+
 !!! note
     Defender for Identity complements Microsoft Entra ID Protection. The former
     emphasizes hybrid and on-premises identity signals; the latter evaluates

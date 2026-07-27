@@ -72,3 +72,29 @@ so an endpoint alert is correlated with the identity and email signals around it
 - Run Microsoft's documented detection test on an approved test device.
 - Validate isolation, live response, evidence collection, and rollback authority.
 - Track unmanaged devices, exposure score, vulnerabilities, and stale sensors.
+
+## Architecture and prerequisites
+
+- **Sensor:** built into Windows 10/11 and Windows Server; installed via package on macOS and Linux; mobile uses the Defender app with Intune.
+- **Onboarding:** Intune, Configuration Manager, Group Policy, or script; the onboarding blob authorizes the sensor to the tenant.
+- **Cloud dependency:** cloud-delivered protection and EDR require outbound access to the documented Microsoft endpoints; sample submission improves verdicts.
+- **Licensing:** Plan 1 (prevention), Plan 2 (full EDR, automated investigation, and threat intelligence), or Defender for Business for small and medium organizations.
+- **RBAC:** device groups and role-based access control scope who can view and act on which devices.
+
+## Detections and MITRE ATT&CK
+
+Behavioral EDR maps alerts to ATT&CK tactics — Initial Access, Execution, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Lateral Movement, Command and Control, and Impact — and chains them into a device timeline.
+
+## Advanced hunting example
+
+Hunt for encoded PowerShell across every onboarded device:
+
+```kusto
+DeviceProcessEvents
+| where Timestamp > ago(24h)
+| where FileName =~ "powershell.exe"
+| where ProcessCommandLine has_any ("-enc", "-EncodedCommand")
+| project Timestamp, DeviceName, AccountUpn, ProcessCommandLine
+```
+
+Convert high-value queries into custom detection rules so they generate alerts automatically.

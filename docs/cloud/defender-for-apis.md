@@ -68,6 +68,21 @@ that matter most.
 - Correlate API alerts with API Management, application, identity, and WAF logs.
 - Test key revocation, backend isolation, and safe API rollback.
 
+## Architecture and prerequisites
+
+![Defender for APIs coverage across API Management](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-apis-introduction/templates-example.png)
+
+*Source: [Overview of Defender for APIs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-apis-introduction).*
+
+- **Platform prerequisite:** APIs must be published through supported Azure API Management tiers and regions; enabling the plan makes them eligible, and you then onboard specific APIs.
+- **Traffic analysis:** Defender samples API Management traffic to build the inventory and run ML detections — no gateway change or agent.
+- **Capacity model:** the plan covers a number of API requests; onboard the most sensitive, internet-facing APIs first.
+- **Permissions:** Security Admin / Owner to enable; API Management contributor to onboard APIs.
+
+## Detections and OWASP API risks
+
+Detections align with the OWASP API Security Top 10 — for example abnormal data exposure (excessive response payloads), broken object-level authorization probing (enumeration), and suspicious spikes from a single client. Feed alerts to Sentinel and correlate with API Management `ApiManagementGatewayLogs` and any WAF logs for full request context, then respond by revoking keys, tightening product and rate-limit policies, or isolating the backend.
+
 !!! warning "Important"
     Enabling the subscription plan and onboarding individual APIs are distinct
     steps. Unsupported or discovered APIs are not automatically protected.

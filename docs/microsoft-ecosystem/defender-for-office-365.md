@@ -74,3 +74,24 @@ threat is correlated with the endpoint and identity it touches.
 - Confirm message traces, submissions, Explorer or detections, and incidents.
 - Monitor policy exceptions, forwarding, spoofing, and high-risk users.
 - Test mailbox remediation, malicious-message removal, and communications.
+
+## Architecture and prerequisites
+
+- **Layering:** Defender for Office 365 builds on Exchange Online Protection; native deployment on Exchange Online needs no MX change.
+- **Safe Attachments:** sandbox detonation before delivery, with dynamic delivery to reduce latency.
+- **Safe Links:** URL rewrite and time-of-click checking, including in Teams and Office apps.
+- **Policies:** Standard and Strict preset policies apply Microsoft-recommended settings; email authentication (SPF, DKIM, DMARC) underpins anti-spoofing.
+- **Licensing:** Plan 1 (protection) and Plan 2 (Threat Explorer, attack simulation, and automated investigation and response).
+
+## Advanced hunting example
+
+Trace clicks on a malicious URL after delivery:
+
+```kusto
+UrlClickEvents
+| where Timestamp > ago(7d)
+| where ActionType == "ClickAllowed"
+| project Timestamp, Url, AccountUpn, NetworkMessageId
+```
+
+Use Threat Explorer and automated investigation to remove malicious messages tenant-wide, and feed signals into Defender XDR for cross-domain correlation.

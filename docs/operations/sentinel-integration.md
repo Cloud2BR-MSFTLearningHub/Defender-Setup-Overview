@@ -75,6 +75,17 @@ same incident in a loop.
 - Test playbook approval, failure handling, rollback, and audit records.
 - Document which portal analysts use for each response action.
 
+## Architecture and prerequisites
+
+- **Workspace:** Sentinel runs on a Log Analytics workspace; the Defender XDR connector synchronizes incidents and alerts between the two.
+- **Unified portal:** Sentinel is available inside the Microsoft Defender portal, giving one incident queue across Defender XDR and Sentinel.
+- **Connectors:** first-party connectors for Entra, Azure activity, and Microsoft 365, plus non-Microsoft sources such as CEF/Syslog, AWS, GCP, and custom logs.
+- **Cost model:** billing is driven by ingested and retained data; use commitment tiers, basic and auxiliary logs, and archive tiers to manage cost.
+
+## Analytics and automation
+
+Prefer native Defender detections and add Sentinel analytics rules only for cross-source use cases. Automate with automation rules and Logic App playbooks that use least-privilege managed identities, and validate that a single test alert arrives once, with the correct entities, in the chosen primary queue.
+
 !!! warning "Important"
     Sending duplicate raw telemetry and alerts can add cost without adding detection
     value. Build integrations from explicit use cases and retention requirements.

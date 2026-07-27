@@ -69,6 +69,24 @@ control-plane incident usually requires.
 - Pre-authorize containment actions for compromised automation identities.
 - Monitor newly created or moved subscriptions for configuration drift.
 
+## Architecture and prerequisites
+
+- **Data source:** analyzes Azure Resource Manager operations recorded in the Activity Log — no agent.
+- **Scope:** a per-subscription plan; enable it across every subscription in the security boundary, including new and moved subscriptions.
+- **Retention:** export the Activity Log to a Log Analytics workspace (the `AzureActivity` table) for investigation beyond the default retention window.
+- **Permissions:** Security Admin / Owner to enable.
+
+## Detections and MITRE ATT&CK
+
+| Example detection | ATT&CK tactic |
+| --- | --- |
+| Activity matching known cloud attack toolkits | Discovery |
+| Suspicious granting of privileged roles | Privilege Escalation |
+| Mass or unusual resource deletion | Impact |
+| Operations from a risky or anonymized IP | Defense Evasion |
+
+Correlate these alerts with Entra `SigninLogs`, `AuditLogs`, and Privileged Identity Management activations to separate legitimate administration from abuse.
+
 !!! note
     Resource Manager protection observes the Azure control plane. It does not
     replace workload-specific plans, Entra ID Protection, or privileged identity

@@ -69,6 +69,24 @@ the repository and pipeline owners who can actually resolve them.
 - Send remediation to the repository owner and fix source before redeployment.
 - Review connector permissions, inactive repositories, and coverage drift.
 
+## Architecture and prerequisites
+
+![Defender for Cloud DevOps security overview across connected environments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-devops-introduction/security-overview.png)
+
+*Source: [Overview of DevOps security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction).*
+
+- **Connectors:** GitHub (app-based), Azure DevOps (OAuth), and GitLab; capability coverage differs by platform and is documented by Microsoft.
+- **Scanners:** secret scanning, dependency (SCA), infrastructure-as-code, and container image scanning run in the pipeline or via the connector, and results roll up to Defender for Cloud.
+- **Code-to-cloud:** Defender CSPM links a repository finding to the deployed resource so remediation happens at the source.
+- **Least privilege:** grant the connector the minimum scope and prefer read-only where the workflow allows.
+
+## Operationalize findings
+
+- Add secret and IaC scanning as required pipeline checks so a failing scan blocks merge.
+- Route findings to the repository or pipeline owner with an SLA and track mean time to remediate.
+- Never commit real secrets for testing; if a secret is exposed, revoke and rotate it before closing the finding.
+- Review connector permissions, inactive repositories, and coverage drift on a schedule.
+
 !!! note
     A DevOps connector does not protect a running workload by itself. Enable the
     appropriate workload plan for runtime detection and response.

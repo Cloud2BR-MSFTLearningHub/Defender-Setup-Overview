@@ -81,6 +81,32 @@ Azure Policy for Kubernetes or Gatekeeper.
 - Track privileged workloads, exposed services, vulnerable images, and stale data.
 - Test response actions in a non-production namespace.
 
+## Architecture and prerequisites
+
+- **Defender sensor:** a DaemonSet on cluster nodes provides runtime threat detection; it needs schedulable capacity and outbound access to Defender endpoints.
+- **Agentless discovery:** reads the Kubernetes API and, for supported clouds, the control plane to assess configuration without a sensor.
+- **Registry scanning:** images in supported registries (Azure Container Registry and connected AWS/GCP registries) are scanned on push, on pull, and continuously against the Microsoft feed.
+- **Azure Policy for Kubernetes:** a Gatekeeper-based admission add-on evaluates and can enforce policy at deployment time.
+- **Permissions:** onboarding requires Security Admin / Owner on the subscription and cluster-admin equivalent to install components.
+
+## Detections and MITRE ATT&CK
+
+| Example detection | ATT&CK tactic |
+| --- | --- |
+| Exec into a container or suspicious shell in a pod | Execution |
+| Privileged container or host-filesystem mount | Privilege Escalation |
+| Crypto-mining process behavior | Impact |
+| Anomalous access to the Kubernetes API | Discovery |
+| Deployment of a known-malicious image | Initial Access |
+
+Runtime detections correlate node-level sensor telemetry with Kubernetes audit logs, so control-plane and workload behavior are analyzed together.
+
+## Hardening and enforcement
+
+- Use registry scan results as a CI/CD gate so vulnerable images fail the pipeline before deployment.
+- Enforce baseline controls (no privileged pods, read-only root filesystem, approved registries) with Azure Policy for Kubernetes or Gatekeeper in deny mode after piloting in audit mode.
+- Restrict who can schedule privileged workloads or expose services, and work the Kubernetes hardening recommendations in secure score.
+
 !!! note
     Defender recommends and detects; Azure Policy for Kubernetes, Gatekeeper, or
     another admission controller performs preventive enforcement. ARO's managed

@@ -63,3 +63,10 @@ response while keeping human approval on the actions that can disrupt production
 - Protect automation credentials and restrict who can edit playbooks.
 - Maintain break-glass, rollback, and manual execution procedures.
 - Test with simulations and non-production resources.
+
+## Continuous export and SIEM integration
+
+- Stream Defender for Cloud alerts and recommendations with continuous export to Log Analytics (`SecurityAlert` and `SecurityRecommendation`) or to Event Hubs for a SIEM or data lake.
+- Connect Defender XDR to Microsoft Sentinel for bidirectional incident synchronization, and use advanced hunting (KQL) to build custom detections.
+- Trigger response with Logic App playbooks or Azure Functions bound to a least-privilege managed identity, and gate disruptive steps behind approval.
+- Keep automation idempotent and observable: log every action, emit metrics, and alert on playbook failures.

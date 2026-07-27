@@ -75,6 +75,27 @@ Only licensed, provisioned, and connected products contribute their full signals
 - Tune alert rules and exclusions with expiry, owner, and evidence.
 - Measure time to triage, contain, remediate, and close incidents.
 
+## Architecture and data model
+
+- **Correlation:** Defender XDR ingests alerts and entities from each connected product and fuses them into incidents with a shared graph of accounts, devices, mailboxes, and cloud resources.
+- **Advanced hunting:** a unified schema exposes raw events across products (device, identity, email, cloud app, and alert tables) queried with Kusto Query Language (KQL).
+- **RBAC:** unified role-based access control governs which data and actions each analyst sees; device groups scope endpoint actions.
+- **Automation:** Automated Investigation and Response runs at a configurable automation level, from full audit to automatic remediation.
+
+## Advanced hunting example
+
+Hunt for encoded PowerShell across the fleet, then pivot to the account and device:
+
+```kusto
+DeviceProcessEvents
+| where Timestamp > ago(24h)
+| where FileName =~ "powershell.exe"
+| where ProcessCommandLine has_any ("-enc", "-EncodedCommand")
+| project Timestamp, DeviceName, AccountUpn, ProcessCommandLine
+```
+
+Save high-value queries as custom detection rules so novel techniques become first-class alerts that feed the same incident correlation.
+
 !!! note
     Defender XDR is the correlation and response layer. It does not create missing
     telemetry from a Defender product that has not been licensed or deployed.

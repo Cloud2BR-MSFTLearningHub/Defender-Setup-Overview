@@ -74,6 +74,17 @@ support matrix is the authoritative source at deployment time.
 - Monitor prompt attacks, abusive use, credential theft, and data-access anomalies.
 - Recheck coverage whenever models, regions, or architectures change.
 
+## Architecture and prerequisites
+
+- **Posture (AI-SPM):** part of Defender CSPM; agentless discovery inventories models, endpoints, datastores, plugins, and grounding data, then maps identity and network exposure into the cloud security graph.
+- **Threat protection:** integrates with supported Azure AI and Azure OpenAI services and the Azure AI Content Safety prompt-shield signals to detect runtime attacks.
+- **Prompt evidence:** optionally capture suspicious prompt segments in alerts (governed by privacy settings) to accelerate investigation.
+- **Permissions:** Security Admin / Owner to enable; posture uses the CSPM identity while threat protection binds to the AI resource.
+
+## Detections and mitigations
+
+Representative alerts include detected prompt-injection or jailbreak attempts, access to an AI resource from a suspicious IP, credential leakage through a model, and denial-of-wallet spikes. Pair detection with preventive controls: Azure AI Content Safety, least-privilege managed identities for model data access, private networking for endpoints, and data governance on grounding sources. Because service coverage evolves, confirm supported services and regions in the current support matrix at deployment time.
+
 !!! danger "Caution"
     AI plan names, eligible services, and availability are evolving quickly. Treat
     the support matrix and pricing page as authoritative at deployment time.

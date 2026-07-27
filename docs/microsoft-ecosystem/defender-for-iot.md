@@ -68,6 +68,17 @@ covered through Defender for Endpoint.
 - Monitor sensor packet visibility, health, time synchronization, and update status.
 - Exercise incident procedures in a lab or approved maintenance window.
 
+## Architecture and prerequisites
+
+- **OT network sensor:** a physical or virtual appliance that receives mirrored traffic through a SPAN port or TAP, performs deep packet inspection locally, and never transmits to the monitored devices.
+- **Management:** sensors can be air-gapped and locally managed or connected to the cloud experience where policy permits.
+- **Protocol coverage:** understands industrial protocols such as Modbus, DNP3, EtherNet/IP, and S7 to identify assets and behavior IT tools miss.
+- **Enterprise IoT:** managed-network IoT can instead be covered through Defender for Endpoint discovery.
+
+## Detections and operations
+
+Detections include unauthorized device or programming changes, protocol anomalies, and known OT malware behavior. Baseline maintenance windows and engineering workstations to reduce noise, investigate jointly with OT engineers before any containment, and monitor sensor packet visibility, time synchronization, and update status. Integrate alerts with the SOC and Defender XDR while preserving plant-specific response authority.
+
 !!! danger "Caution"
     Do not run active scans, isolate devices, or change control-system traffic
     without OT safety review. Availability and physical safety take priority.

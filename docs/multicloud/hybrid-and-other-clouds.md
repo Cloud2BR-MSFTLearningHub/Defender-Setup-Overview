@@ -79,6 +79,20 @@ supported machines or Kubernetes clusters in clouds other than AWS and GCP.
 - Include Arc, Azure Monitor, data-transfer, and Defender charges in cost estimates.
 - Define offboarding so retired assets do not remain billable or misleading.
 
+## Architecture and prerequisites
+
+- **Connected Machine agent (azcmagent):** registers a server as an Arc resource and needs outbound HTTPS to Arc and Defender endpoints, or a configured proxy or private link.
+- **Arc-enabled Kubernetes agents:** deploy via Helm and require cluster-admin and egress to Arc endpoints.
+- **Extensions:** Defender capabilities (MDE, AMA, vulnerability assessment) are delivered as Arc VM extensions once the plan is enabled in the resource's subscription.
+- **Placement:** choose tenant, subscription, resource group, region, and RBAC deliberately, because they define cost, policy inheritance, and access.
+- **Permissions:** Azure Connected Machine Onboarding plus Contributor to onboard; Security Admin / Owner to enable plans.
+
+## Scale and operate
+
+- Onboard at scale with a service principal and a configuration-management package (Group Policy, Ansible, or the install script).
+- Govern with Azure Policy at the management-group scope so Arc resources receive the intended Defender plan and extensions automatically.
+- Reconcile Arc inventory against the CMDB, monitor disconnected agents and certificate or proxy health, and define offboarding so retired assets stop billing and reporting.
+
 !!! warning "Important"
     Azure Arc does not make every third-party PaaS service eligible for an Azure
     Defender workload plan. It projects supported servers, Kubernetes, data, and

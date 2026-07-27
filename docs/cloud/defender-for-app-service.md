@@ -67,6 +67,24 @@ quickly.
 - Keep deployment credentials out of source code and rotate exposed secrets.
 - Test application containment and slot rollback procedures.
 
+## Architecture and prerequisites
+
+- **Signal sources:** correlates App Service platform logs, sampled request telemetry, and host process behavior — no application code change or agent required.
+- **Scope:** enabled per subscription under Defender plans; billed per App Service instance.
+- **Coverage nuance:** Windows and Linux App Service is supported; Azure Functions and other serverless hosting can differ — confirm against the support matrix.
+- **Permissions:** Security Admin / Owner on the subscription.
+
+## Detections and MITRE ATT&CK
+
+| Example detection | ATT&CK tactic |
+| --- | --- |
+| Web shell upload or suspicious process from the web worker | Persistence / Execution |
+| Dangling DNS entry eligible for subdomain takeover | Initial Access |
+| Connection to a known cryptomining or C2 host | Command and Control |
+| Vulnerability-scanner fingerprint against the app | Reconnaissance |
+
+Stream App Service diagnostic settings to Log Analytics so investigations have request-level context, and export alerts to Sentinel for correlation with WAF and identity signals.
+
 !!! note
     App Service plan support is specific. Azure Functions and other serverless
     hosting options can have different eligibility, telemetry, or protection.
