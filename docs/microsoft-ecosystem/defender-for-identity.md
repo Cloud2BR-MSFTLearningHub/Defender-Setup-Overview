@@ -81,6 +81,23 @@ Entra ID Protection's analysis of cloud sign-ins.
 - **Sizing and connectivity:** validate CPU and memory against domain-controller load, and allow outbound HTTPS to the Defender for Identity service.
 - **Surface:** signals appear in the Defender portal identity experience and feed Defender XDR.
 
+## Hybrid and multi-forest design
+
+Model each forest, domain, trust, domain controller, federation service, and
+certificate service explicitly during deployment. A healthy sensor in one domain
+does not establish coverage for a separate domain controller or identity service.
+Deploy and verify sensors according to the supported topology, and test the
+investigation path across the trusts that the business relies on rather than
+assuming every relationship produces the same visibility.
+
+Keep the relationship between on-premises accounts and cloud identities clear in
+the incident process. An on-premises account may be visible to Defender for
+Identity even when it has no corresponding Entra account; cloud-risk and
+Conditional Access actions must therefore be based on confirmed identity mapping,
+not only matching display names. Record the relevant on-premises identifiers,
+Entra identifiers when available, trust path, sensor health, and the source of
+each conclusion in the investigation.
+
 ## Detections across the attack chain
 
 | Phase | Example detection |

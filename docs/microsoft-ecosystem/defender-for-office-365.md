@@ -112,3 +112,19 @@ UrlClickEvents
 ```
 
 Use Threat Explorer and automated investigation to remove malicious messages tenant-wide, and feed signals into Defender XDR for cross-domain correlation.
+
+## Hunting data lifecycle
+
+Use message and click hunting as an investigation aid, not as the sole legal or
+compliance archive. Before creating custom detections, confirm the tenant's
+available schema, retention, licensing, and the precise meaning of the action
+values returned by the query. Scope queries by time, sender, recipient, message
+identifier, or URL where possible, then preserve the query parameters, result
+reference, and message-remediation decision with the incident record.
+
+Coordinate message removal with retention, eDiscovery, legal-hold, and user
+communications processes. A remediation action can reduce user exposure while
+separate governance controls preserve information required for investigation or
+regulatory obligations. Revalidate hunting and response playbooks whenever mail
+flow, Safe Links policy, accepted domains, or collaboration protection settings
+change.

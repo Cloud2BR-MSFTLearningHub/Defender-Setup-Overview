@@ -101,6 +101,29 @@ Azure Policy for Kubernetes or Gatekeeper.
 
 Runtime detections correlate node-level sensor telemetry with Kubernetes audit logs, so control-plane and workload behavior are analyzed together.
 
+## Audit correlation and response limits
+
+Verify that the supported cluster integration can obtain the Kubernetes audit
+signals needed for your environment, and treat missing or stale audit data as a
+coverage issue rather than evidence that no control-plane activity occurred.
+Managed Kubernetes offerings can restrict audit-policy configuration, retention,
+or direct access to control-plane logs; use the current product architecture and
+cluster documentation to establish what is available before creating a detection
+or response runbook that depends on those events.
+
+Keep node, control-plane, registry, and CI/CD clocks aligned to a common time
+source so an image push, deployment, API call, and runtime alert can be correlated
+reliably. During an incident, capture the cluster, node, namespace, pod UID,
+container image digest, service account, Kubernetes API event reference, and
+deployment revision before deleting or restarting a workload. Deleting a pod can
+remove the strongest evidence of the observed runtime state.
+
+Define an approved containment ladder with the platform team: restrict ingress,
+scale a deployment to zero, revoke a service-account permission, isolate a node,
+or preserve the workload for forensics. The correct action depends on workload
+criticality and cluster architecture; it must not be selected solely from the
+alert title.
+
 ## Hardening and enforcement
 
 - Use registry scan results as a CI/CD gate so vulnerable images fail the pipeline before deployment.

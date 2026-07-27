@@ -94,6 +94,30 @@ information, so the highest-value data receives the closest attention.
 
 Representative alerts include access from a Tor exit node or suspicious IP, an unusual volume of data extraction, upload of a known-malicious blob, and anomalous SAS-token usage. Wire malware-scan Event Grid events to a Logic App or Function to quarantine or delete flagged blobs automatically, and export alerts to Sentinel through the `SecurityAlert` table for correlation.
 
+## Scanning identity and result handling
+
+Treat the scanning configuration as a privileged data-processing integration.
+Review the storage account's identity and access management assignments, the
+Defender-created configuration, Event Grid subscription, destination workflow,
+and any quarantine container before rollout. Scope human and automation roles to
+the smallest account, container, and action set that satisfies the documented
+deployment requirements; do not substitute a broad storage-account key or an
+application owner identity for the managed integration.
+
+Design the scan-result consumer to handle duplicate delivery, delayed delivery,
+and a result that cannot be acted on because the object was deleted or replaced.
+Use blob version or immutable object identifiers where the application supports
+them, preserve the original object and result in a controlled quarantine path,
+and make the workflow emit a success or failure record for every action. Monitor
+the Defender plan state, scan-result events, workflow failures, and scanning caps
+together; an apparently healthy storage account can still have an unprocessed
+malicious-object event.
+
+Keep an evidence trail that links the storage account, blob URI and version,
+uploader identity, result event, quarantine or deletion action, ticket, and
+retention decision. Validate this complete flow with the supported harmless test
+procedure before relying on automatic downstream processing.
+
 !!! warning "Important"
     Malware scanning is not a substitute for access control, private networking,
     soft delete, versioning, backups, or data-loss prevention.

@@ -115,3 +115,19 @@ DeviceProcessEvents
 ```
 
 Convert high-value queries into custom detection rules so they generate alerts automatically.
+
+## Hunting data lifecycle
+
+Before operationalizing a hunting query, define its data source, expected event
+coverage, lookback period, query owner, and the incident action that follows a
+match. Advanced hunting schemas, availability, and retention depend on product
+configuration and can change; verify the current schema and retention policy in
+the Defender portal for the tenant rather than assuming that a historical query
+will always return complete endpoint evidence.
+
+Use narrow time windows, explicit device or identity scope, and projected columns
+while developing a query. Preserve the query, parameters, result reference, and
+collection time with the case record, because device timelines and retained data
+can change after cleanup or offboarding. For long-term or cross-source evidence,
+design the approved export and retention path separately and apply the same data
+classification and access controls as the underlying endpoint telemetry.

@@ -86,6 +86,29 @@ same incident in a loop.
 
 Prefer native Defender detections and add Sentinel analytics rules only for cross-source use cases. Automate with automation rules and Logic App playbooks that use least-privilege managed identities, and validate that a single test alert arrives once, with the correct entities, in the chosen primary queue.
 
+## Design telemetry and deduplication
+
+Document every connector as a telemetry contract: the security question it
+answers, source owner, destination table, expected volume, retention, access
+roles, and the analytic or investigation that depends on it. This prevents a
+high-volume source from becoming an expensive data stream with no operational
+purpose. Treat Defender alerts, raw source events, and custom analytics as
+separate inputs; retaining all three is justified only when each serves a
+specific detection or evidence requirement.
+
+When Defender XDR synchronization is enabled, do not create Sentinel analytics
+rules that independently recreate a native Defender detection unless the rule
+adds distinct cross-source logic. Test the intended alert path using a controlled
+event, then verify the incident count, alert IDs, entities, owner, status, and
+automation history in the selected primary queue. If duplicates appear, disable
+or tune the overlapping rule, check connector health and correlation timing, and
+link or close the duplicate only after preserving the investigation evidence.
+
+For every production analytic rule, record the source tables, lookback period,
+entity mappings, suppression behavior, automation dependencies, test procedure,
+and rollback owner. Revalidate those assumptions when a connector, retention
+setting, table schema, or Defender integration changes.
+
 !!! warning "Important"
     Sending duplicate raw telemetry and alerts can add cost without adding detection
     value. Build integrations from explicit use cases and retention requirements.

@@ -93,6 +93,23 @@ supported machines or Kubernetes clusters in clouds other than AWS and GCP.
 - Govern with Azure Policy at the management-group scope so Arc resources receive the intended Defender plan and extensions automatically.
 - Reconcile Arc inventory against the CMDB, monitor disconnected agents and certificate or proxy health, and define offboarding so retired assets stop billing and reporting.
 
+## Connectivity and lifecycle control
+
+Manage the connected-machine agent, proxy, private-link configuration, endpoint
+allow lists, and extension versions as production dependencies. Record the
+network path and proxy owner for every restricted location, then test onboarding,
+extension installation, telemetry delivery, and recovery after a proxy, firewall,
+certificate, or DNS change. A resource can remain visible in Azure while an
+extension or security sensor has stopped reporting, so inventory presence alone
+is not a health check.
+
+Use the Azure Arc agent status and extension status as the first troubleshooting
+evidence, then correlate them with local service logs, proxy logs, and Azure
+activity records. Keep a documented reconnect and offboarding procedure that
+preserves the required security evidence, removes unneeded credentials and
+extensions, and confirms that the asset is no longer receiving policies or
+incurring applicable service charges.
+
 !!! warning "Important"
     Azure Arc does not make every third-party PaaS service eligible for an Azure
     Defender workload plan. It projects supported servers, Kubernetes, data, and
