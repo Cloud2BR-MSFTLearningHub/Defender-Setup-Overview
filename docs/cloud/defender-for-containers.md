@@ -20,6 +20,23 @@ Kubernetes environments.
 
 *Source: [Microsoft Defender for Containers architecture](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-architecture).* 
 
+## Why enable it
+
+Containers move fast, scale automatically, and are often built from third-party
+images, which makes vulnerable or misconfigured workloads easy to miss. Defender
+for Containers covers the full lifecycle — build, registry, and runtime — so a
+known-vulnerable image or a suspicious in-cluster action is caught early.
+
+| Without Defender for Containers | With the plan enabled |
+| --- | --- |
+| Image vulnerabilities are found after deployment, if at all | Registry and runtime image scanning flags them before and during use |
+| Kubernetes misconfigurations rely on manual review | Posture recommendations and hardening guidance are continuous |
+| Runtime attacks blend into normal cluster noise | Behavioral threat detection raises alerts on suspicious activity |
+| Each cloud's clusters are assessed separately | AKS, EKS, GKE, and Arc clusters share one control plane |
+
+**Value in one line:** it secures the container supply chain and the running
+cluster together, instead of trusting that every image and workload is clean.
+
 ## Where it applies
 
 | Environment | Connection model |

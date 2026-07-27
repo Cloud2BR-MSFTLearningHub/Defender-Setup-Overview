@@ -13,7 +13,29 @@
 
 Microsoft Defender for Business delivers endpoint protection for small and
 medium-sized organizations. It can be licensed separately or included in
-eligible Microsoft 365 Business Premium subscriptions.
+eligible Microsoft 365 Business Premium subscriptions. It packages enterprise-grade
+endpoint security into a simplified, guided experience sized for lean IT teams.
+
+![Microsoft Defender for Business capabilities overview](https://learn.microsoft.com/en-us/defender-business/media/mdb-offering-overview.png)
+
+*Source: [What is Microsoft Defender for Business](https://learn.microsoft.com/en-us/defender-business/mdb-overview).*
+
+## Why enable it
+
+Smaller organizations face the same ransomware and phishing threats as large
+enterprises but rarely have a dedicated security team. Defender for Business
+delivers next-generation antivirus, EDR, and automated remediation with defaults
+and guided setup so protection does not require a specialist.
+
+| Without Defender for Business | With it enabled |
+| --- | --- |
+| Consumer antivirus with limited response | Enterprise-grade EDR with automated remediation |
+| Security requires deep expertise | Guided setup and secure defaults do the heavy lifting |
+| Threats are handled reactively | Automated investigation contains common attacks |
+| Devices are managed inconsistently | Central portal covers Windows, macOS, and mobile |
+
+**Value in one line:** it gives small teams enterprise-class endpoint detection
+and automated response without needing a dedicated security operations center.
 
 ## Configure
 
@@ -34,6 +56,6 @@ eligible Microsoft 365 Business Premium subscriptions.
 - Reassess licensing when organization size or security needs grow.
 
 !!! note
-   Defender for Business is not Defender for Cloud. Servers can be protected
-   through a Defender for Business server add-on or through Defender for Servers,
-   depending on architecture and licensing.
+    Defender for Business is not Defender for Cloud. Servers can be protected
+    through a Defender for Business server add-on or through Defender for Servers,
+    depending on architecture and licensing.

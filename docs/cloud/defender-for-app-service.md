@@ -12,7 +12,29 @@
 [Back to the documentation hub](../index.md)
 
 Defender for App Service detects attacks against supported applications hosted
-on Azure App Service by correlating platform and workload signals.
+on Azure App Service by correlating platform and workload signals. It watches for
+reconnaissance, exploitation attempts, dangling DNS takeover, and post-exploit
+behavior that a web application firewall alone would not surface.
+
+![Defender for Cloud alert for a dangling DNS entry on an App Service app](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-app-service-introduction/dangling-dns-alert.png)
+
+*Source: [Overview of Defender for App Service](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-app-service-introduction).*
+
+## Why enable it
+
+Public web apps are probed constantly. Because App Service manages the underlying
+platform, Defender can combine its host-level visibility with your application
+signals to detect attacks that never appear in application logs alone.
+
+| Without Defender for App Service | With the plan enabled |
+| --- | --- |
+| Web attacks are inferred from scattered app logs | Platform and workload signals are correlated into clear alerts |
+| Dangling DNS and subdomain takeover go unnoticed | Dedicated detections flag exposed and orphaned endpoints |
+| Post-exploitation activity blends into normal traffic | Behavioral analytics highlight suspicious process and network actions |
+| Security relies solely on a WAF at the edge | Runtime detection adds defense behind the front door |
+
+**Value in one line:** it gives hosted web apps host-aware threat detection that
+reaches attacks a perimeter firewall cannot see.
 
 ## Enable
 

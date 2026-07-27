@@ -14,7 +14,26 @@
 
 Defender for Cloud addresses generative AI risk through two related capabilities:
 AI security posture management discovers and evaluates AI workloads, while AI
-threat protection detects supported runtime threats.
+threat protection detects supported runtime threats. As organizations ship AI
+features quickly, new risks appear — exposed model endpoints, excessive data
+access, and prompt-injection attacks — that traditional controls do not cover.
+
+## Why enable it
+
+AI applications combine models, data, identities, and plugins in ways that are
+hard to inventory by hand, and a single exposed endpoint or over-privileged
+connection can leak sensitive data. Defender maps the AI bill of materials and
+watches supported workloads for active abuse.
+
+| Without Defender for AI | With the capabilities enabled |
+| --- | --- |
+| AI components are undocumented and unmonitored | Posture management discovers models, endpoints, and data flows |
+| Exposure and excessive permissions are invisible | Findings and attack paths highlight risky AI configurations |
+| Prompt-injection and abuse go undetected | Runtime threat protection alerts on supported attacks |
+| AI risk sits outside the security program | AI findings appear alongside the rest of cloud posture |
+
+**Value in one line:** it brings fast-moving AI workloads under the same
+discovery, posture, and threat-detection discipline as the rest of the cloud.
 
 ## Capability map
 

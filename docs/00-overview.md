@@ -21,6 +21,15 @@ SaaS application, or security event.
 
 *Source: [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction).* 
 
+## Why it matters
+
+Each Defender product exists because a different part of the environment is a
+distinct attack surface. Turning the right ones on replaces blind spots and
+disconnected point tools with layered, correlated protection: posture management
+prevents misconfigurations, workload plans detect runtime attacks, and Defender
+XDR ties the signals into incidents your team can actually act on. The pages in
+this hub each explain the specific value of enabling that protection.
+
 ## The four layers
 
 | Layer | Primary role | Examples |
@@ -77,6 +86,6 @@ response actions. They do not automatically rewrite every unsafe cloud resource.
 | Repair infrastructure configuration | Infrastructure as code and deployment pipeline |
 
 !!! warning "Important"
-  Automated isolation, blocking, or deletion can interrupt production. Start
-  with audit and notification, define an owner and rollback path, and then move
-  well-tested controls to enforcement.
+    Automated isolation, blocking, or deletion can interrupt production. Start
+    with audit and notification, define an owner and rollback path, and then move
+    well-tested controls to enforcement.

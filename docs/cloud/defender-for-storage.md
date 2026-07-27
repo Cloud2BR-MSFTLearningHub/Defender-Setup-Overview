@@ -14,7 +14,30 @@
 
 Defender for Storage detects storage-specific threats and can add on-upload
 malware scanning and sensitive-data threat detection for supported Azure Storage
-services and account types.
+services and account types. Because storage accounts hold backups, application
+data, and shared content, they are a frequent target for exfiltration and a
+common delivery point for malware.
+
+![How Defender for Storage protects data against common threats](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-storage-introduction/defender-for-storage-benefits.png)
+
+*Source: [Overview of Defender for Storage](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-introduction).*
+
+## Why enable it
+
+A single malicious upload or a leaked SAS token can turn a storage account into
+a malware host or a data-loss event. Defender for Storage watches access patterns
+with Microsoft threat intelligence and can block malware at upload time, without
+changing how applications read and write data.
+
+| Without Defender for Storage | With the plan enabled |
+| --- | --- |
+| Suspicious access is only visible in raw logs | Threat intelligence flags anomalous and malicious activity |
+| Uploaded files are trusted implicitly | Optional on-upload malware scanning blocks known-bad files |
+| Sensitive-data exposure is discovered late | Sensitive-data threat detection prioritizes high-value accounts |
+| SAS and key abuse is hard to spot | Alerts highlight unusual token and key usage |
+
+**Value in one line:** it stops storage from becoming a quiet path for malware
+delivery and data theft, while keeping normal application access unchanged.
 
 ## Protect
 
@@ -41,5 +64,5 @@ services and account types.
 - Do not expose test files or production data during validation.
 
 !!! warning "Important"
-   Malware scanning is not a substitute for access control, private networking,
-   soft delete, versioning, backups, or data-loss prevention.
+    Malware scanning is not a substitute for access control, private networking,
+    soft delete, versioning, backups, or data-loss prevention.

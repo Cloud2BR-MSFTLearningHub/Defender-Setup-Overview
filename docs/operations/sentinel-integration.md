@@ -20,6 +20,23 @@ signals with Microsoft and third-party data for broader analytics and automation
 
 *Source: [Microsoft Sentinel overview](https://learn.microsoft.com/en-us/azure/sentinel/overview).* 
 
+## Why integrate it
+
+Defender products are excellent at detecting attacks inside the Microsoft estate,
+but most organizations also run firewalls, non-Microsoft clouds, and custom apps.
+Sentinel adds long-term retention, cross-source correlation, and flexible
+automation, so Defender incidents can be investigated alongside everything else.
+
+| Defender XDR alone | With Sentinel integrated |
+| --- | --- |
+| Deep detection across Microsoft workloads | Adds firewall, network, and third-party data |
+| Retention suited to active investigation | Long-term retention for hunting and compliance |
+| Response scoped to Microsoft products | SOAR playbooks orchestrate any connected system |
+| One vendor's telemetry | A single pane across the whole environment |
+
+**Value in one line:** it extends Defender's strong detections with SIEM-scale
+correlation, retention, and automation across every security source you own.
+
 ## Decide the incident owner
 
 Choose whether Defender XDR or Sentinel is the primary incident queue. Avoid

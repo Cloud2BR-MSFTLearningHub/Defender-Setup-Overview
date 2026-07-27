@@ -13,7 +13,30 @@
 [Back to the documentation hub](../index.md)
 
 Defender for Databases is a family of data-workload protections. Enable the
-subplan that matches the database engine and hosting model.
+subplan that matches the database engine and hosting model. Databases hold the
+most sensitive data in most environments, so they are a primary target for
+injection, brute force, privilege abuse, and exfiltration.
+
+![Defender for Cloud database threat alerts](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-databases-introduction/defender-alerts.png)
+
+*Source: [Overview of Defender for Databases](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-databases-introduction).*
+
+## Why enable it
+
+Attackers who reach a database rarely trigger platform alarms — they use valid
+queries and stolen credentials. Defender for Databases applies behavioral
+analytics and threat intelligence to flag anomalous access and known attack
+patterns against the exact engine you run.
+
+| Without Defender for Databases | With the matching subplan enabled |
+| --- | --- |
+| SQL injection and brute force are found in raw audit logs | Behavioral detections raise prioritized alerts |
+| Anomalous access looks like normal query traffic | Unusual locations, principals, and volumes are highlighted |
+| Vulnerability posture is assessed ad hoc | Built-in vulnerability assessment reports drift (where supported) |
+| Each engine is monitored differently | Consistent coverage across Azure SQL, open-source, and Cosmos DB |
+
+**Value in one line:** it catches credential-based and injection attacks on your
+data tier that infrastructure monitoring simply cannot see.
 
 ## Workload map
 

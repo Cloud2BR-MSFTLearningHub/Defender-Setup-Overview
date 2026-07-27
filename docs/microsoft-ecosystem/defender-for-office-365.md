@@ -20,6 +20,23 @@ Exchange Online, Teams, SharePoint, and OneDrive capabilities.
 
 *Source: [Defender for Office 365 protection ladder](https://learn.microsoft.com/en-us/defender-office-365/mdo-about).* 
 
+## Why enable it
+
+Email and collaboration are the number-one entry point for attacks, and business
+email compromise is among the costliest. Defender for Office 365 adds time-of-click
+link protection, attachment detonation, and impersonation defense that basic spam
+filtering does not provide — plus tools to hunt and remediate what gets through.
+
+| Without Defender for Office 365 | With Plan 1 or Plan 2 enabled |
+| --- | --- |
+| Links are checked only at delivery | Safe Links re-checks URLs at time of click |
+| Attachments rely on signature scanning | Safe Attachments detonates files in a sandbox |
+| Impersonation and BEC are hard to catch | Impersonation and spoof intelligence flag them |
+| Post-delivery cleanup is manual | Explorer and automated response hunt and remove threats |
+
+**Value in one line:** it defends the most-attacked surface — the inbox — with
+active detonation, click-time protection, and fast post-delivery remediation.
+
 ## Protection ladder
 
 | Level | Main addition |

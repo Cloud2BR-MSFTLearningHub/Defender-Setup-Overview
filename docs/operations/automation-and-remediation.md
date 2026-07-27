@@ -16,6 +16,23 @@ Defender detects, recommends, investigates, and performs specific supported
 response actions. Policy and automation services provide broader enforcement and
 remediation. Match the tool to the decision being made.
 
+## Why it matters
+
+Detection without response just produces alerts faster than people can act on them.
+Automation closes that gap — handling repetitive triage, enrichment, and
+containment in seconds — while keeping humans in control of disruptive actions.
+The value comes from pairing the right enforcement tool with each decision.
+
+| Manual-only operations | With measured automation |
+| --- | --- |
+| Analysts repeat the same triage steps | Playbooks normalize and enrich alerts instantly |
+| Response time depends on staff availability | Routine containment happens in seconds, any hour |
+| Enforcement is inconsistent | Policy and pipelines apply controls uniformly |
+| Disruptive actions risk mistakes | Approval gates protect high-impact steps |
+
+**Value in one line:** automation removes the busywork and slow hand-offs from
+response while keeping human approval on the actions that can disrupt production.
+
 ## Control map
 
 | Goal | Typical tool |

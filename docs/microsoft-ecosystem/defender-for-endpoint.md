@@ -14,7 +14,26 @@
 
 Defender for Endpoint is Microsoft's enterprise endpoint security platform for
 prevention, endpoint detection and response, investigation, and remediation.
-It supports eligible Windows, macOS, Linux, Android, and iOS platforms.
+It supports eligible Windows, macOS, Linux, Android, and iOS platforms, combining
+next-generation antivirus, attack surface reduction, and behavioral EDR in one
+sensor.
+
+## Why enable it
+
+Endpoints are where most attacks land and where response has to happen fast.
+Defender for Endpoint adds behavioral detection, one-click isolation, and
+automated investigation on top of prevention, so a compromised device can be
+contained in minutes rather than hours.
+
+| Without Defender for Endpoint | With the platform deployed |
+| --- | --- |
+| Antivirus blocks known malware but little else | Behavioral EDR catches novel and fileless attacks |
+| A compromised device stays connected during triage | One-click isolation and live response contain it |
+| Vulnerability data lives in a separate scanner | Integrated vulnerability management is built in |
+| Endpoint alerts are disconnected from other signals | Signals feed Defender XDR incident correlation |
+
+**Value in one line:** it upgrades endpoints from prevention-only antivirus to
+detection, investigation, and rapid containment that feeds the wider XDR picture.
 
 ## Deployment paths
 

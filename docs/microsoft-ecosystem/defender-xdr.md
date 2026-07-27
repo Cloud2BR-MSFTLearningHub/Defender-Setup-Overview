@@ -14,7 +14,26 @@
 
 Microsoft Defender XDR unifies prevention, detection, investigation, and
 response across endpoints, identities, email, collaboration, applications, and
-connected cloud signals in the Microsoft Defender portal.
+connected cloud signals in the Microsoft Defender portal. Instead of chasing
+separate alerts in separate consoles, analysts work a single incident that
+stitches the related evidence together automatically.
+
+## Why enable it
+
+Modern attacks cross domains — a phishing email leads to a stolen identity, which
+leads to an endpoint, which reaches the cloud. Reviewing each product separately
+hides that story. Defender XDR correlates the signals into one incident and can
+respond automatically, cutting the time attackers have to act.
+
+| Without Defender XDR | With Defender XDR enabled |
+| --- | --- |
+| Alerts are triaged product by product | Related alerts merge into a single incident |
+| Analysts pivot between multiple consoles | One portal shows the full attack story |
+| Cross-domain attacks are pieced together manually | Correlation links email, identity, endpoint, and cloud |
+| Response is manual and slow | Automated investigation and response contain threats faster |
+
+**Value in one line:** it turns a flood of isolated alerts into a few
+prioritized incidents and automates the routine response work behind them.
 
 ## Signal sources
 

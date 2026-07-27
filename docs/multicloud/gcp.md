@@ -16,6 +16,26 @@ Defender for Cloud connects Google Cloud organizations or projects to provide
 cloud posture management and selected workload protections for supported GCP
 resources.
 
+![Selecting Defender plans while onboarding a GCP project](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/quickstart-onboard-gcp/select-plans.png)
+
+*Source: [Connect your GCP projects to Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-gcp).*
+
+## Why enable it
+
+Google Cloud projects proliferate quickly and often sit outside the central
+security program. A GCP connector applies the same benchmark, posture analysis,
+and workload protection you use elsewhere, so multicloud does not mean multi-blind-spot.
+
+| Without a GCP connector | With GCP connected |
+| --- | --- |
+| GCP risk is measured in a separate tool | GCP posture joins one unified secure score |
+| Project sprawl hides ungoverned resources | Discovery inventories projects and resources centrally |
+| Compute Engine and GKE use isolated tooling | Defender for Servers and Containers extend to GCP |
+| Findings lack cross-cloud context | Attack paths and explorer span clouds |
+
+**Value in one line:** it folds Google Cloud into the same posture and threat
+model as Azure and AWS, so risk is compared on one scale.
+
 ## Typical coverage
 
 - Foundational CSPM and recommendations mapped to multicloud standards.

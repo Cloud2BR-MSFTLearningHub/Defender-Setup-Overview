@@ -13,7 +13,30 @@
 
 Defender for Key Vault detects unusual and potentially harmful attempts to
 access or exploit Azure Key Vault vaults by analyzing control-plane and
-data-plane activity with Microsoft threat intelligence.
+data-plane activity with Microsoft threat intelligence. Because vaults store the
+secrets, keys, and certificates that unlock everything else, a compromised vault
+often means a compromised environment.
+
+![Defender for Cloud Key Vault security alerts page](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-key-vault-intro/key-vault-security-page.png)
+
+*Source: [Overview of Defender for Key Vault](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-key-vault-introduction).*
+
+## Why enable it
+
+Secret theft is a favored escalation step: one leaked application credential can
+be used to pull every secret a vault holds. Defender for Key Vault baselines
+normal access and alerts when an unfamiliar identity, location, or access volume
+suggests abuse.
+
+| Without Defender for Key Vault | With the plan enabled |
+| --- | --- |
+| Vault access is only reviewable in diagnostic logs | Threat intelligence flags suspicious access in near real time |
+| A compromised app can drain secrets unnoticed | Unusual bulk or first-time access triggers alerts |
+| Anomalies require manual baselining | Behavioral analytics learn the normal access pattern |
+| Response is reactive after damage | Early alerts enable rotation before secrets are misused |
+
+**Value in one line:** it turns the vault from a silent single point of failure
+into a monitored tripwire that warns you the moment secrets are targeted.
 
 ## Enable
 

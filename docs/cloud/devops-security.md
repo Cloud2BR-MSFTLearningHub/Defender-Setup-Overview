@@ -14,7 +14,29 @@
 
 Defender for Cloud connects source-control and pipeline environments so security
 teams can see code-to-cloud context. Supported connectors include GitHub, Azure
-DevOps, and GitLab, with capability differences documented by Microsoft.
+DevOps, and GitLab, with capability differences documented by Microsoft. The goal
+is to catch exposed secrets, vulnerable dependencies, and insecure
+infrastructure-as-code in the pipeline, where fixes are cheapest.
+
+![Defender for Cloud DevOps security posture across connected repositories](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-devops-introduction/posture-management.png)
+
+*Source: [Overview of DevOps security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction).*
+
+## Why enable it
+
+Most cloud risk is written in code long before it is deployed. Connecting DevOps
+platforms lets Defender relate a finding in a repository to the resource it
+becomes in the cloud, so teams fix the root cause instead of patching runtime.
+
+| Without DevOps security | With connectors enabled |
+| --- | --- |
+| Secrets and IaC flaws are found after deployment | Scanning surfaces them in the repository and pipeline |
+| Findings lack cloud context | Code-to-cloud mapping links code to running resources |
+| Ownership of a finding is unclear | Results route to the repository and pipeline owners |
+| Security and developers use separate tools | Findings appear in one posture view for both teams |
+
+**Value in one line:** it shifts security left, catching exposed secrets and
+insecure infrastructure-as-code before they ever reach production.
 
 ## Enable
 
@@ -35,5 +57,5 @@ DevOps, and GitLab, with capability differences documented by Microsoft.
 - Review connector permissions, inactive repositories, and coverage drift.
 
 !!! note
-  A DevOps connector does not protect a running workload by itself. Enable the
-  appropriate workload plan for runtime detection and response.
+    A DevOps connector does not protect a running workload by itself. Enable the
+    appropriate workload plan for runtime detection and response.

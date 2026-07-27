@@ -15,7 +15,27 @@
 
 Defender for Servers protects Windows and Linux machines in Azure, AWS, GCP,
 and on-premises environments. Non-Azure machines normally connect through Azure
-Arc. Microsoft Defender for Endpoint supplies endpoint detection and response.
+Arc. Microsoft Defender for Endpoint supplies endpoint detection and response,
+and the plan adds vulnerability assessment, file integrity monitoring, and
+agentless disk scanning so a server is protected whether or not an agent is
+healthy at any moment.
+
+## Why enable it
+
+Servers hold the operating systems, credentials, and data that attackers pursue
+after an initial foothold. Defender for Servers gives those machines the same
+endpoint-grade detection and response used to protect managed devices, extended
+across every cloud and on-premises estate from a single plan.
+
+| Without Defender for Servers | With the plan enabled |
+| --- | --- |
+| VMs rely on inconsistent, per-team antivirus | Unified Defender for Endpoint EDR across Windows and Linux |
+| Vulnerabilities are discovered on a periodic scan cycle | Integrated vulnerability assessment reports continuously |
+| Non-Azure servers sit outside central security | Arc-connected AWS, GCP, and on-premises servers are covered |
+| A disabled agent means a blind spot | Agentless disk scanning still evaluates the machine |
+
+**Value in one line:** it extends enterprise endpoint detection, vulnerability
+management, and hardening to every server, not just the ones inside Azure.
 
 ## Plan choice
 

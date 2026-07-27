@@ -16,6 +16,27 @@ Defender for Cloud connects AWS organizations or accounts to provide cloud
 posture management and selected workload protections. It does not turn AWS into
 an Azure subscription; protection remains resource- and plan-specific.
 
+![Selecting Defender plans while onboarding an AWS account](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/quickstart-onboard-aws/add-aws-account-plans-selection.png)
+
+*Source: [Connect your AWS accounts to Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-aws).*
+
+## Why enable it
+
+Security teams rarely have one cloud. Running a separate AWS security stack means
+separate consoles, separate scoring, and gaps where nobody is looking. An AWS
+connector brings AWS posture and workload protection into the same secure score
+and attack-path view you already use for Azure.
+
+| Without an AWS connector | With AWS connected |
+| --- | --- |
+| AWS posture lives in a separate tool and score | AWS findings join one unified secure score |
+| Cross-cloud attack paths are invisible | Attack paths can span Azure and AWS resources |
+| EC2 and EKS use different security tooling | Defender for Servers and Containers extend to AWS |
+| Reporting is stitched together manually | One console reports multicloud risk consistently |
+
+**Value in one line:** it removes the AWS blind spot, giving one prioritized view
+of risk across every cloud your organization runs.
+
 ## Typical coverage
 
 - Foundational CSPM and Microsoft Cloud Security Benchmark recommendations.

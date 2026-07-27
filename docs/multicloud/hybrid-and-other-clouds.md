@@ -20,6 +20,23 @@ without a native Defender for Cloud connector.
 
 *Source: [Azure Arc overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview).* 
 
+## Why enable it
+
+On-premises datacenters, private clouds, and providers without a native connector
+are often the least monitored part of an estate — yet they run legacy systems
+attackers love. Azure Arc projects those machines and clusters into Azure so a
+single Defender plan can protect them alongside cloud-native resources.
+
+| Without Azure Arc | With Arc-connected resources |
+| --- | --- |
+| On-premises and other-cloud assets sit outside Defender | Supported servers and clusters gain Defender coverage |
+| Security tooling differs per location | One plan and portal span every environment |
+| Inventory is incomplete and manual | Arc builds a central, queryable inventory |
+| Legacy systems are hard to monitor | EDR, vulnerability, and posture reach them consistently |
+
+**Value in one line:** it brings the hardest-to-reach servers and clusters under
+the same protection, inventory, and reporting as the rest of the cloud estate.
+
 ## What can connect
 
 | Asset | Onboarding path | Defender path |

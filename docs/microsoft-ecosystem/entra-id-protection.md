@@ -13,7 +13,29 @@
 
 Microsoft Entra ID Protection detects and reports risky users, risky sign-ins,
 and risk detections. Conditional Access can use that risk to require secure
-authentication, password change, or access blocking.
+authentication, password change, or access blocking. It applies Microsoft's
+signal from trillions of authentications to spot compromised identities in real time.
+
+![Microsoft Entra ID Protection risk overview](https://learn.microsoft.com/en-us/entra/id-protection/media/overview-identity-protection/identity-protection-overview.png)
+
+*Source: [What is Microsoft Entra ID Protection](https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection).*
+
+## Why enable it
+
+Stolen credentials are the most common way into a tenant, and static rules cannot
+tell a legitimate sign-in from an attacker using the right password. ID Protection
+scores risk continuously and lets Conditional Access respond automatically —
+prompting for MFA, forcing a password reset, or blocking access.
+
+| Without Entra ID Protection | With risk policies enabled |
+| --- | --- |
+| Compromised sign-ins look legitimate | Risk scoring flags anomalous and leaked-credential logins |
+| Response to account risk is manual | Conditional Access auto-remediates risky sign-ins |
+| Risky users are found after damage | Ongoing user-risk detection surfaces them early |
+| Identity risk is disconnected from the SOC | Risk events feed Defender XDR and Sentinel |
+
+**Value in one line:** it automatically challenges or blocks compromised sign-ins
+the moment risk appears, closing the most common path into the tenant.
 
 ## Configure
 

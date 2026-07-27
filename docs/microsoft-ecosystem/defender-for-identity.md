@@ -14,7 +14,26 @@
 
 Defender for Identity uses signals from on-premises identity infrastructure to
 detect reconnaissance, credential theft, lateral movement, and compromised
-identities, then correlates them in Defender XDR.
+identities, then correlates them in Defender XDR. Active Directory is the target
+of most hands-on-keyboard attacks, and its native logs rarely make an attack
+obvious on their own.
+
+## Why enable it
+
+Once attackers have a foothold, they abuse Active Directory to move laterally and
+escalate privilege using legitimate-looking actions. Defender for Identity
+baselines normal identity behavior and detects the techniques — such as
+DCSync, Pass-the-Hash, and Kerberoasting — that those actions represent.
+
+| Without Defender for Identity | With sensors deployed |
+| --- | --- |
+| Domain controller logs must be analyzed by hand | Behavioral analytics surface identity attacks automatically |
+| Lateral movement blends into normal traffic | Lateral-movement paths are mapped and alerted |
+| Identity posture weaknesses are unknown | Security assessments highlight risky configurations |
+| Identity alerts stand alone | Signals correlate into Defender XDR incidents |
+
+**Value in one line:** it turns quiet Active Directory abuse into clear,
+correlated alerts before attackers reach domain dominance.
 
 ## Typical scope
 
@@ -41,6 +60,6 @@ identities, then correlates them in Defender XDR.
 - Protect sensor credentials and establish domain-controller recovery procedures.
 
 !!! note
-  Defender for Identity complements Microsoft Entra ID Protection. The former
-  emphasizes hybrid and on-premises identity signals; the latter evaluates
-  Entra user and sign-in risk.
+    Defender for Identity complements Microsoft Entra ID Protection. The former
+    emphasizes hybrid and on-premises identity signals; the latter evaluates
+    Entra user and sign-in risk.

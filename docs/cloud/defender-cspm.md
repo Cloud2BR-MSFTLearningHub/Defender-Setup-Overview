@@ -14,7 +14,31 @@
 [Back to the documentation hub](../index.md)
 
 Cloud Security Posture Management (CSPM) discovers resources, evaluates their
-configuration, and prioritizes security risk across Azure, AWS, and GCP.
+configuration, and prioritizes security risk across Azure, AWS, and GCP. It
+answers three questions continuously: what do I have, how is it exposed, and
+what should I fix first. Foundational CSPM is free and turned on for every
+connected environment; Defender CSPM adds the context that separates a long list
+of findings from an actionable, risk-ranked plan.
+
+![Defender for Cloud security posture and secure score dashboard](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/secure-score-security-controls/security-posture-page.png)
+
+*Source: [Secure score in Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/secure-score-security-controls).*
+
+## Why enable it
+
+Most cloud incidents begin with a preventable misconfiguration: a public storage
+container, an over-permissioned identity, or an internet-exposed management port.
+CSPM finds that risk before an attacker does and shows the shortest path to fix it.
+
+| Without CSPM | With Defender CSPM enabled |
+| --- | --- |
+| Misconfigurations surface manually or during an incident | Continuous assessment flags risky configurations automatically |
+| Findings are a flat list with no clear starting point | Attack paths and risk prioritization rank the exposures that matter |
+| Multicloud posture is scattered across consoles | Azure, AWS, and GCP posture is unified in one secure score |
+| Progress is hard to prove to leadership | Secure score trends quantify risk reduction over time |
+
+**Value in one line:** CSPM converts thousands of raw findings into a ranked,
+measurable remediation plan that shrinks the attack surface before it is exploited.
 
 ## Plans
 
@@ -39,6 +63,10 @@ configuration, and prioritizes security risk across Azure, AWS, and GCP.
 - Validate agentless scanning coverage, permissions, [region support](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud), and freshness.
 - Assign governance owners and remediation due dates.
 - Use Cloud Security Explorer and attack paths to investigate exposure chains.
+
+![Attack path analysis linking an exposed resource to sensitive data](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/concept-cloud-map/attack-path.png)
+
+*Source: [Attack path analysis](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-attack-path).*
 
 !!! note
     CSPM identifies risk; workload plans add threat detection. Enabling Defender

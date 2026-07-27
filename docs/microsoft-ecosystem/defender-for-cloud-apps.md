@@ -20,6 +20,23 @@ session and access controls with Microsoft Entra Conditional Access.
 
 *Source: [Microsoft Defender for Cloud Apps overview](https://learn.microsoft.com/en-us/defender-cloud-apps/what-is-defender-for-cloud-apps).* 
 
+## Why enable it
+
+Employees adopt SaaS apps faster than security can review them, and sensitive data
+quietly spreads across tools nobody sanctioned. Defender for Cloud Apps reveals
+that shadow IT, scores each app's risk, and can control risky sessions and OAuth
+grants in real time.
+
+| Without Defender for Cloud Apps | With it enabled |
+| --- | --- |
+| Shadow IT usage is unknown | Cloud Discovery reveals apps in use and their risk |
+| Risky OAuth grants persist unnoticed | App Governance flags and controls OAuth apps |
+| SaaS activity has no unified audit | Connectors provide activity logs and anomaly detection |
+| Access is all-or-nothing | Conditional Access App Control governs sessions live |
+
+**Value in one line:** it turns invisible SaaS sprawl into a governed, monitored
+estate with real-time control over risky access and data movement.
+
 ## Capability map
 
 | Need | Capability |

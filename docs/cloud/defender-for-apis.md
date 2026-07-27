@@ -13,6 +13,29 @@
 
 Defender for APIs adds security posture and runtime threat detection for
 eligible APIs managed through supported Azure API Management tiers and regions.
+APIs expose business logic and data directly to the internet, and they are now
+one of the most common attack surfaces, so seeing which APIs exist and how they
+are being used is essential.
+
+![Defender for APIs endpoint details and risk context](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-apis-introduction/endpoint-details.png)
+
+*Source: [Overview of Defender for APIs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-apis-introduction).*
+
+## Why enable it
+
+Many breaches involve an API that security teams did not know was exposed or was
+returning sensitive data. Defender for APIs inventories managed APIs, highlights
+the risky ones, and watches traffic for exploitation of the OWASP API risks.
+
+| Without Defender for APIs | With the plan enabled |
+| --- | --- |
+| Shadow and undocumented APIs go untracked | A live inventory shows APIs, usage, and exposure |
+| Sensitive-data exposure is discovered during an incident | Risk context highlights APIs handling sensitive data |
+| Attacks on API logic look like normal requests | Runtime detections flag suspicious and anomalous calls |
+| Prioritization is guesswork | Findings rank internet-facing, sensitive APIs first |
+
+**Value in one line:** it makes your API estate visible and monitored, so the
+endpoints attackers probe are the endpoints you are already watching.
 
 ## Enable
 

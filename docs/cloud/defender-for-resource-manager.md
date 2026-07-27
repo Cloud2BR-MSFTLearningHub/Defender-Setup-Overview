@@ -13,7 +13,30 @@
 
 Defender for Resource Manager monitors Azure resource-management operations for
 suspicious control-plane activity, including behavior associated with credential
-abuse, unusual administration, or destructive changes.
+abuse, unusual administration, or destructive changes. Azure Resource Manager is
+the management layer every deployment, role change, and configuration passes
+through, so it is where an attacker with stolen credentials operates.
+
+![Azure Resource Manager as the consistent management layer monitored by Defender](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-resource-manager-introduction/consistent-management-layer-with-defender.png)
+
+*Source: [Overview of Defender for Resource Manager](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-resource-manager-introduction).*
+
+## Why enable it
+
+Control-plane attacks — mass role assignments, toolkit-driven enumeration, or
+bulk resource deletion — look like ordinary administration until you correlate
+them. Defender for Resource Manager applies threat intelligence and behavioral
+analytics to the management layer so those actions stand out.
+
+| Without Defender for Resource Manager | With the plan enabled |
+| --- | --- |
+| Malicious admin actions hide inside the Activity Log | Suspicious control-plane operations raise alerts |
+| Attack-toolkit patterns are hard to recognize | Detections map to known cloud attack techniques |
+| Compromised automation identities act freely | Anomalous principal behavior is flagged for response |
+| Subscription-level risk has no dedicated owner | Alerts route to a defined control-plane response process |
+
+**Value in one line:** it watches the one layer every cloud change flows through,
+turning silent control-plane abuse into an actionable alert.
 
 ## Enable
 
