@@ -99,3 +99,20 @@ Save high-value queries as custom detection rules so novel techniques become fir
 !!! note
     Defender XDR is the correlation and response layer. It does not create missing
     telemetry from a Defender product that has not been licensed or deployed.
+
+## Operational decisions
+
+- Select one primary incident queue and document the handoff to Sentinel or ITSM
+    so two teams do not independently contain or close the same incident.
+- Define automation authority by action: enrichment may be automatic, while
+    isolation, account disablement, and mailbox remediation need explicit ownership.
+- Retain incident ID, contributing alerts, affected entities, automation actions,
+    analyst decision, and recovery evidence as a single case record.
+
+## Worked example
+
+A phishing email delivers a malicious link to a finance user. Defender for Office
+365 records the click, Defender for Endpoint detects the downloaded payload, and
+Entra records a risky sign-in. Defender XDR groups the three alerts into one
+incident; automated investigation isolates the device while the SOC resets the
+account and removes the message from other mailboxes.

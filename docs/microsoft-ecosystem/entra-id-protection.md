@@ -91,3 +91,20 @@ Roll policies out in report-only mode, review impact with the What If tool, then
     Entra ID Protection is related to the Microsoft security ecosystem but is not
     a Defender for Cloud workload plan. Avoid locking out administrators by moving
     directly from an untested policy to tenant-wide enforcement.
+
+## Operational decisions
+
+- Keep emergency access accounts outside routine risk-policy enforcement and test
+    them regularly under a documented, audited break-glass procedure.
+- Roll Conditional Access policies through report-only, pilot, and broad scopes;
+    measure both blocked risk and false-positive support impact at every stage.
+- Retain risk event, sign-in ID, policy result, account action, exclusion reason,
+    and restored-access evidence with each high-risk response.
+
+## Worked example
+
+Entra ID Protection flags a user sign-in as high risk because the password appears
+in a leaked-credential set. A report-only Conditional Access policy confirms it
+would require MFA without affecting emergency accounts. The team then enables the
+policy for a pilot group, forces a password reset for high user risk, and expands
+enforcement after reviewing sign-in logs and support impact.

@@ -70,4 +70,14 @@ and security operations.
 
 Before a pilot, use the [configuration, plans, and pricing reference](operations/configuration-plans-and-pricing.md) to configure Defender settings, compare tiers, verify regional eligibility, and open current pricing and cost-calculation tools.
 
+## Use the Guides
+
+Start with the overview to establish product boundaries, then select the guide
+that owns the asset or identity you need to protect. Each guide follows the same
+operating sequence: define scope and ownership, confirm support and licensing,
+enable a controlled pilot, verify telemetry and response, then expand with
+evidence-backed controls. Use the deployment checklist to record the decision,
+the operations guides to establish governance and automation, and the product
+guides to define service-specific prevention and response actions.
+
 <p class="site-note">Layout and palette follow the Cloud2BR TEC academy pattern. The header icon and favicon use the public Cloud2BR OSS - Learning Hub organization avatar.</p>

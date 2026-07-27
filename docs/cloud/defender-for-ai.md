@@ -88,3 +88,20 @@ Representative alerts include detected prompt-injection or jailbreak attempts, a
 !!! danger "Caution"
     AI plan names, eligible services, and availability are evolving quickly. Treat
     the support matrix and pricing page as authoritative at deployment time.
+
+## Operational decisions
+
+- Classify prompts, grounding data, model outputs, and captured evidence under
+    the organization’s privacy policy before enabling prompt-evidence collection.
+- Assign distinct owners for model configuration, data access, application code,
+    and incident response; no single dashboard replaces these accountabilities.
+- Retain model and endpoint identifiers, deployment version, involved identity,
+    prompt-safety event reference, data source, and containment decision.
+
+## Worked example
+
+An internal chat application connects an Azure OpenAI endpoint to a document
+store. AI posture management identifies that the endpoint is public and the
+application identity has broad read access to the store. The team moves the
+endpoint behind private networking, scopes the identity to the approved index, and
+uses prompt-shield detections to monitor for attempted instruction override.

@@ -88,3 +88,20 @@ CSPM maps GCP resources to the Microsoft Cloud Security Benchmark and standards 
 !!! note
     Connecting an organization does not imply that every GCP service receives
     runtime protection. CSPM breadth and workload-plan support are different.
+
+## Operational decisions
+
+- Document the GCP organization, folders, projects, connector identity, and
+    delegated administrators so connector permissions remain reviewable over time.
+- Coordinate containment with GCP owners; changing a firewall rule or service
+    account can affect workloads outside the Defender portal’s inventory view.
+- Retain project ID, resource URI, principal, IAM or firewall delta, audit-log
+    reference, and recovery validation with the incident record.
+
+## Worked example
+
+A GCP organization connection discovers a Compute Engine VM with a public SSH
+rule and an outdated operating system. The cloud team closes SSH to a controlled
+administration path, Arc-enables the VM, and enables Defender for Servers for the
+project. They confirm the resulting MDE device record and vulnerability finding
+appear in the same portal as their Azure servers.

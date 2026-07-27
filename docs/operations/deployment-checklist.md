@@ -50,3 +50,21 @@ owner, date, and scope instead of marking an item complete without validation.
 - [ ] Remove retired assets, stale connectors, permissions, and billable plans.
 - [ ] Exercise response playbooks and audit privileged actions.
 - [ ] Measure risk reduction and response outcomes, not only alert count.
+
+## Operational decisions
+
+- Treat each completed item as evidence-backed: record the owner, scope, date,
+  verification method, exception, and next review date instead of a bare tick.
+- Gate expansion on measurable pilot success, including inventory coverage, alert
+  delivery, response ownership, recovery testing, and observed cost.
+- Re-run the checklist after architecture, licensing, cloud-region, connector, or
+  operating-model changes, not only during the initial deployment.
+
+## Worked example
+
+For an AKS pilot, the platform owner supplies two non-production clusters, the
+SOC owns alert triage, and finance reviews the expected plan charges. Success
+means every node and registry is visible, a benign test finding reaches the chosen
+incident queue, and the cluster team can remediate it within the agreed window.
+Only after those checks and a tested rollback does the organization apply the
+configuration through policy to production subscriptions.

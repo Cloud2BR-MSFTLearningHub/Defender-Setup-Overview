@@ -97,3 +97,20 @@ Representative alerts include access from a Tor exit node or suspicious IP, an u
 !!! warning "Important"
     Malware scanning is not a substitute for access control, private networking,
     soft delete, versioning, backups, or data-loss prevention.
+
+## Operational decisions
+
+- Decide whether a malicious upload is quarantined, deleted, or held for review;
+    make the action idempotent so repeated Event Grid events are harmless.
+- Set scanning caps from observed upload volume and alert before the cap can leave
+    a business-critical path without expected coverage.
+- Retain blob URI, version, scan result, uploader identity, action outcome, and
+    retention owner as incident evidence.
+
+## Worked example
+
+An application accepts customer file uploads into a Blob container. The team
+enables on-upload malware scanning with an Event Grid subscription to a Logic App.
+When a blob is tagged as malicious, the workflow moves it to a quarantine
+container, opens a ticket, and prevents downstream processing; clean uploads
+continue through the existing application path without change.

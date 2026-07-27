@@ -73,6 +73,23 @@ so an endpoint alert is correlated with the identity and email signals around it
 - Validate isolation, live response, evidence collection, and rollback authority.
 - Track unmanaged devices, exposure score, vulnerabilities, and stale sensors.
 
+## Operational decisions
+
+- Assign endpoint isolation and live-response permissions only to trained roles,
+  and define an approval path for business-critical devices.
+- Test policy changes, exclusions, and attack-surface rules with representative
+  applications before broad enforcement; remove temporary exclusions on schedule.
+- Retain device ID, user, process tree, network evidence, response command,
+  containment approval, and clean-state validation with each case.
+
+## Worked example
+
+An employee opens a malicious attachment and Defender for Endpoint detects a
+suspicious child process from Office. The analyst isolates the device from the
+portal, uses live response to collect the command history, confirms no lateral
+movement in advanced hunting, and releases the device only after automated
+remediation and a clean rescan complete.
+
 ## Architecture and prerequisites
 
 - **Sensor:** built into Windows 10/11 and Windows Server; installed via package on macOS and Linux; mobile uses the Defender app with Intune.

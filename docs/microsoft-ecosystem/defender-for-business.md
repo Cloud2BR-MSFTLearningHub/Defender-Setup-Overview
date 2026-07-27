@@ -84,3 +84,20 @@ Run the documented detection test on a pilot device, review incidents and vulner
     Defender for Business is not Defender for Cloud. Servers can be protected
     through a Defender for Business server add-on or through Defender for Servers,
     depending on architecture and licensing.
+
+## Operational decisions
+
+- Name an owner for endpoint policy changes, isolation approval, user support,
+    and recovery so a small IT team can act quickly without unclear escalation.
+- Roll security settings out through device groups and measure application impact
+    before applying attack-surface rules tenant-wide.
+- Retain device ID, assigned policy, incident evidence, automated action, user
+    notification, and recovery outcome in the support record.
+
+## Worked example
+
+A 75-person company on Microsoft 365 Business Premium onboards a pilot group of
+ten Windows laptops through Intune. Defender for Business contains a simulated
+ransomware-like process automatically, the IT generalist verifies recovery, and
+the company uses the same policy assignment to onboard the remaining devices in
+waves rather than relying on each employee to install protection manually.

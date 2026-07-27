@@ -82,3 +82,20 @@ Detections include unauthorized device or programming changes, protocol anomalie
 !!! danger "Caution"
     Do not run active scans, isolate devices, or change control-system traffic
     without OT safety review. Availability and physical safety take priority.
+
+## Operational decisions
+
+- Give the OT operator final authority over containment actions that could affect
+    safety, production availability, or a regulated process.
+- Maintain an approved asset criticality list and maintenance calendar so unusual
+    protocol activity can be assessed with plant context.
+- Retain sensor, site, zone, asset, protocol event, engineering approval, and
+    recovery evidence in the incident record.
+
+## Worked example
+
+An OT sensor sees an engineering workstation communicating with a PLC outside the
+scheduled maintenance window. The SOC does not isolate the device; it contacts the
+plant engineer, who confirms the activity is unauthorized. The plant follows its
+approved incident procedure to remove the workstation from the control segment
+while maintaining a safe manual process for the line.

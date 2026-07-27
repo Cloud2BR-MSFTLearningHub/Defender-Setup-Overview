@@ -100,3 +100,21 @@ Alerts from every layer can converge in Defender XDR and Microsoft Sentinel, whi
     Automated isolation, blocking, or deletion can interrupt production. Start
     with audit and notification, define an owner and rollback path, and then move
     well-tested controls to enforcement.
+
+## Operating model decisions
+
+- Establish a service owner for each workload, a security owner for detection and
+  triage, and a platform owner for preventive controls before enabling automation.
+- Choose Defender XDR or Sentinel as the primary incident queue, then document
+  which response actions are approved, automated, or reserved for the workload team.
+- Retain asset inventory, plan coverage, control exceptions, incident evidence,
+  response outcomes, and recovery lessons in a reviewable security record.
+
+## Worked example
+
+An attacker compromises a developer identity and uses it to deploy a public
+container workload. Defender CSPM identifies the exposed configuration, Defender
+for Containers detects suspicious activity in the pod, and Defender XDR links the
+developer's risky sign-in to the workload incident. The response team revokes the
+identity session, contains the workload through the approved Kubernetes process,
+and adds an admission control to prevent the same public configuration.

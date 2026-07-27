@@ -113,3 +113,21 @@ Attack path analysis pre-computes these chains and scores each path by exploitab
 !!! note
     CSPM identifies risk; workload plans add threat detection. Enabling Defender
     CSPM does not automatically enable every Defender workload protection plan.
+
+## Operational decisions
+
+- Define a risk owner and remediation deadline for every internet-exposed or
+    attack-path finding; do not use secure score as the only success measure.
+- Use policy in audit mode to prove the proposed control will not block a valid
+    deployment before moving it to deny or deploy-if-not-exists.
+- Retain the affected resource, identity path, business owner, exception expiry,
+    and remediation evidence with the recommendation record.
+
+## Worked example
+
+A platform team connects its Azure subscriptions and discovers a public virtual
+machine with an exposed management port. Attack path analysis also shows that the
+VM's managed identity can read a storage account tagged `data-classification: pii`.
+Instead of remediating dozens of unrelated recommendations, the team closes the
+internet exposure, removes the excessive storage role, and records the secure-score
+improvement as evidence that it broke the highest-risk path.

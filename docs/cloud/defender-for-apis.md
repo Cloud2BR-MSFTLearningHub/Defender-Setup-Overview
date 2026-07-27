@@ -86,3 +86,20 @@ Detections align with the OWASP API Security Top 10 — for example abnormal dat
 !!! warning "Important"
     Enabling the subscription plan and onboarding individual APIs are distinct
     steps. Unsupported or discovered APIs are not automatically protected.
+
+## Operational decisions
+
+- Classify each API by data sensitivity and business criticality before assigning
+    response severity; catalog APIs and payment APIs should not share the same SLA.
+- Coordinate key revocation, rate limiting, and backend changes with API owners
+    so containment does not silently break legitimate client integrations.
+- Retain API identifier, product, caller identity, request pattern, affected
+    object scope, containment action, and validation result.
+
+## Worked example
+
+An API Management service exposes both public catalog APIs and a payment API. The
+team onboards the payment API first, assigns it high criticality, and observes a
+spike of object-ID enumeration from one client. They revoke the compromised key,
+apply a stricter rate-limit policy, and create a backlog item to enforce
+object-level authorization in the backend.

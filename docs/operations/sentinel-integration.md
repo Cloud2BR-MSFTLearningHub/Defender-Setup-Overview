@@ -89,3 +89,21 @@ Prefer native Defender detections and add Sentinel analytics rules only for cros
 !!! warning "Important"
     Sending duplicate raw telemetry and alerts can add cost without adding detection
     value. Build integrations from explicit use cases and retention requirements.
+
+## Operational decisions
+
+- Define data-source purpose, retention, owner, and expected volume before adding
+    a connector; remove streams that do not serve a detection, investigation, or
+    compliance requirement.
+- Prevent automation loops by assigning a single primary incident queue and
+    testing incident status synchronization before enabling response playbooks.
+- Retain connector state, workspace, table, analytic rule, incident ID, playbook
+    run, ingestion cost, and recovery outcome for each cross-source investigation.
+
+## Worked example
+
+A SOC wants to detect a stolen cloud credential used from an unusual network.
+Sentinel correlates a Defender for Cloud Resource Manager alert, an Entra risky
+sign-in, and a firewall connection record that Defender XDR alone does not retain.
+An automation rule assigns the single incident to cloud operations and sends a
+playbook for approval before it disables the identity and blocks the source.

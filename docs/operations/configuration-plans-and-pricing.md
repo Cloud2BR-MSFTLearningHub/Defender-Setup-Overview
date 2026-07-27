@@ -57,3 +57,21 @@ Use live pricing and actual resource counts rather than documentation examples:
 Capture the selected plan, scope, billing meter, region, resource count, and
 assumptions in the deployment record. Review the estimate after the pilot using
 actual charges, then establish budgets and anomaly alerts before broad rollout.
+
+## Operational decisions
+
+- Document the business purpose, eligible resources, regional assumptions, and
+   approval owner before changing any plan at management-group or connector scope.
+- Pilot settings that introduce agents, scanning, or data collection separately
+   from the base plan so coverage, operational impact, and cost remain measurable.
+- Retain selected tier, scope, settings, support-matrix check, estimate, pilot
+   result, approval, and planned review date in the deployment record.
+
+## Worked example
+
+A team needs runtime protection for 120 Azure and Arc-enabled production servers
+but only posture visibility for a separate development subscription. It enables
+the selected Defender for Servers tier on a 12-server pilot, confirms the
+extension and MDE device coverage, and compares the resulting bill with its
+estimate. It then applies the plan at the production management-group scope and
+sets a budget alert before expanding the Arc rollout.

@@ -106,3 +106,20 @@ IdentityLogonEvents
     Defender for Identity complements Microsoft Entra ID Protection. The former
     emphasizes hybrid and on-premises identity signals; the latter evaluates
     Entra user and sign-in risk.
+
+## Operational decisions
+
+- Separate the authority to investigate identity alerts from the authority to
+  reset privileged accounts or change Active Directory configuration.
+- Validate sensor deployment, directory topology, and service-account exclusions
+  after domain-controller maintenance and before relying on coverage metrics.
+- Retain device, user, domain controller, detection path, ticket, credential
+  action, and post-remediation sign-in validation for each incident.
+
+## Worked example
+
+Defender for Identity detects Kerberoasting behavior from a workstation that has
+never administered Active Directory. Analysts use the lateral-movement path to
+identify the impacted service account, reset its password, rotate the service
+credential, and remove the unnecessary service principal name that made the
+account a target.

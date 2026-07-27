@@ -97,3 +97,20 @@ supported machines or Kubernetes clusters in clouds other than AWS and GCP.
     Azure Arc does not make every third-party PaaS service eligible for an Azure
     Defender workload plan. It projects supported servers, Kubernetes, data, and
     selected services according to each product's support matrix.
+
+## Operational decisions
+
+- Treat Arc onboarding as a configuration-management deployment with proxy,
+    certificate, patching, and removal ownership rather than a one-time install.
+- Confirm local administrators understand the approved isolation and recovery
+    procedure before enabling disruptive endpoint response on critical servers.
+- Retain server asset ID, Arc resource ID, extension state, network dependency,
+    local owner, and decommissioning date for coverage reconciliation.
+
+## Worked example
+
+A manufacturing site has 40 VMware-hosted Linux servers with inconsistent
+antivirus coverage. The platform team Arc-enables five non-production servers
+through its outbound proxy, enables Defender for Servers on the target
+subscription, and validates extension health and alert routing. After the pilot,
+the same configuration-management package rolls out to the remaining servers.

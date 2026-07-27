@@ -75,6 +75,23 @@ threat is correlated with the endpoint and identity it touches.
 - Monitor policy exceptions, forwarding, spoofing, and high-risk users.
 - Test mailbox remediation, malicious-message removal, and communications.
 
+## Operational decisions
+
+- Establish who approves tenant-wide message removal, account restriction, and
+  user communications, especially when executive or legal mailboxes are affected.
+- Test Safe Links, Safe Attachments, and anti-phishing policies in pilot groups
+  before escalating the action from monitoring to blocking.
+- Retain message ID, recipient scope, URL or attachment evidence, policy action,
+  remediation result, and user-notification record for investigations.
+
+## Worked example
+
+Safe Links allows a URL at delivery, but the destination is weaponized later.
+When a user clicks it, Defender blocks the connection and the SOC uses Threat
+Explorer to find identical messages. Automated investigation removes the emails
+from remaining mailboxes, while the team adds the sender pattern to its phishing
+awareness review.
+
 ## Architecture and prerequisites
 
 - **Layering:** Defender for Office 365 builds on Exchange Online Protection; native deployment on Exchange Online needs no MX change.

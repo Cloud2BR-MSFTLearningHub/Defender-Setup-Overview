@@ -76,6 +76,23 @@ and behavior. Its signals also flow into Defender XDR.
 - Test session controls with emergency access accounts excluded appropriately.
 - Reauthorize expiring connectors and remove abandoned integrations.
 
+## Operational decisions
+
+- Maintain an approved-app catalog with business owner, data classification, and
+  review cadence; Cloud Discovery alone does not decide whether an app is allowed.
+- Validate session controls with the application owner and emergency-access users
+  before blocking downloads or applying real-time reverse-proxy controls.
+- Retain application ID, user, session action, file or activity reference, policy
+  result, exception expiry, and business-owner decision with the alert.
+
+## Worked example
+
+Cloud Discovery identifies an unsanctioned file-sharing service used by a product
+team. Security reviews its risk score and replaces it with an approved connector.
+For a sanctioned SaaS app, a Conditional Access App Control session policy blocks
+downloads to unmanaged devices while allowing browser-only access, reducing data
+exposure without stopping the team's workflow.
+
 ## Architecture and prerequisites
 
 - **Cloud Discovery:** analyzes traffic logs — native from Defender for Endpoint, or uploaded from proxies and firewalls — to reveal and risk-score SaaS apps.

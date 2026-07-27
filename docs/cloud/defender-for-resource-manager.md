@@ -91,3 +91,20 @@ Correlate these alerts with Entra `SigninLogs`, `AuditLogs`, and Privileged Iden
     Resource Manager protection observes the Azure control plane. It does not
     replace workload-specific plans, Entra ID Protection, or privileged identity
     management.
+
+## Operational decisions
+
+- Identify the approved deployment identities and automation windows so analysts
+    can distinguish expected infrastructure change from privilege escalation.
+- Require change approval for role assignments and policy changes, and use PIM
+    for privileged human access rather than standing subscription ownership.
+- Retain operation ID, caller identity, target scope, role or resource delta,
+    change record, and reversal evidence with the alert.
+
+## Worked example
+
+Defender raises an alert after an automation identity assigns itself Owner on a
+subscription outside its normal deployment window. Responders correlate the
+operation with `AzureActivity`, Entra sign-ins, and PIM records, revoke the
+credential, remove the unexpected role assignment, and move the automation to a
+least-privilege custom role.

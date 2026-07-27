@@ -94,3 +94,20 @@ CSPM maps AWS resources to the Microsoft Cloud Security Benchmark and standards 
 !!! warning "Important"
     Do not grant connector permissions without cloud security and AWS platform
     review. Organization-wide templates can affect every member account.
+
+## Operational decisions
+
+- Assign ownership for the AWS Organization, connector role, StackSet, member
+    account enrollment, and CloudTrail evidence before enabling broad scope.
+- Review service-control policies in a representative account first; they can
+    prevent an emergency workload change as readily as an unsafe deployment.
+- Retain AWS account ID, region, CloudTrail event, connector health, remediation
+    owner, and cross-cloud incident reference with each finding.
+
+## Worked example
+
+An AWS Organization connects through a StackSet and Defender CSPM flags an S3
+bucket with public read access in a sandbox account. The account owner removes the
+public ACL, applies an Organizations service-control policy to prevent future
+public buckets, and uses the unified secure score to demonstrate the improvement
+alongside Azure remediation work.

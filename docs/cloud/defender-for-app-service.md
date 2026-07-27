@@ -89,3 +89,19 @@ Stream App Service diagnostic settings to Log Analytics so investigations have r
     App Service plan support is specific. Azure Functions and other serverless
     hosting options can have different eligibility, telemetry, or protection.
     Check the current support matrix rather than assuming all PaaS apps are covered.
+
+## Operational decisions
+
+- Maintain an inventory of application owners, deployment slots, custom domains,
+    and managed identities; App Service findings need this context to be actionable.
+- Treat domain removal and identity changes as controlled releases, with rollback
+    ownership and validation of the production hostname before completion.
+- Retain site name, slot, source IP, deployment identity, request evidence, and
+    the related change record for each investigation.
+
+## Worked example
+
+After retiring a marketing app, a team leaves its custom DNS CNAME in place. A
+Defender for App Service dangling-DNS alert identifies the subdomain-takeover
+risk. The application owner removes the orphaned record, reviews the remaining
+custom domains, and adds DNS cleanup to the decommissioning runbook.

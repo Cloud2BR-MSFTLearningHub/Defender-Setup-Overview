@@ -83,3 +83,20 @@ Representative alerts include access from a suspicious IP or unusual location, a
 !!! warning "Important"
     Defender detects suspicious access; it does not replace least privilege,
     private endpoints, soft-delete and purge protection, or rotation processes.
+
+## Operational decisions
+
+- Pre-approve a rotation path for each secret type; disabling an identity before
+    dependent workloads are updated can create a production outage.
+- Make privileged vault access time-bound and review it alongside private-network
+    exceptions and break-glass access regularly.
+- Retain vault URI, object name, caller identity, source network, access pattern,
+    rotation ticket, and secret owner for every incident.
+
+## Worked example
+
+An application service principal normally reads two secrets per deployment, but
+Defender alerts when it enumerates every secret in the vault from a new IP range.
+The on-call workflow disables the principal's role assignment, rotates the secrets
+it accessed, and asks the application team to restore access using a managed
+identity and private endpoint.

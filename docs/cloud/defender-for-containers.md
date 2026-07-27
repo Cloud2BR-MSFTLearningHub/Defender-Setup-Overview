@@ -111,3 +111,20 @@ Runtime detections correlate node-level sensor telemetry with Kubernetes audit l
     Defender recommends and detects; Azure Policy for Kubernetes, Gatekeeper, or
     another admission controller performs preventive enforcement. ARO's managed
     control plane also limits which components customers can directly manage.
+
+## Operational decisions
+
+- Separate image-risk ownership from cluster-runtime ownership; registry teams
+    patch images while platform teams control admission and workload containment.
+- Begin new admission controls in audit mode and define an exception process for
+    break-fix deployments before enforcing deny.
+- Preserve image digest, namespace, service account, cluster, and deployment
+    version with every finding so responders can identify the exact workload.
+
+## Worked example
+
+A registry scan identifies a critical vulnerability in an image used by an AKS
+production deployment. The security team opens a remediation task for the image
+owner, while the platform team adds an Azure Policy audit rule for that image tag.
+After the patched image is released, the policy is moved to deny mode so future
+deployments cannot use images with the same prohibited condition.

@@ -114,3 +114,20 @@ Alerts surface in Defender for Cloud and the Microsoft Defender portal and can b
     Azure Arc enrollment and Defender for Servers licensing are separate concerns.
     An Arc-connected server is not necessarily protected until its plan and
     required components are healthy.
+
+## Operational decisions
+
+- Select a single onboarding authority for Azure VMs, Arc servers, and endpoint
+    tooling so duplicate agents and coverage gaps can be reconciled quickly.
+- Define who may isolate a server, what application dependency check is required,
+    and the recovery evidence needed before it is released.
+- Retain plan scope, extension health, MDE device ID, OS owner, and offboarding
+    date for every protected server.
+
+## Worked example
+
+An Arc-enabled SQL Server in a datacenter appears in Azure inventory but has no
+Defender for Endpoint device record. The team enables Defender for Servers Plan 2
+on the Arc resource's subscription, verifies the MDE extension reports healthy,
+and uses the documented detection test on a maintenance-window clone. They then
+add a policy initiative so future Arc servers are onboarded automatically.

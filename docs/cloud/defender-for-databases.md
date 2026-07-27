@@ -101,3 +101,21 @@ Detections are per-engine; validate only with an approved, non-production test. 
 !!! warning "Important"
     A generic Databases toggle can expose separate subplans and charges. Review
     the current plan configuration and pricing before broad enablement.
+
+## Operational decisions
+
+- Agree which team owns database containment, credential rotation, and recovery;
+    a security alert must not cause uncoordinated production data loss.
+- Correlate alerts with audit logs and application releases before blocking a
+    principal, then document the approved emergency access path.
+- Retain database name, server, principal, client IP, query or audit reference,
+    containment action, and validation result.
+
+## Worked example
+
+A production Azure SQL Database raises an alert for repeated failed logins from a
+new internet address followed by a successful privileged login. The database
+owner compares the alert with SQL auditing and Entra sign-in evidence, rotates the
+application credential, and restricts the firewall to the approved private
+endpoint. The incident remains linked to the application and identity evidence in
+Defender XDR.

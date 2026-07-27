@@ -30,6 +30,8 @@ markdown_extensions:
   - tables
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true
 

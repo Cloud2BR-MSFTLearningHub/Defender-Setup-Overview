@@ -46,3 +46,20 @@ checks, and live price tools, see [configuration, plans, and pricing](configurat
 - Are preview capabilities billed and supported for production?
 - What telemetry creates separate Log Analytics or Sentinel ingestion charges?
 - How quickly does billing stop after offboarding?
+
+## Operational decisions
+
+- Assign plan-enablement permissions separately from cost approval, and review
+  resource-level overrides that may bypass the intended management-group scope.
+- Use tags or a cost-allocation model that maps Defender charges to an environment,
+  product owner, and workload so spend can be challenged and forecast accurately.
+- Retain plan, meter, resource count, estimate assumptions, actual cost trend,
+  budget threshold, owner approval, and offboarding date for each rollout.
+
+## Worked example
+
+Before enabling Defender for Servers across 800 virtual machines, a team exports
+the inventory and finds that 150 are short-lived development nodes. It pilots the
+plan on 50 representative servers, tags the charges by environment, and compares
+daily cost with the estimate. The review leads to a production-first rollout and
+a monthly check that retired dev nodes no longer remain billable.

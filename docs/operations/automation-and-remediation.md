@@ -70,3 +70,21 @@ response while keeping human approval on the actions that can disrupt production
 - Connect Defender XDR to Microsoft Sentinel for bidirectional incident synchronization, and use advanced hunting (KQL) to build custom detections.
 - Trigger response with Logic App playbooks or Azure Functions bound to a least-privilege managed identity, and gate disruptive steps behind approval.
 - Keep automation idempotent and observable: log every action, emit metrics, and alert on playbook failures.
+
+## Operational decisions
+
+- Categorize actions as notify, enrich, ticket, contain, or destructive, and
+  require a documented owner and approval rule for every category.
+- Build idempotency, retry, timeout, and audit logging into every playbook before
+  connecting it to production alerts; test the same event more than once.
+- Retain playbook version, trigger alert, identity used, input and output status,
+  approval record, rollback action, and resulting incident update.
+
+## Worked example
+
+A high-severity Key Vault alert triggers a Logic App. The playbook enriches the
+alert with the vault owner, resource tags, and recent sign-in context, then opens
+a ticket and sends the owner an approval request. On approval, it removes the
+suspect role assignment, records the action in the incident, and starts a secret
+rotation task; without approval, it preserves the evidence and escalates to the
+on-call analyst.

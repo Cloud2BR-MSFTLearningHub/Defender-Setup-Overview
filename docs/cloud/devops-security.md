@@ -90,3 +90,20 @@ the repository and pipeline owners who can actually resolve them.
 !!! note
     A DevOps connector does not protect a running workload by itself. Enable the
     appropriate workload plan for runtime detection and response.
+
+## Operational decisions
+
+- Define severity and remediation SLAs by repository criticality, deployment
+  reach, and whether a finding maps to a currently deployed resource.
+- Treat credential revocation as a coordinated deployment change: identify all
+  consumers and validate replacement authentication before disabling the secret.
+- Retain repository, commit, pipeline run, finding ID, deployed-resource link,
+  remediation pull request, and exception expiry for auditability.
+
+## Worked example
+
+A repository scan finds an Azure service-principal secret in an old infrastructure
+template. The team revokes the credential immediately, replaces it with workload
+identity federation, and makes secret scanning a required pull-request check. The
+code-to-cloud link identifies the deployed resource, allowing the team to verify
+that no remaining workload depends on the revoked secret.
