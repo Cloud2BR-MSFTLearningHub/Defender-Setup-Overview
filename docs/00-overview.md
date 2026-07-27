@@ -43,6 +43,9 @@ Defender for Cloud combines three cloud-security disciplines:
 
 Azure subscriptions connect natively. AWS and GCP use multicloud connectors.
 Servers and Kubernetes on-premises or in another cloud normally use Azure Arc.
+Before enabling a workload plan, use the [configuration, plans, and pricing
+reference](operations/configuration-plans-and-pricing.md) to compare supported
+tiers, configure settings, confirm regional eligibility, and estimate cost.
 
 ## Defender XDR
 
@@ -82,3 +85,4 @@ response actions. They do not automatically rewrite every unsafe cloud resource.
 - [Microsoft Defender XDR overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)
 - [Microsoft Sentinel overview](https://learn.microsoft.com/en-us/azure/sentinel/overview)
 - [Azure Arc overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
+- [Configuration, plans, and pricing](operations/configuration-plans-and-pricing.md)

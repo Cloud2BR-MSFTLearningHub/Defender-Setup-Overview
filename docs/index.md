@@ -50,6 +50,11 @@ and security operations.
     <h2>Deployment checklist</h2>
     <p>Use a structured path for licensing, pilot scope, verification, response ownership, and rollout.</p>
   </a>
+  <a class="guide-card" href="operations/configuration-plans-and-pricing/">
+    <span class="guide-card__label">Planning</span>
+    <h2>Configure plans and pricing</h2>
+    <p>Compare Defender plans and tiers, check regional support, configure settings, and estimate cost.</p>
+  </a>
 </div>
 
 ## Browse by environment
@@ -60,6 +65,10 @@ and security operations.
 | AWS and Google Cloud | [Multicloud and hybrid guidance](multicloud/aws.md) |
 | On-premises and other clouds | [Azure Arc onboarding](multicloud/hybrid-and-other-clouds.md) |
 | Microsoft 365 and SaaS | Use the **Microsoft Ecosystem** navigation section. |
+
+## Configure and estimate
+
+Before a pilot, use the [configuration, plans, and pricing reference](operations/configuration-plans-and-pricing.md) to configure Defender settings, compare tiers, verify regional eligibility, and open current pricing and cost-calculation tools.
 
 <p class="site-note">Layout and palette follow the Cloud2BR TEC academy pattern. The header icon and favicon use the public Cloud2BR OSS - Learning Hub organization avatar.</p>
 

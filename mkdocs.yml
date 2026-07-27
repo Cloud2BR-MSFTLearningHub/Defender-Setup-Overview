@@ -68,6 +68,7 @@ nav:
       - Entra ID Protection: microsoft-ecosystem/entra-id-protection.md
   - Operations:
       - Deployment checklist: operations/deployment-checklist.md
+      - Configuration, plans, and pricing: operations/configuration-plans-and-pricing.md
       - Automation and remediation: operations/automation-and-remediation.md
       - Sentinel integration: operations/sentinel-integration.md
       - Licensing and cost: operations/licensing-and-cost.md

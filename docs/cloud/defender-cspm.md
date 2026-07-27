@@ -18,12 +18,12 @@ configuration, and prioritizes security risk across Azure, AWS, and GCP.
 
 | Plan | Main capabilities |
 | --- | --- |
-| Foundational CSPM | Asset inventory, security recommendations, secure score, and Microsoft Cloud Security Benchmark |
-| Defender CSPM | Attack paths, cloud security explorer, governance, risk prioritization, agentless scanning, and data or AI context where supported |
+| [Foundational CSPM](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-cloud-security-posture-management) | Asset inventory, security recommendations, secure score, and Microsoft Cloud Security Benchmark |
+| [Defender CSPM](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-cloud-security-posture-management) | Attack paths, cloud security explorer, governance, risk prioritization, agentless scanning, and data or AI context where supported |
 
 ## Enable
 
-1. In Defender for Cloud, open **Environment settings**.
+1. In Defender for Cloud, open [Environment settings](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/1).
 2. Select the Azure subscription, AWS account, or GCP project hierarchy.
 3. Turn on **Defender CSPM** when advanced capabilities are required.
 4. Open **Settings & monitoring** and review each extension and its dependencies.
@@ -34,7 +34,7 @@ configuration, and prioritizes security risk across Azure, AWS, and GCP.
 
 - Confirm inventory is complete and recommendations have populated.
 - Review secure score by control, but prioritize findings by exploitable risk.
-- Validate agentless scanning coverage, permissions, region support, and freshness.
+- Validate agentless scanning coverage, permissions, [region support](https://learn.microsoft.com/en-us/azure/defender-for-cloud/support-matrix-defender-for-cloud), and freshness.
 - Assign governance owners and remediation due dates.
 - Use Cloud Security Explorer and attack paths to investigate exposure chains.
 
@@ -48,3 +48,4 @@ configuration, and prioritizes security risk across Azure, AWS, and GCP.
 - [Enable Defender CSPM](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-cspm-plan)
 - [Security recommendations](https://learn.microsoft.com/en-us/azure/defender-for-cloud/review-security-recommendations)
 - [Attack path analysis](https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-attack-path)
+- [Configuration, plans, and pricing](../operations/configuration-plans-and-pricing.md)

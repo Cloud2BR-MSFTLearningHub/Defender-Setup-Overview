@@ -24,6 +24,9 @@ the price of one Defender product from another product's name.
 5. Model growth, autoscaling, ephemeral resources, and non-production estates.
 6. Pilot with cost alerts and compare the estimate with actual daily charges.
 
+For the portal configuration path, plan and tier comparison, regional support
+checks, and live price tools, see [configuration, plans, and pricing](configuration-plans-and-pricing.md).
+
 ## Cost controls
 
 - Apply plans at a governed scope and continuously detect resource-level overrides.
@@ -48,3 +51,4 @@ the price of one Defender product from another product's name.
 - [Defender for Cloud cost calculator](https://learn.microsoft.com/en-us/azure/defender-for-cloud/cost-calculator)
 - [Microsoft 365 licensing guidance](https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-service-descriptions)
 - [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview)
+- [Configuration, plans, and pricing](configuration-plans-and-pricing.md)
