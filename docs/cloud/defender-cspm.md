@@ -123,7 +123,7 @@ Attack path analysis pre-computes these chains and scores each path by exploitab
 - Retain the affected resource, identity path, business owner, exception expiry,
     and remediation evidence with the recommendation record.
 
-## Worked example
+## Business example
 
 > A platform team connects its Azure subscriptions and discovers a public virtual
 > machine with an exposed management port. Attack path analysis also shows that the

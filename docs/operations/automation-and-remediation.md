@@ -80,7 +80,7 @@ response while keeping human approval on the actions that can disrupt production
 - Retain playbook version, trigger alert, identity used, input and output status,
   approval record, rollback action, and resulting incident update.
 
-## Worked example
+## Business example
 
 > A high-severity Key Vault alert triggers a Logic App. The playbook enriches the
 > alert with the vault owner, resource tags, and recent sign-in context, then opens

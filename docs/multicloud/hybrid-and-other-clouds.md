@@ -124,7 +124,7 @@ incurring applicable service charges.
 - Retain server asset ID, Arc resource ID, extension state, network dependency,
     local owner, and decommissioning date for coverage reconciliation.
 
-## Worked example
+## Business example
 
 > A manufacturing site has 40 VMware-hosted Linux servers with inconsistent
 > antivirus coverage. The platform team Arc-enables five non-production servers

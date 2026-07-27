@@ -56,7 +56,7 @@ checks, and live price tools, see [configuration, plans, and pricing](configurat
 - Retain plan, meter, resource count, estimate assumptions, actual cost trend,
   budget threshold, owner approval, and offboarding date for each rollout.
 
-## Worked example
+## Business example
 
 > Before enabling Defender for Servers across 800 virtual machines, a team exports
 > the inventory and finds that 150 are short-lived development nodes. It pilots the

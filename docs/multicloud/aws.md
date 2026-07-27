@@ -104,7 +104,7 @@ CSPM maps AWS resources to the Microsoft Cloud Security Benchmark and standards 
 - Retain AWS account ID, region, CloudTrail event, connector health, remediation
     owner, and cross-cloud incident reference with each finding.
 
-## Worked example
+## Business example
 
 > An AWS Organization connects through a StackSet and Defender CSPM flags an S3
 > bucket with public read access in a sandbox account. The account owner removes the

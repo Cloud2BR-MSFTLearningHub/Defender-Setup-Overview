@@ -67,7 +67,7 @@ actual charges, then establish budgets and anomaly alerts before broad rollout.
 - Retain selected tier, scope, settings, support-matrix check, estimate, pilot
    result, approval, and planned review date in the deployment record.
 
-## Worked example
+## Business example
 
 > A team needs runtime protection for 120 Azure and Arc-enabled production servers
 > but only posture visibility for a separate development subscription. It enables

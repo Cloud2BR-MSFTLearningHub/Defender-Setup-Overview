@@ -146,7 +146,7 @@ IdentityQueryEvents
 - Retain device, user, domain controller, detection path, ticket, credential
   action, and post-remediation sign-in validation for each incident.
 
-## Worked example
+## Business example
 
 > Defender for Identity detects Kerberoasting behavior from a workstation that has
 > never administered Active Directory. Analysts use the lateral-movement path to

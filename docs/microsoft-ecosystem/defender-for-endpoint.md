@@ -82,7 +82,7 @@ so an endpoint alert is correlated with the identity and email signals around it
 - Retain device ID, user, process tree, network evidence, response command,
   containment approval, and clean-state validation with each case.
 
-## Worked example
+## Business example
 
 > An employee opens a malicious attachment and Defender for Endpoint detects a
 > suspicious child process from Office. The analyst isolates the device from the

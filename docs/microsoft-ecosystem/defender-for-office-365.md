@@ -84,7 +84,7 @@ threat is correlated with the endpoint and identity it touches.
 - Retain message ID, recipient scope, URL or attachment evidence, policy action,
   remediation result, and user-notification record for investigations.
 
-## Worked example
+## Business example
 
 > Safe Links allows a URL at delivery, but the destination is weaponized later.
 > When a user clicks it, Defender blocks the connection and the SOC uses Threat

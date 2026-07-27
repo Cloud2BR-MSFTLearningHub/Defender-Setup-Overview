@@ -113,7 +113,7 @@ SigninLogs
 - Retain risk event, sign-in ID, policy result, account action, exclusion reason,
     and restored-access evidence with each high-risk response.
 
-## Worked example
+## Business example
 
 > Entra ID Protection flags a user sign-in as high risk because the password appears
 > in a leaked-credential set. A report-only Conditional Access policy confirms it

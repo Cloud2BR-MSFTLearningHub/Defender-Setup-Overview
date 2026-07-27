@@ -110,7 +110,7 @@ Alerts from every layer can converge in Defender XDR and Microsoft Sentinel, whi
 - Retain asset inventory, plan coverage, control exceptions, incident evidence,
   response outcomes, and recovery lessons in a reviewable security record.
 
-## Worked example
+## Business example
 
 > An attacker compromises a developer identity and uses it to deploy a public
 > container workload. Defender CSPM identifies the exposed configuration, Defender

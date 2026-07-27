@@ -96,7 +96,7 @@ Detections align with the OWASP API Security Top 10, including abnormal data exp
 - Retain API identifier, product, caller identity, request pattern, affected
     object scope, containment action, and validation result.
 
-## Worked example
+## Business example
 
 > An API Management service exposes both public catalog APIs and a payment API. The
 > team onboards the payment API first, assigns it high criticality, and observes a

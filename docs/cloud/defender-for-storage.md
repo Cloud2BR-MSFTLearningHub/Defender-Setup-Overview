@@ -131,7 +131,7 @@ procedure before relying on automatic downstream processing.
 - Retain blob URI, version, scan result, uploader identity, action outcome, and
     retention owner as incident evidence.
 
-## Worked example
+## Business example
 
 > An application accepts customer file uploads into a Blob container. The team
 > enables on-upload malware scanning with an Event Grid subscription to a Logic App.

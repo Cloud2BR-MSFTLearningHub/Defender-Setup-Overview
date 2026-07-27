@@ -60,7 +60,7 @@ owner, date, and scope instead of marking an item complete without validation.
 - Re-run the checklist after architecture, licensing, cloud-region, connector, or
   operating-model changes, not only during the initial deployment.
 
-## Worked example
+## Business example
 
 > For an AKS pilot, the platform owner supplies two non-production clusters, the
 > SOC owns alert triage, and finance reviews the expected plan charges. Success

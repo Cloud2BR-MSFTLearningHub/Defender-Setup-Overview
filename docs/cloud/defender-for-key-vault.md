@@ -93,7 +93,7 @@ Representative alerts include access from a suspicious IP or unusual location, a
 - Retain vault URI, object name, caller identity, source network, access pattern,
     rotation ticket, and secret owner for every incident.
 
-## Worked example
+## Business example
 
 > An application service principal normally reads two secrets per deployment, but
 > Defender alerts when it enumerates every secret in the vault from a new IP range.

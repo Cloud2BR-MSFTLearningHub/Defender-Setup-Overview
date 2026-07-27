@@ -94,7 +94,7 @@ Run the documented detection test on a pilot device, review incidents and vulner
 - Retain device ID, assigned policy, incident evidence, automated action, user
     notification, and recovery outcome in the support record.
 
-## Worked example
+## Business example
 
 > A 75-person company on Microsoft 365 Business Premium onboards a pilot group of
 > ten Windows laptops through Intune. Defender for Business contains a simulated

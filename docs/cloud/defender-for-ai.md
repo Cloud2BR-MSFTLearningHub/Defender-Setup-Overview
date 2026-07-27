@@ -98,7 +98,7 @@ Representative alerts include detected prompt-injection or jailbreak attempts, a
 - Retain model and endpoint identifiers, deployment version, involved identity,
     prompt-safety event reference, data source, and containment decision.
 
-## Worked example
+## Business example
 
 > An internal chat application connects an Azure OpenAI endpoint to a document
 > store. AI posture management identifies that the endpoint is public and the

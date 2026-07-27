@@ -99,7 +99,7 @@ Stream App Service diagnostic settings to Log Analytics so investigations have r
 - Retain site name, slot, source IP, deployment identity, request evidence, and
     the related change record for each investigation.
 
-## Worked example
+## Business example
 
 > After retiring a marketing app, a team leaves its custom DNS CNAME in place. A
 > Defender for App Service dangling-DNS alert identifies the subdomain-takeover

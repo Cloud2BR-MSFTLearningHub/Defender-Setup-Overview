@@ -111,7 +111,7 @@ Detections are per-engine; validate only with an approved, non-production test. 
 - Retain database name, server, principal, client IP, query or audit reference,
     containment action, and validation result.
 
-## Worked example
+## Business example
 
 > A production Azure SQL Database raises an alert for repeated failed logins from a
 > new internet address followed by a successful privileged login. The database

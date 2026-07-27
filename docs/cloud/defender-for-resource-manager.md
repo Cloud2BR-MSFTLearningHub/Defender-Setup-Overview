@@ -101,7 +101,7 @@ Correlate these alerts with Entra `SigninLogs`, `AuditLogs`, and Privileged Iden
 - Retain operation ID, caller identity, target scope, role or resource delta,
     change record, and reversal evidence with the alert.
 
-## Worked example
+## Business example
 
 > Defender raises an alert after an automation identity assigns itself Owner on a
 > subscription outside its normal deployment window. Responders correlate the

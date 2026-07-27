@@ -124,7 +124,7 @@ Alerts surface in Defender for Cloud and the Microsoft Defender portal and can b
 - Retain plan scope, extension health, MDE device ID, OS owner, and offboarding
     date for every protected server.
 
-## Worked example
+## Business example
 
 > An Arc-enabled SQL Server in a datacenter appears in Azure inventory but has no
 > Defender for Endpoint device record. The team enables Defender for Servers Plan 2

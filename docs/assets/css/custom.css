@@ -195,6 +195,26 @@
   margin-top: -0.65rem;
 }
 
+.md-typeset .task-list-control {
+  display: inline;
+}
+
+.md-typeset .task-list-control input[type="checkbox"] {
+  appearance: auto;
+  cursor: pointer;
+  height: 1rem;
+  margin: 0 0.45rem 0 0;
+  opacity: 1;
+  position: static;
+  vertical-align: -0.15rem;
+  width: 1rem;
+  z-index: auto;
+}
+
+.md-typeset .task-list-control .task-list-indicator {
+  display: none;
+}
+
 @media screen and (max-width: 76.25em) {
   .guide-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

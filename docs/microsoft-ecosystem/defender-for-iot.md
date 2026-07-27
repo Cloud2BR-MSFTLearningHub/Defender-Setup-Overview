@@ -92,7 +92,7 @@ Detections include unauthorized device or programming changes, protocol anomalie
 - Retain sensor, site, zone, asset, protocol event, engineering approval, and
     recovery evidence in the incident record.
 
-## Worked example
+## Business example
 
 > An OT sensor sees an engineering workstation communicating with a PLC outside the
 > scheduled maintenance window. The SOC does not isolate the device; it contacts the

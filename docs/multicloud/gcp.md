@@ -98,7 +98,7 @@ CSPM maps GCP resources to the Microsoft Cloud Security Benchmark and standards 
 - Retain project ID, resource URI, principal, IAM or firewall delta, audit-log
     reference, and recovery validation with the incident record.
 
-## Worked example
+## Business example
 
 > A GCP organization connection discovers a Compute Engine VM with a public SSH
 > rule and an outdated operating system. The cloud team closes SSH to a controlled

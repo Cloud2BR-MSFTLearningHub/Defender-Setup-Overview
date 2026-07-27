@@ -125,7 +125,7 @@ AlertInfo
 - Retain incident ID, contributing alerts, affected entities, automation actions,
     analyst decision, and recovery evidence as a single case record.
 
-## Worked example
+## Business example
 
 > A phishing email delivers a malicious link to a finance user. Defender for Office
 > 365 records the click, Defender for Endpoint detects the downloaded payload, and

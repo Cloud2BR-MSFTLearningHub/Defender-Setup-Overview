@@ -85,7 +85,7 @@ and behavior. Its signals also flow into Defender XDR.
 - Retain application ID, user, session action, file or activity reference, policy
   result, exception expiry, and business-owner decision with the alert.
 
-## Worked example
+## Business example
 
 > Cloud Discovery identifies an unsanctioned file-sharing service used by a product
 > team. Security reviews its risk score and replaces it with an approved connector.

@@ -100,7 +100,7 @@ the repository and pipeline owners who can actually resolve them.
 - Retain repository, commit, pipeline run, finding ID, deployed-resource link,
   remediation pull request, and exception expiry for auditability.
 
-## Worked example
+## Business example
 
 > A repository scan finds an Azure service-principal secret in an old infrastructure
 > template. The team revokes the credential immediately, replaces it with workload

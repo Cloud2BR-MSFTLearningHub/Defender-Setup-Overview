@@ -123,7 +123,7 @@ setting, table schema, or Defender integration changes.
 - Retain connector state, workspace, table, analytic rule, incident ID, playbook
     run, ingestion cost, and recovery outcome for each cross-source investigation.
 
-## Worked example
+## Business example
 
 > A SOC wants to detect a stolen cloud credential used from an unusual network.
 > Sentinel correlates a Defender for Cloud Resource Manager alert, an Entra risky

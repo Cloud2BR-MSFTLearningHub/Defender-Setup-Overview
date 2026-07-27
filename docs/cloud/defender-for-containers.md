@@ -144,7 +144,7 @@ alert title.
 - Preserve image digest, namespace, service account, cluster, and deployment
     version with every finding so responders can identify the exact workload.
 
-## Worked example
+## Business example
 
 > A registry scan identifies a critical vulnerability in an image used by an AKS
 > production deployment. The security team opens a remediation task for the image
