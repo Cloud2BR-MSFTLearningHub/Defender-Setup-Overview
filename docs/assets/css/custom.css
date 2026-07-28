@@ -118,18 +118,8 @@
 }
 
 .defender-hero {
-  border-bottom: 4px solid var(--defender-teal);
   margin: 0.2rem 0 2rem;
   padding: 1.75rem 0 1.6rem;
-}
-
-.defender-hero__eyebrow {
-  color: var(--defender-teal);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  margin: 0 0 0.45rem;
-  text-transform: uppercase;
 }
 
 .defender-hero h1 {

@@ -13,8 +13,6 @@ Last updated: 2026-07-27
 
 <div class="defender-hero" markdown>
 
-<p class="defender-hero__eyebrow">Cloud2BR OSS - Learning Hub</p>
-
 Microsoft Defender is a security portfolio, not a single switch. Use this hub
 to choose the right protection for cloud workloads, devices, identities, data,
 and security operations.
