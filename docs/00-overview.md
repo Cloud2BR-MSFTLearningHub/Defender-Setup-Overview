@@ -6,7 +6,7 @@ Last updated: 2026-07-27
 <summary>References</summary>
 
 - [Microsoft Defender for Cloud overview](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender XDR overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)
+- [Microsoft Defender XDR (extended detection and response) overview](https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender)
 - [Microsoft Sentinel overview](https://learn.microsoft.com/en-us/azure/sentinel/overview)
 - [Azure Arc overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
 - [Configuration, plans, and pricing](operations/configuration-plans-and-pricing.md)
@@ -29,40 +29,40 @@ Each Defender product exists because a different part of the environment is a
 distinct attack surface. Turning the right ones on replaces blind spots and
 disconnected point tools with layered, correlated protection: posture management
 prevents misconfigurations, workload plans detect runtime attacks, and Microsoft
-Defender extended detection and response (XDR) ties the signals into incidents your team can actually act on. The pages in
+Defender XDR (extended detection and response) ties the signals into incidents your team can actually act on. The pages in
 this hub each explain the specific value of enabling that protection.
 
 ## The four layers
 
 | Layer | Primary role | Examples |
 | --- | --- | --- |
-| Microsoft Defender for Cloud | Cloud-native application protection platform (CNAPP): cloud security posture management (CSPM), development, security, and operations (DevSecOps), and cloud workload protection platform (CWPP) | Azure, AWS, GCP, Arc-enabled resources |
-| Microsoft Defender extended detection and response (XDR) | Unified detection and response | Endpoint, Identity, Office 365, Cloud Apps |
-| Microsoft Sentinel | Cloud-native security information and event management (SIEM) and security orchestration, automation, and response (SOAR) | Analytics, retention, hunting, playbooks, third-party data |
+| Microsoft Defender for Cloud | CNAPP (cloud-native application protection platform): CSPM (cloud security posture management), DevSecOps (development, security, and operations), and CWPP (cloud workload protection platform) | Azure, AWS (Amazon Web Services), GCP (Google Cloud Platform), Arc-enabled resources |
+| Microsoft Defender XDR (extended detection and response) | Unified detection and response | Endpoint, Identity, Office 365, Cloud Apps |
+| Microsoft Sentinel | SIEM (security information and event management) and SOAR (security orchestration, automation, and response) | Analytics, retention, hunting, playbooks, third-party data |
 | Policy and management | Prevention and remediation | Azure Policy, Intune, Conditional Access, Gatekeeper, Logic Apps |
 
 ## Defender for Cloud
 
 Defender for Cloud combines three cloud-security disciplines:
 
-- **Cloud security posture management (CSPM)** continuously evaluates configuration and exposure. Foundational CSPM
-  is free; Defender CSPM adds capabilities such as attack paths, cloud security
+- **CSPM (cloud security posture management)** continuously evaluates configuration and exposure. Foundational CSPM (cloud security posture management)
+  is free; Defender CSPM (cloud security posture management) adds capabilities such as attack paths, cloud security
   explorer, governance, and agentless scanning where supported.
-- **Development, security, and operations (DevSecOps)** connects GitHub, Azure DevOps, and GitLab so code, secret, and
+- **DevSecOps (development, security, and operations)** connects GitHub, Azure DevOps (development and operations), and GitLab so code, secret, and
   infrastructure-as-code findings can be related to deployed resources.
-- **Cloud workload protection platform (CWPP)** adds workload-specific threat protection through plans for servers,
+- **CWPP (cloud workload protection platform)** adds workload-specific threat protection through plans for servers,
   containers, storage, databases, App Service, Key Vault, Resource Manager,
-  APIs, and AI workloads.
+  APIs (application programming interfaces), and AI (artificial intelligence) workloads.
 
-Azure subscriptions connect natively. AWS and GCP use multicloud connectors.
+Azure subscriptions connect natively. AWS (Amazon Web Services) and GCP (Google Cloud Platform) use multicloud connectors.
 Servers and Kubernetes on-premises or in another cloud normally use Azure Arc.
 Before enabling a workload plan, use the [configuration, plans, and pricing
 reference](operations/configuration-plans-and-pricing.md) to compare supported
 tiers, configure settings, confirm regional eligibility, and estimate cost.
 
-## Defender XDR
+## Defender XDR (extended detection and response)
 
-Defender XDR correlates signals from products that are licensed and deployed:
+Defender XDR (extended detection and response) correlates signals from products that are licensed and deployed:
 
 - Defender for Endpoint protects Windows, Linux, macOS, Android, and iOS.
 - Defender for Identity uses Active Directory signals to detect identity threats.
@@ -84,7 +84,7 @@ response actions. They do not automatically rewrite every unsafe cloud resource.
 | Deny a noncompliant Azure deployment | Azure Policy deny effect |
 | Enforce Kubernetes admission rules | Azure Policy for Kubernetes or Gatekeeper |
 | Require a compliant managed device | Intune plus Conditional Access |
-| Respond to an alert | Defender automation, Logic Apps, Sentinel playbooks, or API |
+| Respond to an alert | Defender automation, Logic Apps, Sentinel playbooks, or API (application programming interface) |
 | Repair infrastructure configuration | Infrastructure as code and deployment pipeline |
 
 ## Where signals surface
@@ -92,11 +92,11 @@ response actions. They do not automatically rewrite every unsafe cloud resource.
 | Product family | Primary portal | Query and export |
 | --- | --- | --- |
 | Defender for Cloud plans | Microsoft Defender for Cloud in the Azure portal | Continuous export to Log Analytics (`SecurityAlert`) or Event Hubs |
-| Defender XDR products | Microsoft Defender portal | Advanced hunting (Kusto Query Language (KQL)) and the streaming application programming interface (API) |
+| Defender XDR (extended detection and response) products | Microsoft Defender portal | Advanced hunting with KQL (Kusto Query Language) and the streaming API (application programming interface) |
 | Microsoft Sentinel | Defender portal or Azure portal | Log Analytics workspace, analytics rules, and workbooks |
-| Entra ID Protection | Microsoft Entra admin center | Sentinel connector and Microsoft Graph |
+| Entra ID (identity) Protection | Microsoft Entra admin center | Sentinel connector and Microsoft Graph |
 
-Alerts from every layer can converge in Defender XDR and Microsoft Sentinel, which is what makes cross-domain correlation possible. Decide the primary incident queue (Defender XDR or Sentinel) before enabling connectors so ownership and automation stay unambiguous.
+Alerts from every layer can converge in Defender XDR (extended detection and response) and Microsoft Sentinel, which is what makes cross-domain correlation possible. Decide the primary incident queue (Defender XDR (extended detection and response) or Sentinel) before enabling connectors so ownership and automation stay unambiguous.
 
 !!! warning "Important"
     Automated isolation, blocking, or deletion can interrupt production. Start
@@ -107,7 +107,7 @@ Alerts from every layer can converge in Defender XDR and Microsoft Sentinel, whi
 
 - Establish a service owner for each workload, a security owner for detection and
   triage, and a platform owner for preventive controls before enabling automation.
-- Choose Defender XDR or Sentinel as the primary incident queue, then document
+- Choose Defender XDR (extended detection and response) or Sentinel as the primary incident queue, then document
   which response actions are approved, automated, or reserved for the workload team.
 - Retain asset inventory, plan coverage, control exceptions, incident evidence,
   response outcomes, and recovery lessons in a reviewable security record.
@@ -115,8 +115,8 @@ Alerts from every layer can converge in Defender XDR and Microsoft Sentinel, whi
 ## Business example
 
 > An attacker compromises a developer identity and uses it to deploy a public
-> container workload. Defender CSPM identifies the exposed configuration, Defender
-> for Containers detects suspicious activity in the pod, and Defender XDR links the
+> container workload. Defender CSPM (cloud security posture management) identifies the exposed configuration, Defender
+> for Containers detects suspicious activity in the pod, and Defender XDR (extended detection and response) links the
 > developer's risky sign-in to the workload incident. The response team revokes the
 > identity session, contains the workload through the approved Kubernetes process,
 > and adds an admission control to prevent the same public configuration.

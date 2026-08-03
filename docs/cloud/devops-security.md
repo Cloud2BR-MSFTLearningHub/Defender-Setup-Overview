@@ -1,13 +1,13 @@
-# DevOps Security in Microsoft Defender for Cloud
+# DevOps (development and operations) Security in Microsoft Defender for Cloud
 
 Last updated: 2026-07-27
 
 <details markdown>
 <summary>References</summary>
 
-- [Defender for Cloud DevOps security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction)
+- [Defender for Cloud DevOps (development and operations) security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction)
 - [Connect GitHub](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-github)
-- [Connect Azure DevOps](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-devops)
+- [Connect Azure DevOps (development and operations)](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-devops)
 - [Connect GitLab](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-gitlab)
 
 </details>
@@ -16,23 +16,23 @@ Last updated: 2026-07-27
 
 Defender for Cloud connects source-control and pipeline environments so security
 teams can see code-to-cloud context. Supported connectors include GitHub, Azure
-DevOps, and GitLab, with capability differences documented by Microsoft. The goal
+DevOps (development and operations), and GitLab, with capability differences documented by Microsoft. The goal
 is to catch exposed secrets, vulnerable dependencies, and insecure
 infrastructure-as-code in the pipeline, where fixes are cheapest.
 
-![Defender for Cloud DevOps security posture across connected repositories](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-devops-introduction/posture-management.png)
+![Defender for Cloud DevOps (development and operations) security posture across connected repositories](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-devops-introduction/posture-management.png)
 
-*Source: [Overview of DevOps security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction).*
+*Source: [Overview of DevOps (development and operations) security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction).*
 
 ## Why enable it
 
-Most cloud risk is written in code long before it is deployed. Connecting DevOps
+Most cloud risk is written in code long before it is deployed. Connecting DevOps (development and operations)
 platforms lets Defender relate a finding in a repository to the resource it
 becomes in the cloud, so teams fix the root cause instead of patching runtime.
 
-| Without DevOps security | With connectors enabled |
+| Without DevOps (development and operations) security | With connectors enabled |
 | --- | --- |
-| Secrets and IaC flaws are found after deployment | Scanning surfaces them in the repository and pipeline |
+| Secrets and IaC (infrastructure as code) flaws are found after deployment | Scanning surfaces them in the repository and pipeline |
 | Findings lack cloud context | Code-to-cloud mapping links code to running resources |
 | Ownership of a finding is unclear | Results route to the repository and pipeline owners |
 | Security and developers use separate tools | Findings appear in one posture view for both teams |
@@ -42,13 +42,13 @@ insecure infrastructure-as-code before they ever reach production.
 
 ## How it works
 
-A DevOps connector authorizes Defender for Cloud to read metadata from your GitHub,
-Azure DevOps, or GitLab environment. Scanning surfaces exposed secrets, vulnerable
+A DevOps (development and operations) connector authorizes Defender for Cloud to read metadata from your GitHub,
+Azure DevOps (development and operations), or GitLab environment. Scanning surfaces exposed secrets, vulnerable
 dependencies, insecure infrastructure-as-code, and container image findings in the
 repositories and pipelines where they originate, and the results appear in
 Defender for Cloud with the rest of your posture.
 
-The differentiator is code-to-cloud mapping: when Defender CSPM is enabled, a
+The differentiator is code-to-cloud mapping: when Defender CSPM (cloud security posture management) is enabled, a
 finding in a template can be related to the live resource it deploys, so teams fix
 the root cause in source instead of repeatedly patching runtime. Findings route to
 the repository and pipeline owners who can actually resolve them.
@@ -56,10 +56,10 @@ the repository and pipeline owners who can actually resolve them.
 ## Enable
 
 1. Inventory organizations, projects, groups, repositories, pipelines, and owners.
-2. In Defender for Cloud **Environment settings**, add the DevOps connector.
+2. In Defender for Cloud **Environment settings**, add the DevOps (development and operations) connector.
 3. Grant the minimum required authorization and select the intended scope.
 4. Install or authorize required scanning components for the chosen platform.
-5. Enable Defender CSPM when advanced code-to-cloud context is required.
+5. Enable Defender CSPM (cloud security posture management) when advanced code-to-cloud context is required.
 6. Define ownership and service-level objectives for findings.
 
 ## Verify and operate
@@ -73,33 +73,33 @@ the repository and pipeline owners who can actually resolve them.
 
 ## Architecture and prerequisites
 
-![Defender for Cloud DevOps security overview across connected environments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-devops-introduction/security-overview.png)
+![Defender for Cloud DevOps (development and operations) security overview across connected environments](https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-devops-introduction/security-overview.png)
 
-*Source: [Overview of DevOps security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction).*
+*Source: [Overview of DevOps (development and operations) security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction).*
 
-- **Connectors:** GitHub (app-based), Azure DevOps (OAuth), and GitLab; capability coverage differs by platform and is documented by Microsoft.
-- **Scanners:** secret scanning, dependency (SCA), infrastructure-as-code, and container image scanning run in the pipeline or via the connector, and results roll up to Defender for Cloud.
-- **Code-to-cloud:** Defender CSPM links a repository finding to the deployed resource so remediation happens at the source.
+- **Connectors:** GitHub (app-based), Azure DevOps (OAuth (Open Authorization)), and GitLab; capability coverage differs by platform and is documented by Microsoft.
+- **Scanners:** secret scanning, dependency scanning (SCA (software composition analysis)), infrastructure-as-code, and container image scanning run in the pipeline or via the connector, and results roll up to Defender for Cloud.
+- **Code-to-cloud:** Defender CSPM (cloud security posture management) links a repository finding to the deployed resource so remediation happens at the source.
 - **Least privilege:** grant the connector the minimum scope and prefer read-only where the workflow allows.
 
 ## Operationalize findings
 
-- Add secret and IaC scanning as required pipeline checks so a failing scan blocks merge.
-- Route findings to the repository or pipeline owner with an SLA and track mean time to remediate.
+- Add secret and IaC (infrastructure as code) scanning as required pipeline checks so a failing scan blocks merge.
+- Route findings to the repository or pipeline owner with an SLA (service-level agreement) and track mean time to remediate.
 - Never commit real secrets for testing; if a secret is exposed, revoke and rotate it before closing the finding.
 - Review connector permissions, inactive repositories, and coverage drift on a schedule.
 
 !!! note
-    A DevOps connector does not protect a running workload by itself. Enable the
+    A DevOps (development and operations) connector does not protect a running workload by itself. Enable the
     appropriate workload plan for runtime detection and response.
 
 ## Operational decisions
 
-- Define severity and remediation SLAs by repository criticality, deployment
+- Define severity and remediation SLAs (service-level agreements) by repository criticality, deployment
   reach, and whether a finding maps to a currently deployed resource.
 - Treat credential revocation as a coordinated deployment change: identify all
   consumers and validate replacement authentication before disabling the secret.
-- Retain repository, commit, pipeline run, finding ID, deployed-resource link,
+- Retain repository, commit, pipeline run, finding ID (identifier), deployed-resource link,
   remediation pull request, and exception expiry for auditability.
 
 ## Business example
